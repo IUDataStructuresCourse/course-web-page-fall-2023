@@ -19,11 +19,11 @@ doing better on job interview questions.
 
 **Lecture** 
 
-Mondays and Wednesdays 1:15pm-2:30pm, Geological Sciences (GY), Room 4069.
+Mondays and Wednesdays 1:15pm-2:30pm, Ballantine Hall (BH), Room 344.
 
 **Lab** 
 
-Fridays 10:20am-12:15pm, Ballantine Hall 118.
+Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
 
 **Instructors and Office Hours**
 
