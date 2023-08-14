@@ -28,7 +28,7 @@ Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
 **Instructors and Office Hours**
 
 * Jeremy Siek (jsiek), office hours: TBD in Luddy 3014.
-* Tianyu Chen (chen512), office hours: TBD in Luddy 3014.
+* Tianyu Chen (chen512), office hours: Fridays 3:00-5:00pm in Luddy 3014.
 
 **Textbook**
 
