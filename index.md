@@ -42,15 +42,15 @@ Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
 **Schedule**
 
 Day     | Lecture Topic             | Reading Due  | Assignment Due
-Aug. 22 | Introduction              |              |
-Aug. 24 | Arrays, Rotation, Testing | Ch. 1        | 
-Aug. 26 |                           |              | Lab: Array Search Testing
+Aug. 21 | Introduction              |              |
+Aug. 23 | Arrays, Rotation, Testing | Ch. 1        | 
+Aug. 25 |                           |              | Lab: Array Search Testing
 
 **Resources**
 
 * Final Exam with solutions from [2017](./final-2017.pdf) and [2021](./final-2021.pdf).
 
-* Autograder for submitting coding assignments.
+* [Autograder](https://autograder.luddy.indiana.edu/web/course/59) for submitting coding assignments.
 
 * Code Editor and Debugger: 
   [IntelliJ IDEA](https://www.jetbrains.com/idea/download) (Community Edition)
