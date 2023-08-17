@@ -61,7 +61,32 @@ public class Rotation {
 ```
 
 Next I am going to create unit tests for `rotate_ripple`. Right click on the root
-directory and select "New -> Directory".
+directory and select "New -> Directory". Name the new directory `test`.
 ![](resources/lab1/new_test_dir.png)
+
+Right click on `test` in the file structure. Go to the last item in the pop-up menu
+and select "Mark Directory As -> Test **Sources** Root". The `test` directory will be
+highlighted in green.
+
+Add a new Java class in `test` called `RotationTest`. Create `rotate_save_n_shift`
+as a private static member function of `RotationTest`. We use `rotate_save_n_shift`
+as our [test oracle](https://en.wikipedia.org/wiki/Test_oracle).
+
+>  A test oracle is a mechanism for determining whether a test has passed or failed.
+
+In this case, we are testing `rotate_ripple` against `rotate_save_n_shift`.
+
+Next we import [JUnit](https://junit.org), a Java testing framework. Add the following
+lines to the beginning of `RotationTest`:
+
+```java
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+```
+
+Move cursor to `junit`, where IntelliJ tells me that it cannot resolve the symbol.
+Click on "Add 'JUnit' to classpath" and then "OK". Perform the same action on `jupiter`.
+
+![](resources/lab1/add_junit.png)
 
 ## Your assignment: testing search algorithms
