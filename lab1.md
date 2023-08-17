@@ -121,4 +121,17 @@ The rotation implementation is correct, so the test case passes:
 
 ![](resources/lab1/test_success.png)
 
+Suppose I made a mistake in the implementation. For example, if I did not assign `tmp2`
+to `tmp1`, it would cause the entire array to be filled with `A[0]` and produce a wrong
+answer. If I remove `tmp1 = tmp2` and rerun the test, it catches the bug by throwing
+an assertion error:
+
+![](resources/lab1/test_fail.png)
+
+Now suppose I would like to debug the issue. I start by displaying the two rotated arrays,
+so I can add a breakpoint at `assertArrayEquals(A, B)`. I click on the line number and
+it turn into a red circle. Then I choose "Debug ..." from the drop-down menu:
+
+![](resources/lab1/debug.png)
+
 ## Your assignment: testing search algorithms
