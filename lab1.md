@@ -136,6 +136,8 @@ it turn into a red circle. Then I choose "Debug ..." from the drop-down menu:
 
 The execution stops at the breakpoint. Both arrays, `A` and `B`, are displayed in the "Debug"
 section of IntelliJ. We can see that the correct implementation produces `{5, 1, 2, 3, 4}` but
-the buggy implementation produces `{1, 1, 1, 1, 1}`.
+the buggy implementation produces `{1, 1, 1, 1, 1}`:
+
+![](resources/lab1/breakpoint.png)
 
 ## Your assignment: testing search algorithms
