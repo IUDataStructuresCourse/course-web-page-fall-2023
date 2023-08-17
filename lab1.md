@@ -17,11 +17,11 @@
     version control (optional).
   - Language: "Java"; build systems: "IntelliJ"
   - Install JDK. Click "Add SDK -> Download JDK" in the "JDK" drop-down menu
-    <img src="resources/lab1/install_jdk.png" width=75%>
+    ![](resources/lab1/install_jdk.png)
   - In the pop-up window choose "Vendor" : "Oracle OpenJDK". "Version" should
     be filled in automatically (`20` as of the time of writing).
     Make sure version ≥15. "Location" can be left as default.
-    <img src="resources/lab1/jdk_version.png" width=75%>
+    ![](resources/lab1/jdk_version.png)
   - Click "Download" and wait for the download to finish. In the "New Project"
     window, uncheck "Add sample code" and leave everything else as is. Click "Create".
 
@@ -34,11 +34,11 @@ In this section I will show you how to:
 - Debug and test
 
 I first create a IntelliJ project "RotationTest". After creation, the file structure is:
-<p align="center"><img src="resources/lab1/mint_proj.png" width=50%></p>
+![](resources/lab1/mint_proj.png)
 
 Suppose I am to implement the "ripple** approach of array rotation. I right click on the 
 **`src`** directory in the file structure and choose **"Java Class"**.
-![](resources/lab1/new_java_class.png){:width=50%}
+![](resources/lab1/new_java_class.png)
 
 I enter "Rotation" as its name. IntelliJ creates a new file `src/Rotation.java` whose
 content is an empty `public class Rotation`. In the editor, I create `rotate_ripple` 
@@ -60,6 +60,8 @@ public class Rotation {
 }
 ```
 
-Next I am going to create unit tests for `rotate_ripple`.
+Next I am going to create unit tests for `rotate_ripple`. Right click on the root
+directory and select "New -> Directory".
+![](resources/lab1/new_test_dir.png)
 
 ## Your assignment: testing search algorithms
