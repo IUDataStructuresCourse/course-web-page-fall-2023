@@ -1,7 +1,4 @@
-## CSCI H343 Data Structures
-
-Indiana University, Fall 2023
-
+**Indiana University, Fall 2023**
 
 This course studies the fundamental ideas for efficiently analyzing
 large amounts of data, such as DNA sequence databases and geographic
@@ -17,11 +14,11 @@ challenging problems in bioinformatics and geographic information
 systems. Warning: a possible side-effect of taking this course is
 doing better on job interview questions.
 
-**Lecture** 
+**Lecture**
 
 Mondays and Wednesdays 1:15pm-2:30pm, Ballantine Hall (BH), Room 344.
 
-**Lab** 
+**Lab**
 
 Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
 
@@ -43,8 +40,8 @@ Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
 
 Day     | Lecture Topic             | Reading Due  | Assignment Due
 Aug. 21 | Introduction              |              |
-Aug. 23 | Arrays, Rotation, Testing | Ch. 1        | 
-Aug. 25 |                           |              | Lab: Array Search Testing
+Aug. 23 | Arrays, Rotation, Testing | Ch. 1        |
+Aug. 25 |                           |              | [Lab: Array Search Testing](./lab1)
 
 **Resources**
 
@@ -52,7 +49,7 @@ Aug. 25 |                           |              | Lab: Array Search Testing
 
 * [Autograder](https://autograder.luddy.indiana.edu/web/course/59) for submitting coding assignments.
 
-* Code Editor and Debugger: 
+* Code Editor and Debugger:
   [IntelliJ IDEA](https://www.jetbrains.com/idea/download) (Community Edition)
 
 **Grade Weighting**
