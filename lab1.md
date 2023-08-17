@@ -19,8 +19,8 @@
   - Install JDK. Click "Add SDK -> Download JDK" in the "JDK" drop-down menu
     ![install_jdk](resources/lab1/install_jdk.png)
   - In the pop-up window choose "Vendor" : "Oracle OpenJDK". "Version" should
-    be filled in automatically (`20` as of the time of writing). Make sure version
-    $\geq 15$ . "Location" can be left as default.
+    be filled in automatically (`20` as of the time of writing). 
+    Make sure version $\geq 15$ . "Location" can be left as default.
     ![jdk_version](resources/lab1/jdk_version.png)
 
 ## Instructor demonstration: testing array rotation
