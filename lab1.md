@@ -89,4 +89,36 @@ Click on "Add 'JUnit' to classpath" and then "OK". Perform the same action on `j
 
 ![](resources/lab1/add_junit.png)
 
+Add the following as a public member function of `RotationTest`:
+
+```java
+    @Test
+    public void test_rotation_simple() {
+        String test_description = "rotating a small array";
+        int[] A = {1, 2, 3, 4, 5};
+        int[] B = {1, 2, 3, 4, 5};
+        rotate_save_n_shift(A);
+        Rotation.rotate_ripple(B);
+        try {
+            assertArrayEquals(A, B);
+        } catch (Exception e) {
+            fail(test_description + e.toString());
+        }
+    }
+```
+
+The array `{1, 2, 3, 4, 5}` is the example that we talked about in lecture.
+I call the two implementations of rotation and compare the arrays afterwards
+using `assertArrayEquals`, which is wrapped in a try-catch block. Should the
+assertion fail, the catch clause throws an exception, which contains an error
+message that consists of description of the test case and the exception `e`.
+
+We can run this test point by clicking on the green icon:
+
+![](resources/lab1/run_test.png)
+
+The rotation implementation is correct, so the test case passes:
+
+![](resources/lab1/test_success.png)
+
 ## Your assignment: testing search algorithms
