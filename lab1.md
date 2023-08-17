@@ -121,6 +121,8 @@ The rotation implementation is correct, so the test case passes:
 
 ![](resources/lab1/test_success.png)
 
+<!-- TODO add random number generation -->
+
 Suppose I made a mistake in the implementation. For example, if I did not assign `tmp2`
 to `tmp1`, it would cause the entire array to be filled with `A[0]` and produce a wrong
 answer. If I remove `tmp1 = tmp2` and rerun the test, it catches the bug by throwing
@@ -130,7 +132,7 @@ an assertion error:
 
 Now suppose I would like to debug the issue. I start by displaying the two rotated arrays,
 so I can add a breakpoint at `assertArrayEquals(A, B)`. I click on the line number and
-it turn into a red circle. Then I choose "Debug ..." from the drop-down menu:
+it turn into a red dot. Then I choose "Debug ..." from the drop-down menu:
 
 ![](resources/lab1/debug.png)
 
@@ -139,5 +141,10 @@ section of IntelliJ. We can see that the correct implementation produces `{5, 1,
 the buggy implementation produces `{1, 1, 1, 1, 1}`:
 
 ![](resources/lab1/breakpoint.png)
+
+We can add more breakpoints by repeating the steps above. Breakpoints are controlled
+using the "View Breakpoints" pop-up (the two-overlapping-red-circles button).
+We can resume the execution by hitting the green play button ("Resume Program").
+Alternatively, we can single-step through the program by pressing the down-arrow button.
 
 ## Your assignment: testing search algorithms
