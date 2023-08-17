@@ -1,5 +1,11 @@
 # Lab 1: Basics of Testing and Debugging
 
+## Table of contents
+
+1. [Software installation and environment set-up](#software-installation-and-environment-set-up)
+2. [Instructor demonstration: testing array rotation](#instructor-demonstration-testing-array-rotation)
+3. ‼️[**Your assignment:** testing search algorithms](#your-assignment-testing-search-algorithms)
+
 ## Software installation and environment set-up
 
 + Download and install [IntelliJ IDEA](https://www.jetbrains.com/idea/download) Community Edition
@@ -148,3 +154,5 @@ We can resume the execution by hitting the green play button ("Resume Program").
 Alternatively, we can single-step through the program by pressing the down-arrow button.
 
 ## Your assignment: testing search algorithms
+
+Your tasks are creating test cases for three search algorithm implementations.
