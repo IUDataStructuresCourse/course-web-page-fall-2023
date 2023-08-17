@@ -38,7 +38,7 @@ I first create a IntelliJ project "RotationTest". After creation, the file struc
 
 Suppose I am to implement the "ripple** approach of array rotation. I right click on the 
 **`src`** directory in the file structure and choose **"Java Class"**.
-<p align="center"><img src="resources/lab1/new_java_class.png" width=50%></p>
+![](resources/lab1/new_java_class.png){:width=50%}
 
 I enter "Rotation" as its name. IntelliJ creates a new file `src/Rotation.java` whose
 content is an empty `public class Rotation`. In the editor, I create `rotate_ripple` 
