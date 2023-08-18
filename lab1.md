@@ -113,6 +113,8 @@ Add the following as a public member function of `RotationTest`:
     }
 ```
 
+Note that the function is marked with the `@Test` attribute, which indicates
+that it contains a unit test.
 The array `{1, 2, 3, 4, 5}` is the example that we talked about in lecture.
 I call the two implementations of rotation and compare the arrays afterwards
 using `assertArrayEquals`, which is wrapped in a try-catch block. Should the
@@ -172,16 +174,34 @@ Think about the following questions before you start:
 
 Submit your test file named `StudentTest.java`. The file should contain
 `public class StudentTest`. The class contains a member function
-`public void test()` which serves as the main entrance.
+`public void test()` (marked with `@Test`) which serves as the main entrance.
 
 For example, if you have 2 test functions `test_foo()` and `test_bar()`,
 the `test()` function should be:
 
 ```java
-    public void test() {
-        test_foo();
-        test_bar();
-    }
+public void test() {
+    test_foo();
+    test_bar();
+}
+```
+
+Inside each test function, use JUnit's
+[assertions](https://junit.org/junit5/docs/5.0.1/api/org/junit/jupiter/api/Assertions.html)
+such as `assertEquals` to check for the correct answer:
+
+```java
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class SearchTest {
+	@Test
+	public void test_find_first_true() {
+		// ...
+        assertEquals(Search.find_first_true(A, begin, end), 2);
+	}
+}
 ```
 
 Your test cases invoked in `test()` should cover all three search algorithms.
@@ -225,7 +245,7 @@ The search function has the following signature:
 
 ```java
 public static int find_first_true(boolean[] A, int begin, int end) {
-    ...
+    // ...
 }
 ```
 
