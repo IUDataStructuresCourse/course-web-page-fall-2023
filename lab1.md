@@ -219,7 +219,7 @@ The most basic but surprisingly useful search function involves an
 array `A` of boolean values (`true` or `false`). The function finds
 the position of the first `true`, that is, find the smallest index `i`
 such that `A[i]` is `true`.  If there are no `true` elements in the
-subarray, then `find_first_true` must return the `end` position of the
+subarray, then `find_first_true` returns the `end` position of the
 subarray.
 
 **[Example 1]** If the input array `A` is
@@ -258,3 +258,24 @@ index and finishes one element before the `end` index.
 
 Add test cases for function `Search.find_first_true(A, begin, end)`
 in the `StudentTest` class and call your tests in `test()`.
+
+#### Problem 2: Linear Search on an Array of Integers
+
+Another search function involves an array of integers, with the goal
+of finding the position of the first element that is equal to the `x` parameter.
+If there are no elements equal to `x`, the length of the array is returned.
+
+**[Example 3]** Suppose `A` is the array
+
+```java
+{32, 11, 4, 5, 99, 5, 32, 75}
+```
+then the result of search for `5` should be `3`:
+
+```java
+find_first_equal(A, 5) == 3
+```
+
+Add test cases for function `Search.find_first_equal(A, x)` in the `StudentTest`
+class and call your tests in `test()`.
+The implementation of `find_first_equal` could potentially depend on `find_first_true`.
