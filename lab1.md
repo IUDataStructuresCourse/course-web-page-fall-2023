@@ -39,15 +39,15 @@ In this section I will show you how to:
 - Build and run the code
 - Debug and test
 
-I first create a IntelliJ project "RotationTest". After creation, the file structure is:
+We first create a IntelliJ project "RotationTest". After creation, the file structure looks like:
 ![](resources/lab1/mint_proj.png)
 
-Suppose I am to implement the "ripple** approach of array rotation. I right click on the 
-**`src`** directory in the file structure and choose **"Java Class"**.
+Suppose we are to implement the "ripple" approach of array rotation. We right click on the
+`src` directory in the file structure and choose **"Java Class"**.
 ![](resources/lab1/new_java_class.png)
 
-I enter "Rotation" as its name. IntelliJ creates a new file `src/Rotation.java` whose
-content is an empty `public class Rotation`. In the editor, I create `rotate_ripple` 
+We enter "Rotation" as its name. IntelliJ creates a new file `src/Rotation.java` whose
+content is an empty `public class Rotation`. In the editor, we create `rotate_ripple`
 as a public static member function of `Rotation`:
 
 ```java
@@ -66,7 +66,7 @@ public class Rotation {
 }
 ```
 
-Next I am going to create unit tests for `rotate_ripple`. Right click on the root
+Next we create unit tests for `rotate_ripple`. Right click on the root
 directory and select "New -> Directory". Name the new directory `test`.
 ![](resources/lab1/new_test_dir.png)
 
@@ -116,7 +116,7 @@ Add the following as a public member function of `RotationTest`:
 Note that the function is marked with the `@Test` attribute, which indicates
 that it contains a unit test.
 The array `{1, 2, 3, 4, 5}` is the example that we talked about in lecture.
-I call the two implementations of rotation and compare the arrays afterwards
+We call the two implementations of rotation and compare the produced arrays
 using `assertArrayEquals`, which is wrapped in a try-catch block. Should the
 assertion fail, the catch clause throws an exception, which contains an error
 message that consists of description of the test case and the exception `e`.
@@ -152,26 +152,27 @@ public void test_rotation_random() {
 }
 ```
 
-We can select the tests to run using the drop-down menu in the top-right corner:
+Now that we have multiple test cases, we can select which tests to run
+using the drop-down menu in the top-right corner:
 
 ![](resources/lab1/choose_config.png)
 
 Suppose I made a mistake in the implementation. For example, if I did not assign `tmp2`
 to `tmp1`, it would cause the entire array to be filled with `A[0]` and produce a wrong
-answer. If I remove `tmp1 = tmp2` and rerun the test, it catches the bug by throwing
+answer. If we remove `tmp1 = tmp2` and rerun the test, it catches the bug by throwing
 an assertion error:
 
 ![](resources/lab1/test_fail.png)
 
-Now suppose I would like to debug the issue. I start by displaying the two rotated arrays,
-so I can add a breakpoint at `assertArrayEquals(A, B)`. I click on the line number and
-it turn into a red dot. Then I choose "Debug ..." from the drop-down menu:
+Now suppose we would like to debug the issue. We start by inspecting the two rotated arrays.
+We can add a breakpoint at `assertArrayEquals(A, B)`. We click on the line number and
+it turns into a red dot. Then we choose "Debug ..." from the drop-down menu:
 
 ![](resources/lab1/debug.png)
 
-The execution stops at the breakpoint. Both arrays, `A` and `B`, are displayed in the "Debug"
+Execution stops at the breakpoint. Both arrays, `A` and `B`, are displayed in the "Debug"
 section of IntelliJ. We can see that the correct implementation produces `{5, 1, 2, 3, 4}` but
-the buggy implementation produces `{1, 1, 1, 1, 1}`:
+the buggy implementation produces `{1, 1, 1, 1, 1}` instead:
 
 ![](resources/lab1/breakpoint.png)
 
@@ -184,15 +185,15 @@ Alternatively, we can single-step through the program by pressing the down-arrow
 
 ### Overview
 
-Your tasks are creating test cases for three search algorithm implementations.
-You have two options for test oracles: 1) using the Java standard library 2) implementing
-your own.
+Your tasks are to create test cases for three search algorithm implementations.
+You have two options for test oracles: 1) using the Java standard library
+2) implementing your own.
 
 Think about the following questions before you start:
 
 1. What does it mean for each search algorithm to be correct?
 2. Can some of the three algorithms share the same test oracle? Why?
-3. What are possible corner cases? Hint: arrays with 0 or 1 element, arrays
+3. What are possible _corner cases_? Hint: arrays with 0 or 1 element, arrays
    with even or odd lengths, start and end positions being equal, ...
 
 ### Submission
@@ -231,8 +232,7 @@ public class SearchTest {
 }
 ```
 
-Your test cases invoked in `test()` should cover all three search algorithms.
-Autograder will run your submission on 8 problematic search implementations and
+Autograder will run your submission on 8 problematic `Search` implementations and
 one correct implementation to rule out false positive. Your test cases are expected
 to throw exceptions on all implementations except the correct one.
 
