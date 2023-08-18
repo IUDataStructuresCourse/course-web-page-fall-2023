@@ -41,7 +41,7 @@ Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
 Day     | Lecture Topic             | Reading Due  | Assignment Due
 Aug. 21 | Introduction              |              |
 Aug. 23 | Arrays, Rotation, Testing | Ch. 1        |
-Aug. 25 |                           |              | [Lab: Array Search Testing](./lab1)
+Aug. 25 |                           |              | [Lab 1: Array Search Testing](./lab1)
 
 **Resources**
 
