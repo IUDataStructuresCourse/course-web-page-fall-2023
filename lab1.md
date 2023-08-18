@@ -23,11 +23,11 @@
     version control (optional).
   - Language: "Java"; build systems: "IntelliJ"
   - Install JDK. Click "Add SDK -> Download JDK" in the "JDK" drop-down menu
-    ![](resources/lab1/install_jdk.png)
+    ![](assets/images/lab1/install_jdk.png)
   - In the pop-up window choose "Vendor" : "Oracle OpenJDK". "Version" should
     be filled in automatically (`20` as of the time of writing).
     Make sure version ≥15. "Location" can be left as default.
-    ![](resources/lab1/jdk_version.png)
+    ![](assets/images/lab1/jdk_version.png)
   - Click "Download" and wait for the download to finish. In the "New Project"
     window, uncheck "Add sample code" and leave everything else as is. Click "Create".
 
@@ -40,11 +40,11 @@ In this section I will show you how to:
 - Debug and test
 
 We first create a IntelliJ project "RotationTest". After creation, the file structure looks like:
-![](resources/lab1/mint_proj.png)
+![](assets/images/lab1/mint_proj.png)
 
 Suppose we are to implement the "ripple" approach of array rotation. We right click on the
 `src` directory in the file structure and choose **"Java Class"**.
-![](resources/lab1/new_java_class.png)
+![](assets/images/lab1/new_java_class.png)
 
 We enter "Rotation" as its name. IntelliJ creates a new file `src/Rotation.java` whose
 content is an empty `public class Rotation`. In the editor, we create `rotate_ripple`
@@ -68,7 +68,7 @@ public class Rotation {
 
 Next we create unit tests for `rotate_ripple`. Right click on the root
 directory and select "New -> Directory". Name the new directory `test`.
-![](resources/lab1/new_test_dir.png)
+![](assets/images/lab1/new_test_dir.png)
 
 Right click on `test` in the file structure. Go to the last item in the pop-up menu
 and select "Mark Directory As -> Test **Sources** Root". The `test` directory will be
@@ -93,7 +93,7 @@ import static org.junit.jupiter.api.Assertions.*;
 Move cursor to `junit`, where IntelliJ tells me that it cannot resolve the symbol.
 Click on "Add 'JUnit' to classpath" and then "OK". Perform the same action on `jupiter`.
 
-![](resources/lab1/add_junit.png)
+![](assets/images/lab1/add_junit.png)
 
 Add the following as a public member function of `RotationTest`:
 
@@ -123,11 +123,11 @@ message that consists of description of the test case and the exception `e`.
 
 We can run this test point by clicking on the green icon:
 
-![](resources/lab1/run_test.png)
+![](assets/images/lab1/run_test.png)
 
 The rotation implementation is correct, so the test case passes:
 
-![](resources/lab1/test_success.png)
+![](assets/images/lab1/test_success.png)
 
 
 We can also generate random numbers to fill the input array:
@@ -155,26 +155,26 @@ public void test_rotation_random() {
 Now that we have multiple test cases, we can select which tests to run
 using the drop-down menu in the top-right corner:
 
-![](resources/lab1/choose_config.png)
+![](assets/images/lab1/choose_config.png)
 
 Suppose I made a mistake in the implementation. For example, if I did not assign `tmp2`
 to `tmp1`, it would cause the entire array to be filled with `A[0]` and produce a wrong
 answer. If we remove `tmp1 = tmp2` and rerun the test, it catches the bug by throwing
 an assertion error:
 
-![](resources/lab1/test_fail.png)
+![](assets/images/lab1/test_fail.png)
 
 Now suppose we would like to debug the issue. We start by inspecting the two rotated arrays.
 We can add a breakpoint at `assertArrayEquals(A, B)`. We click on the line number and
 it turns into a red dot. Then we choose "Debug ..." from the drop-down menu:
 
-![](resources/lab1/debug.png)
+![](assets/images/lab1/debug.png)
 
 Execution stops at the breakpoint. Both arrays, `A` and `B`, are displayed in the "Debug"
 section of IntelliJ. We can see that the correct implementation produces `{5, 1, 2, 3, 4}` but
 the buggy implementation produces `{1, 1, 1, 1, 1}` instead:
 
-![](resources/lab1/breakpoint.png)
+![](assets/images/lab1/breakpoint.png)
 
 We can add more breakpoints by repeating the steps above. Breakpoints are controlled
 using the "View Breakpoints" pop-up (the two-overlapping-red-circles button).
