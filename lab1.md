@@ -129,7 +129,28 @@ The rotation implementation is correct, so the test case passes:
 
 ![](resources/lab1/test_success.png)
 
-<!-- TODO add random number generation -->
+
+We can also generate random numbers to fill the input array:
+
+```java
+@Test
+public void test_rotation_random() {
+    String test_description = "rotating an array with random integers";
+    Random r = new Random(0);
+    int[] A = new int[100];
+    for (int i = 0; i != A.length; ++ i) {
+        A[i] = r.nextInt();
+    }
+    int[] B = Arrays.copyOf(A, A.length);
+    rotate_save_n_shift(A);
+    Rotation.rotate_ripple(B);
+    try {
+        assertArrayEquals(A, B);
+    } catch (Exception e) {
+        fail(test_description + e.toString());
+    }
+}
+```
 
 Suppose I made a mistake in the implementation. For example, if I did not assign `tmp2`
 to `tmp1`, it would cause the entire array to be filled with `A[0]` and produce a wrong
