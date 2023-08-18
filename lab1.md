@@ -223,7 +223,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SearchTest {
+public class StudentTest {
 	@Test
 	public void test_find_first_true() {
 		// ...
@@ -232,9 +232,9 @@ public class SearchTest {
 }
 ```
 
-Autograder will run your submission on 8 problematic `Search` implementations and
-one correct implementation to rule out false positive. Your test cases are expected
-to throw exceptions on all implementations except the correct one.
+Autograder will run your submission on 8 problematic `Search` implementations.
+It also runs one correct implementation to rule out false positive.
+Your test cases are expected to throw exceptions on all implementations except the correct one.
 
 ### Problem Set
 
