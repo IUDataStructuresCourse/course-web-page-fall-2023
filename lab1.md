@@ -4,7 +4,7 @@
 
 1. [Software installation and environment set-up](#software-installation-and-environment-set-up)
 2. [Instructor demonstration: testing array rotation](#instructor-demonstration-testing-array-rotation)
-3. ‼️[**Your assignment:** testing search algorithms](#your-assignment-testing-search-algorithms)
+3. [**Your assignment:** testing search algorithms](#your-assignment-testing-search-algorithms)
 
 ## Software installation and environment set-up
 
@@ -155,4 +155,33 @@ Alternatively, we can single-step through the program by pressing the down-arrow
 
 ## Your assignment: testing search algorithms
 
+### Overview
+
 Your tasks are creating test cases for three search algorithm implementations.
+You have two options for test oracles: 1) using the Java standard library 2) implementing
+your own.
+
+Think about the following questions before you start:
+
+1. What does it mean for each search algorithm to be correct?
+2. Can some of the three algorithms share the same test oracle? Why?
+3. What are possible corner cases? Hint: arrays with 0 or 1 element, arrays
+   with even or odd lengths, start and end positions being equal, ...
+
+### Submission
+
+Submit your test file named `StudentTest.java`. The file should contain
+`public class StudentTest`. The class contains a member function
+`public void test()` which serves as the main entrance.
+
+For example, if you have 2 test functions `test_foo()` and `test_bar()`,
+the `test()` function should be:
+
+```java
+    public void test() {
+        test_foo();
+        test_bar();
+    }
+```
+
+Your test cases invoked in `test()` should cover all three search algorithms.
