@@ -218,7 +218,10 @@ to throw exceptions on all implementations except the correct one.
 The most basic but surprisingly useful search function involves an
 array `A` of boolean values (`true` or `false`). The function finds
 the position of the first `true`, that is, find the smallest index `i`
-such that `A[i]` is `true`.  If there are no `true` elements in the
+such that `A[i]` is `true`.
+The search is restricted to the subarray within `A` that starts at the `begin`
+index and finishes one element before the `end` index.
+(This is called a half-open interval.) If there are no `true` elements in the
 subarray, then `find_first_true` returns the `end` position of the
 subarray.
 
@@ -251,11 +254,6 @@ public static int find_first_true(boolean[] A, int begin, int end) {
 }
 ```
 
-The search is restricted to the region within `A` that starts at the `begin`
-index and finishes one element before the `end` index.
-(This is called a half-open interval.)
-<!-- The time it takes for the algorithm to run is proportional to the length of `A`. -->
-
 Add test cases for function `Search.find_first_true(A, begin, end)`
 in the `StudentTest` class and call your tests in `test()`.
 
@@ -279,3 +277,26 @@ find_first_equal(A, 5) == 3
 Add test cases for function `Search.find_first_equal(A, x)` in the `StudentTest`
 class and call your tests in `test()`.
 The implementation of `find_first_equal` could potentially depend on `find_first_true`.
+
+#### Problem 3: Testing Binary Search on an Array of Booleans
+
+We revisit searching an array of Booleans, but suppose that all of the
+`false` elements in the array come before all of the `true` elements (sorted) this time.
+A more efficient solution that runs in time proportional to the logarithm of
+the length of the array looks at the element in the middle and then restricts
+the search to the right or left subarray depending on its value.
+
+**[Example 4]** Suppose `A` is the sorted array
+
+```java
+{false, false, true, true, true, true, true}
+```
+
+The position of the first `true` element is `2` in this case.
+
+Add test cases for function `Search.find_first_true_sorted(A, begin, end)` 
+in the `StudentTest` class and call your tests in `test()`.
+
+-----------------
+
+* You have reached the end of Lab 1. Yay!
