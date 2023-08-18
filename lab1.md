@@ -152,6 +152,10 @@ public void test_rotation_random() {
 }
 ```
 
+We can select the tests to run using the drop-down menu in the top-right corner:
+
+![](resources/lab1/choose_config.png)
+
 Suppose I made a mistake in the implementation. For example, if I did not assign `tmp2`
 to `tmp1`, it would cause the entire array to be filled with `A[0]` and produce a wrong
 answer. If I remove `tmp1 = tmp2` and rerun the test, it catches the bug by throwing
