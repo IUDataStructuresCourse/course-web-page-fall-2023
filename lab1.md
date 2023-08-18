@@ -299,6 +299,14 @@ then the result of search for `5` should be `3`:
 find_first_equal(A, 5) == 3
 ```
 
+The search function has the following signature:
+
+``` java
+public static int find_first_equal(int[] A, int x) {
+    // ...
+}
+```
+
 Add test cases for function `Search.find_first_equal(A, x)` in the `StudentTest`
 class and call your tests in `test()`.
 The implementation of `find_first_equal` could potentially depend on `find_first_true`.
@@ -318,6 +326,14 @@ the search to the right or left subarray depending on its value.
 ```
 
 The position of the first `true` element is `2` in this case.
+
+The search function has the following signature:
+
+```java
+public static int find_first_true_sorted(boolean[] A, int begin, int end) {
+    // ...
+}
+```
 
 Add test cases for function `Search.find_first_true_sorted(A, begin, end)` 
 in the `StudentTest` class and call your tests in `test()`.
