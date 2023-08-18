@@ -185,3 +185,54 @@ the `test()` function should be:
 ```
 
 Your test cases invoked in `test()` should cover all three search algorithms.
+Autograder will run your submission on 8 problematic search implementations and
+one correct implementation to rule out false positive. Your test cases are expected
+to throw exceptions on all implementations except the correct one.
+
+### Problem Set
+
+#### Problem 1: Testing Linear Search on an Array of Booleans
+
+The most basic but surprisingly useful search function involves an
+array `A` of boolean values (`true` or `false`). The function finds
+the position of the first `true`, that is, find the smallest index `i`
+such that `A[i]` is `true`.  If there are no `true` elements in the
+subarray, then `find_first_true` must return the `end` position of the
+subarray.
+
+**[Example 1]** If the input array `A` is
+
+```java
+{false, false, true, false, true}
+```
+
+then the result should be 2 because `A[2] == true` and there are no
+`true` elements at lower indices (`A[0]` and `A[1]` are both `false`).
+
+**[Example 2]** Suppose `A` is the array
+
+```java
+{true, false, true, false, true}
+```
+
+and we search in the half-open interval `[1,3)`. The answer should be `2`.
+
+```java
+find_first_true(A, 1, 3) == 2
+```
+
+The search function has the following signature:
+
+```java
+public static int find_first_true(boolean[] A, int begin, int end) {
+    ...
+}
+```
+
+The search is restricted to the region within `A` that starts at the `begin`
+index and finishes one element before the `end` index.
+(This is called a half-open interval.)
+<!-- The time it takes for the algorithm to run is proportional to the length of `A`. -->
+
+Add test cases for function `Search.find_first_true(A, begin, end)`
+in the `StudentTest` class and call your tests in `test()`.
