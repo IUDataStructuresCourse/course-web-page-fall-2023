@@ -98,19 +98,19 @@ Click on "Add 'JUnit' to classpath" and then "OK". Perform the same action on `j
 Add the following as a public member function of `RotationTest`:
 
 ```java
-    @Test
-    public void test_rotation_simple() {
-        String test_description = "rotating a small array";
-        int[] A = {1, 2, 3, 4, 5};
-        int[] B = {1, 2, 3, 4, 5};
-        rotate_save_n_shift(A);
-        Rotation.rotate_ripple(B);
-        try {
-            assertArrayEquals(A, B);
-        } catch (Exception e) {
-            fail(test_description + e.toString());
-        }
+@Test
+public void test_rotation_simple() {
+    String test_description = "rotating a small array";
+    int[] A = {1, 2, 3, 4, 5};
+    int[] B = {1, 2, 3, 4, 5};
+    rotate_save_n_shift(A);
+    Rotation.rotate_ripple(B);
+    try {
+        assertArrayEquals(A, B);
+    } catch (Exception e) {
+        fail(test_description + e.toString());
     }
+}
 ```
 
 Note that the function is marked with the `@Test` attribute, which indicates
@@ -282,7 +282,7 @@ public static int find_first_true(boolean[] A, int begin, int end) {
 Add test cases for function `Search.find_first_true(A, begin, end)`
 in the `StudentTest` class and call your tests in `test()`.
 
-#### Problem 2: Linear Search on an Array of Integers
+#### Problem 2: Testing Linear Search on an Array of Integers
 
 Another search function involves an array of integers, with the goal
 of finding the position of the first element that is equal to the `x` parameter.
