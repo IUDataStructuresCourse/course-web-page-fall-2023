@@ -3,7 +3,7 @@
 ## Table of contents
 
 1. [Software installation and environment set-up](#software-installation-and-environment-set-up)
-2. [Instructor demonstration: testing array rotation](#instructor-demonstration-testing-array-rotation)
+2. [Instructor demonstration: testing array rotation](#instructor-demonstration-testing-and-debugging-array-rotation)
 3. [**Your assignment:** testing search algorithms](#your-assignment-testing-search-algorithms)
 
 ## Software installation and environment set-up
