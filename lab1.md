@@ -1,4 +1,4 @@
-# Lab 1: Basics of Testing and Debugging
+# Lab 1: Array Search Testing
 
 ## Table of contents
 
@@ -31,7 +31,7 @@
   - Click "Download" and wait for the download to finish. In the "New Project"
     window, uncheck "Add sample code" and leave everything else as is. Click "Create".
 
-## Instructor demonstration: testing array rotation
+## Instructor demonstration: testing and debugging array rotation
 
 In this section I will show you how to:
 
