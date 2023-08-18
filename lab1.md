@@ -180,6 +180,7 @@ For example, if you have 2 test functions `test_foo()` and `test_bar()`,
 the `test()` function should be:
 
 ```java
+@Test
 public void test() {
     test_foo();
     test_bar();
@@ -188,7 +189,8 @@ public void test() {
 
 Inside each test function, use JUnit's
 [assertions](https://junit.org/junit5/docs/5.0.1/api/org/junit/jupiter/api/Assertions.html)
-such as `assertEquals` to check for the correct answer:
+such as `assertEquals` to check for the correct answer. Suppose you are testing
+`Search.find_first_true(A, begin, end)` and the expected result is `2`:
 
 ```java
 import org.junit.jupiter.api.Test;
@@ -199,7 +201,7 @@ public class SearchTest {
 	@Test
 	public void test_find_first_true() {
 		// ...
-        assertEquals(Search.find_first_true(A, begin, end), 2);
+        assertEquals(2, Search.find_first_true(A, begin, end));
 	}
 }
 ```
