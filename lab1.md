@@ -39,6 +39,8 @@ In this section I will show you how to:
 - Build and run the code
 - Debug and test
 
+You can download a copy of this demo [here](assets/RotationTest.tar.gz).
+
 We first create a IntelliJ project "RotationTest". After creation, the file structure looks like:
 ![](assets/images/lab1/mint_proj.png)
 
