@@ -1,7 +1,4 @@
-## CSCI H343 Data Structures
-
-Indiana University, Fall 2023
-
+**Indiana University, Fall 2023**
 
 This course studies the fundamental ideas for efficiently analyzing
 large amounts of data, such as DNA sequence databases and geographic
@@ -17,18 +14,18 @@ challenging problems in bioinformatics and geographic information
 systems. Warning: a possible side-effect of taking this course is
 doing better on job interview questions.
 
-**Lecture** 
+**Lecture**
 
 Mondays and Wednesdays 1:15pm-2:30pm, Ballantine Hall (BH), Room 344.
 
-**Lab** 
+**Lab**
 
 Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
 
 **Instructors and Office Hours**
 
 * Jeremy Siek (jsiek), office hours: TBD in Luddy 3014.
-* Tianyu Chen (chen512), office hours: Mondays 3-5pm in Luddy 3014.
+* Tianyu Chen (chen512), office hours: Fridays 3:00-5:00pm in Luddy 3014.
 
 **Textbook**
 
@@ -44,7 +41,7 @@ Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
 Day     | Lecture Topic                         | Reading Due  | Assignment Due
 Aug. 21 | [Introduction](./lectures/Aug-21.md)  |              |
 Aug. 23 | Arrays, Rotation, Testing             | Ch. 1        | 
-Aug. 25 |                                       |              | Lab: Array Search Testing
+Aug. 25 |                                       |              | [Lab 1: Array Search Testing](./lab1)
 
 **Resources**
 
@@ -52,7 +49,7 @@ Aug. 25 |                                       |              | Lab: Array Sear
 
 * [Autograder](https://autograder.luddy.indiana.edu/web/course/59) for submitting coding assignments.
 
-* Code Editor and Debugger: 
+* Code Editor and Debugger:
   [IntelliJ IDEA](https://www.jetbrains.com/idea/download) (Community Edition)
 
 **Grade Weighting**
