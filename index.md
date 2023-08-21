@@ -44,6 +44,11 @@ Aug. 23 | Arrays, Rotation, Testing             | Ch. 1        |
 Aug. 25 |                                       |              | [Lab 1: Array Search Testing](./lab1)
 Aug. 28 |                                       |              | Lab 1 due.
 Aug. 30 |                                       |              | [Homework 1](./homework/HW1.md) due.
+Sep. 4  | Labor Day
+Sep. 1  |                                       |              | Lab 2: Array Search
+Sep. 5  |                                       |              | Lab 2: Array Search due
+Sep. 8  |                                       |              | Lab: work on FloodIt! project
+Sep. 11 |                                       |              | Project 1 : FloodIt! due.
 
 **Resources**
 
