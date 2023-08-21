@@ -18,4 +18,14 @@ E1. Using the definition of logarithm, explain why
 
     log₁₀(2) = 1 / (log₂(10))
 
-E2. 
+E2. Let a, b, and c be positive real numbers. Explain why
+
+    a^(log_b(c)) = c^(log_b(a))
+
+   Where ^ means exponentiation and b is the base in log_b.
+
+E3. Find each of the following quantities.
+
+    a) log₂(1024)
+    b) log₂(1/4)
+    c) log₄(8)

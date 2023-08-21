@@ -42,6 +42,7 @@ Day     | Lecture Topic                         | Reading Due  | Assignment Due
 Aug. 21 | [Introduction](./lectures/Aug-21.md)  |              |
 Aug. 23 | Arrays, Rotation, Testing             | Ch. 1        | 
 Aug. 25 |                                       |              | [Lab 1: Array Search Testing](./lab1)
+Aug. 30 |                                       |              | [Homework 1](./homework/HW1.md)
 
 **Resources**
 
