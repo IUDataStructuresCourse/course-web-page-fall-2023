@@ -18,11 +18,11 @@ E1. Using the definition of logarithm, explain why
 
     log₁₀(2) = 1 / (log₂(10))
 
-E2. Let a, b, and c be positive real numbers. Explain why
+E2. Let x, p, and r be positive real numbers. Explain why
 
-    a^(log_b(c)) = c^(log_b(a))
+    x^(logₚ(r)) = r^(logₚ(x))
 
-   Where ^ means exponentiation and b is the base in log_b.
+   Where ^ means exponentiation.
 
 E3. Find each of the following quantities.
 
