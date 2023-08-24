@@ -6,7 +6,7 @@ In the previous lab, we developed test cases for three array search algorithms. 
 we are going to implement those algorithms as methods of a class called `Search`.
 
 You may reuse the IntelliJ project from last time. Create file `src/Search.java` which
-contains the `Search` public class.
+contains a public class called `Search`.
 
 When your lab is complete, submit your `Search.java` file to Autograder.
 By the way, make sure to test your solutions using the test cases from Lab 1 first!
@@ -86,7 +86,7 @@ public static int find_first_equal(int[] A, int x) {
 
 ### Problem 3: Binary Search on an Array of Booleans
 
-Similar to Problem 1, we search on an array of Booleans and look for the position
+Similar to Problem 1, we search on an array of booleans and look for the position
 of the first `true`. This time we suppose that all of the `false` elements in the array
 come before all of the `true` elements (sorted).
 
@@ -110,3 +110,7 @@ public static int find_first_true_sorted(boolean[] A, int begin, int end) {
     // ...
 }
 ```
+
+-----------------
+
+* You have reached the end of Lab 2. Yay!
