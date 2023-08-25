@@ -200,6 +200,10 @@ Think about the following questions before you start:
 
 ### Submission
 
+**Testing locally**: create a class `Search` in `src/Search.java`,
+which contains the search algorithms to test. Create your test oracles
+as methods of `test/StudentTest.java`.
+
 Submit your test file named `StudentTest.java`. The file should contain
 `public class StudentTest`. The class contains a member function
 `public void test()` (marked with `@Test`) which serves as the main entrance.
