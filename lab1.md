@@ -334,15 +334,15 @@ The implementation of `find_first_equal` could potentially depend on `find_first
 We revisit searching an array of Booleans, but suppose that all of the
 `false` elements in the array come before all of the `true` elements (sorted) this time.
 
-**Specification:** The `find_first_true_sorted(A, begin, end)` return
-the position of the first `true` in array `A`, that is, find the smallest index `i`
-greater or equal to `begin` and less than `end` such that `A[i]` is
-`true`.  If there is no `true` within the half-open range
-`[begin,end)`, return `end`.  The caller must supply a valid half-open
-range which means `begin <= end`, `0 <= begin`, `begin <= A.length`,
-`0 <= end`, and `end <= A.length`. Furthermore, the array must be
-sorted so that all the `false` elements come before any `true`
-elements.
+**Specification:** The `find_first_true_sorted(A, begin, end)` returns
+the position of the first `true` in array `A`, that is, it finds the
+smallest index `i` greater or equal to `begin` and less than `end`
+such that `A[i]` is `true`.  If there is no `true` within the
+half-open range `[begin,end)`, it returns `end`.  The caller must supply a
+valid half-open range which means `begin <= end`, `0 <= begin`, `begin <= A.length`,
+`0 <= end`, and `end <= A.length`. Furthermore, the
+array must already be sorted so that all the `false` elements come before any
+`true` elements.
 
 **[Example 4]** Suppose `A` is the sorted array
 
