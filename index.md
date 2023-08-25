@@ -45,7 +45,7 @@ Aug. 25 |                                       |              | [Lab 1: Array S
 Aug. 28 |                                       |              | Lab 1 due.
 Aug. 30 |                                       |              | [Homework 1](./homework/HW1.md) due.
 Sep. 4  | Labor Day
-Sep. 1  |                                       |              | Lab 2: Array Search
+Sep. 1  |                                       |              | [Lab 2: Array Search](./lab2)
 Sep. 5  |                                       |              | Lab 2: Array Search due
 Sep. 8  |                                       |              | Lab: work on FloodIt! project
 Sep. 11 |                                       |              | Project 1 : FloodIt! due.
