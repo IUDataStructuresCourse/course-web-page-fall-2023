@@ -253,14 +253,18 @@ Your test cases are expected to throw exceptions on all implementations except t
 #### Problem 1: Testing Linear Search on an Array of Booleans
 
 The most basic but surprisingly useful search function involves an
-array `A` of boolean values (`true` or `false`). The function finds
-the position of the first `true`, that is, find the smallest index `i`
-such that `A[i]` is `true`.
-The search is restricted to the subarray within `A` that starts at the `begin`
-index and finishes one element before the `end` index.
-(This is called a half-open interval.) If there are no `true` elements in the
-subarray, then `find_first_true` returns the `end` position of the
-subarray.
+array `A` of boolean values (`true` or `false`). 
+
+**Specification:** The `find_first_true` function returns the position
+of the first `true`, that is, find the smallest index `i` such that
+`A[i]` is `true`.  The search is restricted to the subarray within `A`
+that starts at the `begin` index and finishes one element before the
+`end` index.  (This is called a half-open interval.) If there are no
+`true` elements in the subarray, then `find_first_true` returns the
+`end` position of the subarray. The caller of `find_first_true` is
+required to provide a valid half-open range, which means `begin <=
+end`, `0 <= begin`, `begin <= A.length`, `0 <= end`, and `end <=
+A.length`.
 
 **[Example 1]** If the input array `A` is
 
