@@ -255,15 +255,16 @@ Your test cases are expected to throw exceptions on all implementations except t
 The most basic but surprisingly useful search function involves an
 array `A` of boolean values (`true` or `false`). 
 
-**Specification:** The `find_first_true(A, begin, end)` function returns 
-the position of the first `true`, that is, find the smallest index `i` such that
-`A[i]` is `true`.  The search is restricted to the subarray within `A`
-that starts at the `begin` index and finishes one element before the
-`end` index.  (This is called a half-open interval.) If there are no
-`true` elements in the subarray, then `find_first_true` returns the
-`end` position of the subarray. The caller of `find_first_true` is
-required to provide a valid half-open range, which means `begin <= end`,
-`0 <= begin`, `begin <= A.length`, `0 <= end`, and `end <= A.length`.
+**Specification:** The `find_first_true(A, begin, end)` function
+returns the position of the first `true` in array `A`, that is, find
+the smallest index `i` such that `A[i]` is `true`.  The search is
+restricted to the subarray within `A` that starts at the `begin` index
+and finishes one element before the `end` index.  (This is called a
+half-open interval.) If there are no `true` elements in the subarray,
+then `find_first_true` returns the `end` position of the subarray. The
+caller of `find_first_true` is required to provide a valid half-open
+range, which means `begin <= end`, `0 <= begin`, `begin <= A.length`,
+`0 <= end`, and `end <= A.length`.
 
 **[Example 1]** If the input array `A` is
 
@@ -302,7 +303,7 @@ in the `StudentTest` class and call your tests in `test()`.
 Another search function involves an array of integers.
 
 **Specification** The `find_first_equal(A, x)` function
-returns the position of the first element that is equal to the `x` argument.
+returns the position of the first element in `A` that is equal to the `x` argument.
 If there are no elements equal to `x`, the length of the array is returned.
 
 **[Example 3]** Suppose `A` is the array
@@ -334,7 +335,7 @@ We revisit searching an array of Booleans, but suppose that all of the
 `false` elements in the array come before all of the `true` elements (sorted) this time.
 
 **Specification:** The `find_first_true_sorted(A, begin, end)` return
-the position of the first `true`, that is, find the smallest index `i`
+the position of the first `true` in array `A`, that is, find the smallest index `i`
 greater or equal to `begin` and less than `end` such that `A[i]` is
 `true`.  If there is no `true` within the half-open range
 `[begin,end)`, return `end`.  The caller must supply a valid half-open
