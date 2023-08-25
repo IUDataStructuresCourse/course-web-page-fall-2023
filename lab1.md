@@ -255,16 +255,15 @@ Your test cases are expected to throw exceptions on all implementations except t
 The most basic but surprisingly useful search function involves an
 array `A` of boolean values (`true` or `false`). 
 
-**Specification:** The `find_first_true` function returns the position
-of the first `true`, that is, find the smallest index `i` such that
+**Specification:** The `find_first_true(A, begin, end)` function returns 
+the position of the first `true`, that is, find the smallest index `i` such that
 `A[i]` is `true`.  The search is restricted to the subarray within `A`
 that starts at the `begin` index and finishes one element before the
 `end` index.  (This is called a half-open interval.) If there are no
 `true` elements in the subarray, then `find_first_true` returns the
 `end` position of the subarray. The caller of `find_first_true` is
-required to provide a valid half-open range, which means `begin <=
-end`, `0 <= begin`, `begin <= A.length`, `0 <= end`, and `end <=
-A.length`.
+required to provide a valid half-open range, which means `begin <= end`,
+`0 <= begin`, `begin <= A.length`, `0 <= end`, and `end <= A.length`.
 
 **[Example 1]** If the input array `A` is
 
@@ -300,8 +299,10 @@ in the `StudentTest` class and call your tests in `test()`.
 
 #### Problem 2: Testing Linear Search on an Array of Integers
 
-Another search function involves an array of integers, with the goal
-of finding the position of the first element that is equal to the `x` parameter.
+Another search function involves an array of integers.
+
+**Specification** The `find_first_equal(A, x)` function
+returns the position of the first element that is equal to the `x` argument.
 If there are no elements equal to `x`, the length of the array is returned.
 
 **[Example 3]** Suppose `A` is the array
@@ -331,9 +332,16 @@ The implementation of `find_first_equal` could potentially depend on `find_first
 
 We revisit searching an array of Booleans, but suppose that all of the
 `false` elements in the array come before all of the `true` elements (sorted) this time.
-A more efficient solution that runs in time proportional to the logarithm of
-the length of the array looks at the element in the middle and then restricts
-the search to the right or left subarray depending on its value.
+
+**Specification:** The `find_first_true_sorted(A, begin, end)` return
+the position of the first `true`, that is, find the smallest index `i`
+greater or equal to `begin` and less than `end` such that `A[i]` is
+`true`.  If there is no `true` within the half-open range
+`[begin,end)`, return `end`.  The caller must supply a valid half-open
+range which means `begin <= end`, `0 <= begin`, `begin <= A.length`,
+`0 <= end`, and `end <= A.length`. Furthermore, the array must be
+sorted so that all the `false` elements come before any `true`
+elements.
 
 **[Example 4]** Suppose `A` is the sorted array
 
