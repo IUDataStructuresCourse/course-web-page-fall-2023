@@ -231,16 +231,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class StudentTest {
 
-	@Test
-	public void test() {
-	    test_find_first_true();
+    @Test
+    public void test() {
+        test_find_first_true();
     }
 
-	@Test
-	public void test_find_first_true() {
-		// ...
+    @Test
+    public void test_find_first_true() {
+        // ...
         assertEquals(2, Search.find_first_true(A, begin, end));
-	}
+    }
 }
 ```
 
