@@ -210,7 +210,6 @@ We'll need to import several items from the JUnit Jupiter library.
 ```
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RotateTest {
@@ -280,59 +279,11 @@ greater than 1. So let's create tests that take different branches.
 
 ## Testing Big Inputs using Random Input Generation
 
-```
-    @Test
-    public void rotate_big() {
-        // rotate a big array
-        try {
-            Random r = new Random(0);
-            for (int t = 0; t != 50; ++t) {
-                int n = r.nextInt(1000);
-                int[] A = new int[n];
-                for (int i = 0; i != n; ++i) {
-                    A[i] = r.nextInt(100);
-                }
-                int[] A_correct = Arrays.copyOf(A, A.length);
-                Rotate.rotate(A);
-                simple_rotate(A_correct);
-                assertArrayEquals(A, A_correct);
-            }
-        } catch (Exception e) {
-            fail(e.toString());
-        }
-    }
-```
-
-
-
-
-## Correctness
-
-We'll focus on the swap-backwards algorithm, expressed below as a
-`while` loop.
-
-```
-static void rotate_1_swap_bkwd(int[] A) {
-	if (A.length > 1) {
-		int i = A.length - 1;
-		while (i != 0) {
-			swap(A, i, i-1);
-			--i;
-		}
-	} else {
-		// Nothing to do here
-	}
-}
-```
-
-We're going to prove that this algorithm is correct and document the
-proof by adding comments and `assert` statements to the code.
-
-What does it mean exactly for an array to be rotated by 1 to the right
-The following `is_rotated` function makes this idea precise. If the
-array has zero or one element, then rotating it does not change the
-array. Otherwise, the last element becomes the first element and all
-the other elements are moved by one to the right.
+We'll need a way to check whether the `rotate` method did it's job.
+We can do this by taking the specification for `rotate` and coding it
+up as the following Java method `is_rotated` that takes two arrays, a
+copy of the original one and the new one that was supposedly rotated.
+It returns `true` if `A_new` is the rotated version of `A_orig`.
 
 ```
 static boolean is_rotated(int[] A_orig, int[] A_new) {
@@ -348,104 +299,32 @@ static boolean is_rotated(int[] A_orig, int[] A_new) {
 }
 ```
 
-Most of the work of the algorithm is in a `while` loop, which means we
-need to come up with a *loop invariant* to prove that it is correct.
-A loop invariant is a statement about the current state of affairs
-that it true at the beginning of each loop iteration.
+Now we're ready to test `rotate` on arbitrary arrays.  We use the
+standard Java random number generator to choose an array length and to
+fill the array `A` with numbers. We then copy the array into `A_orig`,
+apply `rotate` to `A`, and then check the result by calling
+`is_rotated` with `A_orig` and `A`.
 
-The tricky thing about a loop invariant is that the state of affairs
-is changing, so it must be abstract enough to capture some property
-that stays the same.
-
-Let's watch the algorithm in action to see if we can see some patterns
-from which we can create the loop invariant. The `while` loop is
-controled by variable `i`, so let's draw a vertical line just before
-the element at the index i. The loop invariant will need to relate the
-current state of the array to it's original state, so we'll write down
-both at each iteration of the loop:
-
-    A_orig: 1 2 3 4 | 5
-    A:      1 2 3 4 | 5
-	
-    A_orig: 1 2 3 | 4 5
-    A:      1 2 3 | 5 4
-	
-    A_orig: 1 2 | 3 4 5
-    A:      1 2 | 5 3 4
-	
-    A_orig: 1 | 2 3 4 5
-    A:      1 | 5 2 3 4
-	
-    A_orig: | 1 2 3 4 5
-    A_:     | 5 1 2 3 4
-
-Looking at the above, let's focus on the front part of the array, the
-elements before the line. There's an easy pattern: the elements in the
-front part of A are the same as those in the front part of A_orig.
-
-What about the back part, i.e. the elements after the line? The back
-part of A is the rotated version of the back part of A_orig!
-
-We write down the loop invariant as another function:
 
 ```
-static boolean loop_invariant_rotate_bkwd(int[] A_orig, int[] A, int i) {
-    return is_rotated(copyOfRange(A_orig, i, A.length), 
-                      copyOfRange(A, i, A.length))
-        && Arrays.equals(copyOfRange(A_orig, 0, i), 
-                         copyOfRange(A, 0, i));
-}
+    @Test
+    public void rotate_big() {
+        // rotate a big array
+        try {
+            Random r = new Random(0);
+            for (int t = 0; t != 50; ++t) {
+                int n = r.nextInt(1000);
+                int[] A = new int[n];
+                for (int i = 0; i != n; ++i) {
+                    A[i] = r.nextInt(100);
+                }
+                int[] A_orig = Arrays.copyOf(A, A.length);
+                Rotate.rotate(A);
+                is_rotated(A_orig, A);
+            }
+        } catch (Exception e) {
+            fail(e.toString());
+        }
+    }
 ```
 
-Now that we've identified a loop invariant, we need to check that it
-really is an appropriate loop invariant for this algorithm.
-
-1. show that the loop invariant is true before the start of the loop
-2. show that the loop invariant is true at the end of the loop body,
-   assuming that it started out true at the beginning of the loop.
-   (For a hypothetical iteration of the loop.)
-3. show that the loop invariant combined with the loop condition
-   being false logically implies the correctness criteria for the
-   algorithm.
-
-### Student Exercise
-
-write down arguments for 1, 2, and 3.
-
-
-### Rotate with annotations 
-
-```
-static void rotate_1_swap_bkwd_short_proof(int[] A) {
-	int[] A_orig = copyOf(A, A.length);
-	assert Arrays.equals(A_orig, A);
-	if (A.length > 1) {
-		int i = A.length - 1;
-		// The subarrays [A.length-1, A.length) of A_orig and A have length 1,
-		//     and are equal, so they satisfy first branch of is_rotated.
-		// The subarrays [0, A.length-1) of A_orig and A are equal.
-		assert loop_invariant_rotate_bkwd(A_orig, A, i);
-		while (i != 0) {
-			assert loop_invariant_rotate_bkwd(A_orig, A, i);
-			// A_orig: ... V W | X Y Z
-			// A:      ... V W | Z X Y
-			//                   i
-			swap(A, i, i-1);
-			// A_orig: ... V W | X Y Z
-			// A:      ... V Z | W X Y
-			assert loop_invariant_rotate_bkwd(A_orig, A, i - 1);
-			--i;
-			// A_orig: ... V | W X Y Z
-			// A:      ... V | Z W X Y
-		}
-		assert loop_invariant_rotate_bkwd(A_orig, A, i) && i == 0;
-		// The subarrays [0, A.length) of A and A_orig are rotated, and
-		// they are equal to the entire arrays.
-		assert is_rotated(A_orig, A);
-	} else {
-		// Nothing to do here
-		assert is_rotated(A_orig, A);
-	}
-	assert is_rotated(A_orig, A);
-}
-```
