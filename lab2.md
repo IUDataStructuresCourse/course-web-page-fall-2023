@@ -95,8 +95,19 @@ Similar to Problem 1, we search on an array of booleans and look for the positio
 of the first `true`. This time we suppose that all of the `false` elements in the array
 come before all of the `true` elements (sorted).
 
-Implement a more efficient algorithm that runs in time proportional to the ⚠️**logarithm** of
-the length of the array, by _looking at the element in the middle and restricting
+Implement `find_first_true_sorted(A, begin, end)`, which returns
+the position of the first `true` in array `A`, that is, it finds the
+smallest index `i` greater or equal to `begin` and less than `end`
+such that `A[i]` is `true`.  If there is no `true` within the
+half-open range `[begin,end)`, it returns `end`.  The caller always supplies a
+valid half-open range which means `begin <= end`, `0 <= begin`,
+`begin <= A.length`, `0 <= end`, and `end <= A.length`. Furthermore,
+the caller also ensures that `A` must already be sorted, so that all the `false`
+elements come before any `true` elements.
+
+The algorithm should be more efficient and runs in time proportional
+to the ⚠️**logarithm** of the length of the array, by
+_looking at the element in the middle and restricting
 the search to the right or left subarray_ depending on its value.
 
 **[Example 4]** Suppose `A` is the _sorted_ array
