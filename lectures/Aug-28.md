@@ -14,6 +14,8 @@ ignoring details that don't matter.
 
 Functions to think about: n, 10n, lg n, n lg n, 10 n², n² + n
 
+https://www.desmos.com/calculator
+
 ## Asymptotic Upper Bound
 
 **Definition** (Big-O) For a given function g, we define **O(g)** as the
@@ -26,9 +28,12 @@ in the set O(g).
 **Notation** We write f ≲ g iff f ∈ O(g), and say that f is
 asymptotically less-or-equal to g.
 
-Demonstrate the main idea and the role of k and c.
+Alternatively, the asympotic growth of functions can be characterized
+using limits.
 
-https://www.desmos.com/calculator
+f ∈ O(g) iff lim{n→∞} f(n)/g(n) is greater or equal zero and not infinity.
+
+Demonstrate the main idea and the role of k and c.
 
 e.g. 4x versus x²
 
