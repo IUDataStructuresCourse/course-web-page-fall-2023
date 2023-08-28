@@ -2,14 +2,16 @@
 
 ## Overview and Submission
 
-In the previous lab, we developed test cases for three array search algorithms. This time
-we are going to implement those algorithms as methods of a class called `Search`.
+In the previous lab, we developed test cases for three array search algorithms.
+This time we are going to implement those algorithms as methods of a class called
+`Search`.
 
-You may reuse the IntelliJ project from last time. Create file `src/Search.java` which
-contains a public class called `Search`.
-
+You may reuse the IntelliJ project from last time.
+Create file `src/Search.java` which contains a public class called `Search`.
 When your lab is complete, submit your `Search.java` file to Autograder.
-By the way, make sure to test your solutions using the test cases from Lab 1 first!
+
+By the way, make sure to test your solutions locally using the test cases
+from Lab 1 first!
 
 ## Problem Set
 
@@ -23,6 +25,9 @@ index and finishes one element before the `end` index
 (half-open interval `[begin,end)`).
 If there are no `true` elements in the subarray, then `find_first_true`
 returns the `end` position of the subarray.
+The caller of `find_first_true` always provides a valid half-open
+range: `begin <= end`, `0 <= begin`, `begin <= A.length`,
+`0 <= end`, and `end <= A.length`.
 _The time it takes for your algorithm to run should be proportional to the
 length of the array `A`._
 
