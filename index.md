@@ -43,7 +43,7 @@ Aug. 21 | [Introduction](./lectures/Aug-21.md)              |              |
 Aug. 23 | [Arrays, Rotation, Testing](./lectures/Aug-23.md) | Ch. 1        | 
 Aug. 25 |                                                   |              | [Lab 1: Array Search Testing](./lab1)
 Aug. 28 | [Algorithm Analysis](./lectures/Aug-28.md)        |              | Lab 1 due.
-Aug. 30 | Algorithm Analysis continued                      | Ch. 2        | [Homework 1](./homework/HW1.md) due.
+Aug. 30 | [Algorithm Analysis continued](./lectures/Aug-30.md)                      | Ch. 2        | [Homework 1](./homework/HW1.md) due.
 Sep. 1  |                                       |              | [Lab 2: Array Search](./lab2)
 Sep. 4  | Labor Day
 Sep. 5  |                                       |              | Lab 2: Array Search due
