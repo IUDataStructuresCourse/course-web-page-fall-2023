@@ -13,9 +13,9 @@ asymptotically less-or-equal to g.
 
 Proof rules:
 
-(∃I) To prove ∃ x. P(x), choose x=k and show that P(k).
+(⇒∃) To prove ∃ x. P(x), choose x=k and show P(k).
 
-(∃E) If you have an assumption ∃ x. P(x), then you have P(y)
+(∃⇒) If you have an assumption ∃ x. P(x), then you have P(y)
    for any fresh variable y.
    
 Let's see these rules used in an example.
@@ -29,8 +29,8 @@ Proof. Choose k=3 and note that 2 × 3 = 6. QED.
 
 Theorem. If x and y are even, then x + y is even.
 Proof.
-Assume x is even, so (∃ k. 2 k = x) so 2 k₁ = x (∃E).
-Assume y is even, so (∃ k. 2 k = y) so 2 k₂ = y (∃E).
+Assume x is even, so (∃ k. 2 k = x) so 2 k₁ = x (∃⇒).
+Assume y is even, so (∃ k. 2 k = y) so 2 k₂ = y (∃⇒).
 
 x + y = 2k₁ + 2k₂ = 2(k₁ + k₂)          (1)
 
@@ -39,6 +39,7 @@ It suffices to show that (∃ k. 2 k = x + y).
 Choose k = k₁ + k₂ and note that 2(k₁ + k₂) = x + y by equation (1).
 QED
 
+
 ## Review of ∀
 
 ∀ means "for all"
@@ -46,21 +47,21 @@ QED
 Proof rules:
 
 To prove ∀ x. P(x), 
-   (∀I) prove that P is true for some unknown entity y.
+   (⇒∀) prove that P is true for some unknown entity y.
    (Induction) If x is a natural number, use induction:
       * prove P(0)
 	  * prove that P(k) implies P(1+k) for an unknown number k.
 
-(∀E) If you have an assumption ∀ x. P(x), then you known P(y)
+(∀⇒) If you have an assumption ∀ x. P(x), then you known P(y)
    for any choice of y.
 
 ## Example of ∀
 
 Theorem. ∀ n. n is even implies n + 2 is even.
 Proof.
- Let p be a number. (∀I)
+ Let p be a number. (⇒∀)
  Assume that p is even, that is, (∃k. 2 × k = p).
- So 2 × k₁ = p by (∃E)      (1)
+ So 2 × k₁ = p by (∃⇒)      (1)
  
  We need to show that p + 2 is even, that is, (∃ k. 2 × k = p + 2).
  
@@ -80,7 +81,7 @@ QED.
 Theorem. 2 is even.
 Proof.
 0 is even because 2 × 0 = 0.
-2 is even by applying the above theorem and rule (∀E).
+2 is even by applying the above theorem and rule (∀⇒).
 QED.
 
 # Back to Big-O
@@ -92,13 +93,13 @@ Proof.
  Suppose f₁ ≲ g and f₂ ≲ g.
  So   ∀n ≥ k₁. f₁(n) ≤ c₁ × g(n)    (1)
  and  ∀n ≥ k₂. f₂(n) ≤ c₂ × g(n)    (2)
- by (∃E).
+ by (∃⇒).
 
  We need to show that ∃k c. ∀n ≥ k. f₁(n) + f₂(n) ≤ c × g(n)
- Choose k = k₁ + k₂ (∃I).
- Choose c = c₁ + c₂ (∃I).
+ Choose k = k₁ + k₂ (⇒∃).
+ Choose c = c₁ + c₂ (⇒∃).
  ∀n ≥ k₁ + k₂. f₁(n) + f₂(n) ≤ (c₁ + c₂) × g(n)
- Let n be a number and assume n ≥ k₁ + k₂. (∀I)
+ Let n be a number and assume n ≥ k₁ + k₂. (⇒∀)
  We need to show that f₁(n) + f₂(n) ≤ (c₁ + c₂) × g(n)
  equivalently: f₁(n) + f₂(n) ≤ c₁ × g(n) + c₂ × g(n)
  From (1) and (2) we have
@@ -117,6 +118,7 @@ To make it easy to compute log n, let's look at powers of 2.
 
 |  n  | log n | n/2 | 2 log n |
 | --- | ----- | --- | ------- |
+|  1  |   0   | 1/2 |    0    |
 |  2  |   1   |  1  |    2    |
 |  4  |   2   |  2  |    4    |
 |  8  |   3   |  4  |    6    |
@@ -127,34 +129,41 @@ To make it easy to compute log n, let's look at powers of 2.
 Choose k = 16.
 Choose c = 1.
 
-We need to show that ∀ n. n ≥ 16 implies 2 log n ≤ n / 2.
+We need to show that ∀ n ≥ 16. 2 log n ≤ n / 2.
 Proof by induction.
 Base case n = 16. 2 log 16 = 8 = n / 2.
 Induction step. Assume k > 16.
-  Assume 2 log k ≤ k / 2 (Induction Hypothesis).
+  Assume 2 log(k) ≤ k/2 (Induction Hypothesis).
   We need to show that 2 log (k + 1) ≤ (k + 1) / 2.
-  2 log(k + 1) ≤ 2 log(2k)
-               = 2 log(2) + 2 log(k)
-			   = 2 + 2 log(k)
-			   ≤ 2 + k / 2     by (IH)
+  Work backwards through the following:
+  2 log(k + 1) ≤ 2 log(1.18 × k)
+			   = 2 (log(1.18) + log(k))      (log(ab) = log(a) + log(n))
+			   ≤ 2 (1/4  + log(k))
+			   = 2(1/4) + 2 log(k)
+			   ≤ 1/2 + 2 log(k) 
+			   ≤ 1/2 + k/2   by IH
 			   = (1 + k) / 2.
 QED.
 
 # Practice analyzing the time complexity of an algorithm: Insertion Sort
 
-	public static void insertion_sort(int[] A) {
-		for (int j = 1; j != A.length; ++j) {
-			int key = A[j];
-			int i = j - 1;
-			while (i >= 0 && A[i] > key) {
-				A[i+1] = A[i];
-				i -= 1;
-			}
-			A[i+1] = key;
-		}
+	public static void insertion_sort(int[] A) { // let n = A.length 
+		for (int j = 1; j != A.length; ++j) { // iterations? n
+			int key = A[j];                 // O(1)
+			int i = j - 1;                  // O(1)
+			while (i >= 0 && A[i] > key) {  // iterations? n
+				A[i+1] = A[i];              // O(1)
+				i -= 1;                     // O(1)
+  				                            // while body total: O(1)
+			}                               // while: O(n)
+			A[i+1] = key;                   // O(1)
+			                                // for body total: O(n)
+		}                                   // for: n * O(n) = O(n^2)
 	}
 
 What is the time complexity of insertion_sort?
+
+   worst-case-insertion-sort-time(n) ∈ O(n^2)
 
 Answer:
 * inner loop is O(n)
