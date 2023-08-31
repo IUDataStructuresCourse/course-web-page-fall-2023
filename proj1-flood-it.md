@@ -40,7 +40,12 @@ The project has the following file structure:
 ```
 
 Download ("Code (green button) -> Download ZIP") or clone the repository
-and open it as an IntelliJ project. Your task is to implement the `flood` function in `src/Flood.java`.
+and open it as an IntelliJ project. Run the `main` function in `src/Game.java` and
+you will see an interactive game window:
+
+![](assets/images/proj1/play.png)
+
+Your task is to implement the `flood` function in `src/Flood.java`.
 Like prior labs, test your implementation locally by adding test cases in `test/FloodTest.java`.
 
 After completion, submit **three** files to Autograder:
