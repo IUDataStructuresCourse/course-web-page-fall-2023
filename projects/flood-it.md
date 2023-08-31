@@ -54,7 +54,11 @@ After completion, submit **three** files to Autograder:
 
 ### Specifications of `flood`
 
-We would like you to write the `flood` function in `Flood` class. It takes four parameters:
+We would like you to write the `flood` function in `Flood` class. 
+
+#### Input of `flood`:
+
+The `flood` function takes four parameters:
 
 + `color : WaterColor`: The color that the player just selected. It is an instance of the `WaterColor` enum.
 
@@ -69,8 +73,19 @@ to the color of a tile, which can be obtained using the `getColor` method.
 + `board_size : Integer`: the number of rows of tiles in the board.
 The number of columns is the same as the number of rows because the board is square.
 
-The `flood` function modifies `flooded_list` in place.
-You are to add the new flooded tiles to the `flooded_list`. You are not responsible for changing the color of any tiles.
+#### Output of `flood`:
+
+The `flood` function modifies `flooded_list` in place. You are to add the new flooded tiles to the `flooded_list`.
+You are not responsible for changing the color of any tiles.
+
+**[Definition 1]** We say that a tile _neighbors_ another tile if it is directly above, below, left, or right,
+that is, sharing a side with the other one.
+
+The `Coord` class contains some helpful functions:
+
++ `up`, `down`, `left`, and `right`: compute the coordinates of neighboring tiles
++ `onBoard`: tells you whether a coordinate is on the board
++ `neightbors`: returns a list of neighboring coordinates
 
 -----------------
 
