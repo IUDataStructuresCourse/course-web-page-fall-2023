@@ -60,7 +60,7 @@ After completion, submit **three** files to Autograder:
 
 ### Specifications of `flood`
 
-We would like you to write the `flood` function in `Flood` class. 
+We would like you to write the `flood` function in `Flood` class.
 
 #### Input of `flood`:
 
@@ -92,6 +92,21 @@ The `Coord` class contains some helpful functions:
 + `up`, `down`, `left`, and `right`: compute the coordinates of neighboring tiles
 + `onBoard`: tells you whether a coordinate is on the board
 + `neightbors`: returns a list of neighboring coordinates
+
+**[Definition 2]** An X-colored region is a set of tiles defined as follows:
+
++ A tile of color X is an X-colored region.
++ If tile T is color X and neighbors a tile in an X-colored region R,
+  then the union of T and R is an X-colored region.
+
+<!-- OLD: -->
+<!-- Given a flooded_list whose tiles are of color X, the flood function should add every -->
+<!-- X-colored region to the flooded_list, provided the region contains a tile that -->
+<!-- is adjacent to a tile in the flooded_list. -->
+
+Given a `flooded_list` and a player selected color X, the `flood` function should add every
+X-colored region to the `flooded_list`, provided that the region contains a tile that neighbors
+a tile in the `flooded_list`.
 
 -----------------
 
