@@ -56,13 +56,11 @@ After completion, submit **three** files to Autograder:
 
 ⚠️**Do NOT submit your tests.** Autograder will thoroughly test the correctness of your implementation.
 
-## Detailed Instructions
-
-### Specifications of `flood`
+## Specifications of `flood`
 
 We would like you to write the `flood` function in `Flood` class.
 
-#### Input of `flood`:
+### Input of `flood`:
 
 The `flood` function takes four parameters:
 
@@ -79,7 +77,7 @@ to the color of a tile, which can be obtained using the `getColor` method.
 + `board_size : Integer`: the number of rows of tiles in the board.
 The number of columns is the same as the number of rows because the board is square.
 
-#### Output of `flood`:
+### Output of `flood`:
 
 The `flood` function modifies `flooded_list` in place. You are to add the new flooded tiles to the `flooded_list`.
 You are not responsible for changing the color of any tiles.
@@ -107,6 +105,14 @@ The `Coord` class contains some helpful functions:
 Given a `flooded_list` and a player selected color X, the `flood` function should add every
 X-colored region to the `flooded_list`, provided that the region contains a tile that neighbors
 a tile in the `flooded_list`.
+
+## Problem Set
+
+### Problem 1: Implementing, Testing and Debugging `flood`
+
+### Problem 2: Plotting Execution Time and Analyzing Time Complexity
+
+### Problem 3: Comparing Time Complexity Between Implementations
 
 -----------------
 
