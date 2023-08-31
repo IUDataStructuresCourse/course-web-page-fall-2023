@@ -86,8 +86,8 @@ The number of columns is the same as the number of rows because the board is squ
 
 ### Output of `flood`:
 
-The `flood` function modifies `flooded_list` in place. You are to add the new flooded tiles to the `flooded_list`.
-You are not responsible for changing the color of any tiles.
+The `flood` function modifies `flooded_list` by adding the newly flooded tiles.
+Please note that you are not responsible for changing the color of any tiles.
 
 **[Definition 1]** We say that a tile _neighbors_ another tile if it is directly above, below, left, or right,
 that is, sharing a side with the other one.
