@@ -1,5 +1,12 @@
 # Project 1: Flood It! 🌊
 
+## Table of Contents
+
+1. [The Game](#software-installation-and-environment-set-up)
+2. [Support Code and Submission](#support-code-and-submission)
+3. [Specifications of `flood`](#specifications-of-flood)
+4. [**Problem Set**](#problem-set)
+
 ## The Game
 
 “Flood It” is a tile coloring game played on a square board of colored tiles.
@@ -108,7 +115,13 @@ a tile in the `flooded_list`.
 
 ## Problem Set
 
-### Problem 1: Implementing, Testing and Debugging `flood`
+### Problem 1: Implementing, Testing and Debugging `flood()`
+
+Play the game online and observe the behavior of flooding.
+Program `flood()` according to [the specifications](#specifications-of-flood).
+
+Before submitting to Autograder, test your code locally by writing test cases in `src/FloodTest.java`.
+We have included a simple test case in that file to get you started.
 
 ### Problem 2: Plotting Execution Time and Analyzing Time Complexity
 
