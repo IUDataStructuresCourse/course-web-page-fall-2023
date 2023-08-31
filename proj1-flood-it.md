@@ -40,8 +40,9 @@ The project has the following file structure:
 ```
 
 Download ("Code (green button) -> Download ZIP") or clone the repository
-and open it as an IntelliJ project. Run the `main` function in `src/Game.java` and
-you will see an interactive game window:
+and open it as an IntelliJ project. Run the `main` function in `src/Game.java`
+(use the green "Play" button next to that function or the configuration "FloodIt - Interactive")
+and you will see an interactive game window:
 
 ![](assets/images/proj1/play.png)
 
