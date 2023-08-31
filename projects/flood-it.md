@@ -1,4 +1,4 @@
-# Project 1: Flood It!
+# Project 1: Flood It! 🌊
 
 ## The Game
 
@@ -51,6 +51,26 @@ After completion, submit **three** files to Autograder:
 ⚠️**Do NOT submit your tests.** Autograder will thoroughly test the correctness of your implementation.
 
 ## Detailed Instructions
+
+### Specifications of `flood`
+
+We would like you to write the `flood` function in `Flood` class. It takes four parameters:
+
++ `color : WaterColor`: The color that the player just selected. It is an instance of the `WaterColor` enum.
+
++ `flooded_list : LinkedList<Coord>`: a `LinkedList` of coordinates for all of the tiles in the current flooded region.
+When a new game starts, `flooded_list` initially contains the tile at the upper left corner.
+
++ `tiles : Tile[][]`: a two dimensional array of `Tile`s, where `tiles[y][x]` accesses the tile
+at the specified x and y coordinate. The x coordinate increase as you go to the right
+and the y coordinate increase as you go down. The purpose of this parameter is to give you access
+to the color of a tile, which can be obtained using the `getColor` method.
+
++ `board_size : Integer`: the number of rows of tiles in the board.
+The number of columns is the same as the number of rows because the board is square.
+
+The `flood` function modifies `flooded_list` in place.
+You are to add the new flooded tiles to the `flooded_list`. You are not responsible for changing the color of any tiles.
 
 -----------------
 
