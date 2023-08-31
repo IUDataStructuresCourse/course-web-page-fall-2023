@@ -17,9 +17,38 @@ for game play before trying to implement anything. There is an [online version](
 
 Don't worry! We have written most of the game
 [here](https://github.com/IUDataStructuresCourse/flood-it-student-support-code).
+The project has the following file structure:
 
-Your task is to implement the `flood` function in `src/Flood.java`.
+```
+.
+├── FloodIt.iml
+├── README
+├── out
+├── src
+│   ├── Board.java
+│   ├── Constants.java
+│   ├── Coord.java
+│   ├── Flood.java  (your code goes here)
+│   ├── GUI.java
+│   ├── Game.java
+│   ├── Tile.java
+│   ├── TimingGraph.java
+│   └── WaterColor.java
+├── test
+│   └── FloodTest.java  (your tests goes here)
+└── test_suite.yaml
+```
+
+Download ("Code (green button) -> Download ZIP") or clone the repository
+and open it as an IntelliJ project. Your task is to implement the `flood` function in `src/Flood.java`.
 Like prior labs, test your implementation locally by adding test cases in `test/FloodTest.java`.
+
+After completion, submit **three** files to Autograder:
++ `Flood.java`: your code
++ `result.png`: execution time graph
++ `README.md`: responses to questions in the "Detailed Instructions" section
+
+⚠️**Do NOT submit your tests.** Autograder will thoroughly test the correctness of your implementation.
 
 ## Detailed Instructions
 
