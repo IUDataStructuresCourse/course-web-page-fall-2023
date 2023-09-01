@@ -125,6 +125,12 @@ We have included a simple test case in that file to get you started.
 
 ### Problem 2: Plotting Execution Time and Analyzing Time Complexity
 
+After making sure the correctness of `flood()`, we consider its time efficiency.
+Run the game in batch timing mode by adding `"timing"` to the program arguments
+in the "Run: FloodIt - Interactive" configuration window:
+
+![](assets/images/proj1/config.png)
+
 ### Problem 3: Comparing Time Complexity Between Implementations
 
 -----------------
