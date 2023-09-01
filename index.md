@@ -47,7 +47,7 @@ Aug. 30 | [Algorithm Analysis continued](./lectures/Aug-30.md) [video](https://i
 Sep. 1  |                                       |              | [Lab 2: Array Search](./lab2)
 Sep. 4  | Labor Day
 Sep. 5  |                                       |              | Lab 2: Array Search due
-Sep. 8  |                                       |              | Lab: work on FloodIt! project
+Sep. 8  |                                       |              | Lab: work on [FloodIt!](./proj1-flood-it) project
 Sep. 11 |                                       |              | Project 1 : FloodIt! due.
 
 **Resources**
