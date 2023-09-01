@@ -60,7 +60,7 @@ Like prior labs, test your implementation locally by adding test cases in `test/
 
 After completion, submit **three** files to Autograder:
 + `Flood.java`: your code
-+ `result.png`: the execution time graph in ![Problem 3](#problem-3-comparing-time-complexity-between-implementations)
++ `result.png`: the execution time graph in [Problem 3](#problem-3-comparing-time-complexity-between-implementations)
 + `README.md`: responses to Question 1 ~ Question 5.
 
 ⚠️**Do NOT submit your tests.** Autograder will test the correctness of your implementation using its own test suite.
