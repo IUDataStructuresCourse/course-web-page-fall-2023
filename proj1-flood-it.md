@@ -131,6 +131,18 @@ in the "Run: FloodIt - Interactive" configuration window:
 
 ![](assets/images/proj1/config.png)
 
+This will display a graph of the execution time (along the y-axis)
+versus the number of tiles on the board (along the x-axis) and it will
+save the graph to PNG file named `result.png`.
+
+Look at the graph. Answer the following questions in your project write-up:
+
++ What function roughly fits that graph? Hint: possibilities are $f(n) = n$, $f(n) = n^2$, $f(n) = n log(n)$.
+
+<!-- What is the time complexity of your flood function based on analyzing the code in your flood function? -->
+<!-- Does your analysis match up with what you see in the graph? -->
+<!-- If not, double check your analysis. Is the time complexity of your flood function the best it can be or can you do better? -->
+
 ### Problem 3: Comparing Time Complexity Between Implementations
 
 -----------------
