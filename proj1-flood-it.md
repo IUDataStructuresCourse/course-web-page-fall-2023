@@ -63,7 +63,7 @@ After completion, submit **three** files to Autograder:
 + `result.png`: execution time graph
 + `README.md`: responses to questions in the "Detailed Instructions" section
 
-⚠️**Do NOT submit your tests.** Autograder will thoroughly test the correctness of your implementation.
+⚠️**Do NOT submit your tests.** Autograder will test the correctness of your implementation using its own test suite.
 
 ## Specifications of `flood`
 
@@ -143,6 +143,8 @@ Look at the graph. Answer the following questions in your project write-up:
 + **[Question 1]** What function roughly fits that graph?
   Hint: possibilities are $f(n) = n$, $f(n) = n^2$, $f(n) = n log(n)$...
 + **[Question 2]** What is the time complexity of your `flood()` function based on analyzing its code?
+  Answer the question in your write-up and write the complexity as a line of comment in your code
+  above the function.
 + **[Question 3]** Does your analysis match up with what you see in the graph?
   - If not, double check your analysis.
 + **[Question 4]** Is the time complexity of your flood function the best it can be or can you do better?
@@ -159,12 +161,13 @@ Swap the names so that your most time efficient implementation is named `flood()
 so that it will be the version used interactively. Re-run with `"timing"` and produce a graph, in which the line
 of the most efficient version is highlighted in red.
 
-+ **[Question 5]** What is the time complexity of your most time efficient implementation?
++ **[Question 5]** What is the time complexity of your alternative implementations? Comment the functions with their
+  time complexity in your code. Write down the function names and their time complexity in your write-up.
 
-<!-- If your code is so slow that no graph is produced when running in batch mode, -->
-<!-- try temporarily reducing the value of Constants.MAX_BOARD_SIZE_FOR_AUTOPLAY. -->
-<!-- For each board size, the game is repeated 5 times to reduce the effect of noise. -->
-<!-- Turning down the Constants.NUM_GAMES_TO_AUTOPLAY parameter may save you time during development. -->
+Development note: If your code is so slow that no graph is produced when running in batch mode,
+try temporarily reducing the value of `MAX_BOARD_SIZE_FOR_AUTOPLAY` in `src/Constants.java`.
+For each board size, the game is repeated 5 times to reduce the effect of noise.
+Turning down the `NUM_GAMES_TO_AUTOPLAY` parameter may save you time during development.
 
 -----------------
 
