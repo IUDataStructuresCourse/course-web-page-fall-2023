@@ -50,12 +50,13 @@ The project has the following file structure:
 
 Download ("Code (green button) -> Download ZIP") or clone the repository
 and open it as an IntelliJ project. Run the `main()` function in `src/Game.java`
-(use the green "Play" button next to that function or the configuration "FloodIt - Interactive")
+(use the green "Play" button next to that function or run the configuration "FloodIt - Interactive")
 and you will see an interactive game window:
 
 ![](assets/images/proj1/play.png)
 
-Your task is to implement the `flood()` function in `src/Flood.java`.
+The game is not working properly, because flooded region does not expand when you click on a tile.
+We need your help! Your task is to implement the `flood()` function in `src/Flood.java`.
 Like prior labs, test your implementation locally by adding test cases in `test/FloodTest.java`.
 
 After completion, submit **three** files to Autograder:
@@ -147,7 +148,8 @@ Look at the graph. Answer the following questions in your project write-up:
   above the function.
 + **[Question 3]** Does your analysis match up with what you see in the graph?
   - If not, double check your analysis.
-+ **[Question 4]** Is the time complexity of your flood function the best it can be or can you do better?
++ **[Question 4]** What data structures did you use (linked lists, arrays...) ?
+  Is the time complexity of your flood function the best it can be or can you do better? Why?
 
 ### Problem 3: Comparing Time Complexity Between Implementations
 
