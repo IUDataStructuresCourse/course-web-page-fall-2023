@@ -1,5 +1,7 @@
 # Project 1: Flood It! 🌊
 
+**[Note]** This is a group project. Every group member submits their solutions on Autograder individually.
+
 ## Table of Contents
 
 1. [The Game](#software-installation-and-environment-set-up)
@@ -125,7 +127,8 @@ We have included a simple test case in that file to get you started.
 
 ### Problem 2: Plotting Execution Time and Analyzing Time Complexity
 
-After making sure the correctness of `flood()`, we consider its time efficiency.
+After ensuring the correctness of `flood()`, we consider its time efficiency.
+
 Run the game in batch timing mode by adding `"timing"` to the program arguments
 in the "Run: FloodIt - Interactive" configuration window:
 
@@ -137,14 +140,32 @@ save the graph to PNG file named `result.png`.
 
 Look at the graph. Answer the following questions in your project write-up:
 
-+ What function roughly fits that graph? Hint: possibilities are $f(n) = n$, $f(n) = n^2$, $f(n) = n log(n)$.
-
-<!-- What is the time complexity of your flood function based on analyzing the code in your flood function? -->
-<!-- Does your analysis match up with what you see in the graph? -->
-<!-- If not, double check your analysis. Is the time complexity of your flood function the best it can be or can you do better? -->
++ **[Question 1]** What function roughly fits that graph?
+  Hint: possibilities are $f(n) = n$, $f(n) = n^2$, $f(n) = n log(n)$...
++ **[Question 2]** What is the time complexity of your `flood()` function based on analyzing its code?
++ **[Question 3]** Does your analysis match up with what you see in the graph?
+  - If not, double check your analysis.
++ **[Question 4]** Is the time complexity of your flood function the best it can be or can you do better?
 
 ### Problem 3: Comparing Time Complexity Between Implementations
 
+Try to improve the time complexity of your flood function.
+
+Write new flood functions `flood1()`, `flood2()`... whose execution time does not grow so quickly
+as the number of tiles increases. When you run `floodN()` in batch mode, the timing for these alternate
+implementations will show up as gray lines.
+
+Swap the names so that your most time efficient implementation is named `flood()`,
+so that it will be the version used interactively. Re-run with `"timing"` and produce a graph, in which the line
+of the most efficient version is highlighted in red.
+
++ **[Question 5]** What is the time complexity of your most time efficient implementation?
+
+<!-- If your code is so slow that no graph is produced when running in batch mode, -->
+<!-- try temporarily reducing the value of Constants.MAX_BOARD_SIZE_FOR_AUTOPLAY. -->
+<!-- For each board size, the game is repeated 5 times to reduce the effect of noise. -->
+<!-- Turning down the Constants.NUM_GAMES_TO_AUTOPLAY parameter may save you time during development. -->
+
 -----------------
 
-* You have reached the end of Project 1. Congratulations!
+* You have finally reached the end of Project 1. Congratulations!
