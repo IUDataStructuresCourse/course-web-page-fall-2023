@@ -55,7 +55,8 @@ and you will see an interactive game window:
 
 ![](assets/images/proj1/play.png)
 
-The game is not working properly, because flooded region does not expand when you click on a tile.
+The game is not working properly at this moment, because the flooded region does not expand
+when you click on a tile.
 We need your help! Your task is to implement the `flood()` function in `src/Flood.java`.
 Like prior labs, test your implementation locally by adding test cases in `test/FloodTest.java`.
 
@@ -77,7 +78,7 @@ The `flood()` function takes four parameters:
 + `color : WaterColor`: The color that the player just selected. It is an instance of the `WaterColor` enum.
 
 + `flooded_list : LinkedList<Coord>`: a `LinkedList` of coordinates for all of the tiles in the current flooded region.
-When a new game starts, `flooded_list` initially contains the tile at the upper left corner.
+When a new game starts, `flooded_list` initially contains the region in the top left corner.
 
 + `tiles : Tile[][]`: a two dimensional array of `Tile`s, where `tiles[y][x]` accesses the tile
 at the specified x and y coordinate. The x coordinate increase as you go to the right
