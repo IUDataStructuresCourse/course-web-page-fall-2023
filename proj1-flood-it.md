@@ -6,7 +6,7 @@
 
 1. [The Game](#software-installation-and-environment-set-up)
 2. [Support Code and Submission](#support-code-and-submission)
-3. [Specifications of `flood`](#specifications-of-flood)
+3. [Specifications of `flood()`](#specifications-of-flood)
 4. [**Problem Set**](#problem-set)
 
 ## The Game
@@ -49,13 +49,13 @@ The project has the following file structure:
 ```
 
 Download ("Code (green button) -> Download ZIP") or clone the repository
-and open it as an IntelliJ project. Run the `main` function in `src/Game.java`
+and open it as an IntelliJ project. Run the `main()` function in `src/Game.java`
 (use the green "Play" button next to that function or the configuration "FloodIt - Interactive")
 and you will see an interactive game window:
 
 ![](assets/images/proj1/play.png)
 
-Your task is to implement the `flood` function in `src/Flood.java`.
+Your task is to implement the `flood()` function in `src/Flood.java`.
 Like prior labs, test your implementation locally by adding test cases in `test/FloodTest.java`.
 
 After completion, submit **three** files to Autograder:
@@ -65,13 +65,13 @@ After completion, submit **three** files to Autograder:
 
 ⚠️**Do NOT submit your tests.** Autograder will test the correctness of your implementation using its own test suite.
 
-## Specifications of `flood`
+## Specifications of `flood()`
 
-We would like you to write the `flood` function in `Flood` class.
+We would like you to write the `flood()` function in `Flood` class.
 
-### Input of `flood`:
+### Input of `flood()`:
 
-The `flood` function takes four parameters:
+The `flood()` function takes four parameters:
 
 + `color : WaterColor`: The color that the player just selected. It is an instance of the `WaterColor` enum.
 
@@ -86,9 +86,9 @@ to the color of a tile, which can be obtained using the `getColor` method.
 + `board_size : Integer`: the number of rows of tiles in the board.
 The number of columns is the same as the number of rows because the board is square.
 
-### Output of `flood`:
+### Output of `flood()`:
 
-The `flood` function modifies `flooded_list` by adding the newly flooded tiles.
+The `flood()` function modifies `flooded_list` by adding the newly flooded tiles.
 Please note that you are not responsible for changing the color of any tiles.
 
 **[Definition 1]** We say that a tile _neighbors_ another tile if it is directly above, below, left, or right,
@@ -96,9 +96,9 @@ that is, sharing a side with the other one.
 
 The `Coord` class contains some helpful functions:
 
-+ `up`, `down`, `left`, and `right`: compute the coordinates of neighboring tiles
-+ `onBoard`: tells you whether a coordinate is on the board
-+ `neightbors`: returns a list of neighboring coordinates
++ `up()`, `down()`, `left()`, and `right()`: compute the coordinates of neighboring tiles
++ `onBoard()`: tells you whether a coordinate is on the board
++ `neightbors()`: returns a list of neighboring coordinates
 
 **[Definition 2]** An X-colored region is a set of tiles defined as follows:
 
@@ -111,7 +111,7 @@ The `Coord` class contains some helpful functions:
 <!-- X-colored region to the flooded_list, provided the region contains a tile that -->
 <!-- is adjacent to a tile in the flooded_list. -->
 
-Given a `flooded_list` and a player selected color X, the `flood` function should add every
+Given a `flooded_list` and a player selected color X, the `flood()` function should add every
 X-colored region to the `flooded_list`, provided that the region contains a tile that neighbors
 a tile in the `flooded_list`.
 
