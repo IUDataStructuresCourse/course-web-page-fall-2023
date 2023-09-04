@@ -1,6 +1,6 @@
 # Project 1: Flood It! 🌊
 
-**[Note]** This is a group project. Every group member submits their solutions on Autograder individually.
+**[Note]** This is a group project. Every group member submits their solutions on Autograder <mark>individually</mark>.
 
 ## Table of Contents
 
