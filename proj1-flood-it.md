@@ -1,6 +1,7 @@
 # Project 1: Flood It! 🌊
 
-**[Note]** This is a group project. Every group member submits their solutions on Autograder <mark>individually</mark>.
+**[Note]** This is a group project. Students work in groups of 3 ~ 4 people.
+  After completion, Every group member submits their solutions on Autograder <mark>individually</mark>.
 
 ## Table of Contents
 
@@ -126,6 +127,8 @@ Program `flood()` according to [the specifications](#specifications-of-flood).
 
 Before submitting to Autograder, test your code locally by writing test cases in `src/FloodTest.java`.
 We have included a simple test case in that file to get you started.
+
+> [Development note] You may submit just `Flood.java` on Autograder to test the correctness of `flood()`.
 
 ### Problem 2: Plotting Execution Time and Analyzing Time Complexity
 
