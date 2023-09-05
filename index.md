@@ -50,7 +50,7 @@ Aug. 30 | [Algorithm Analysis continued](./lectures/Aug-30.md)  | Ch. 2     | [H
 Sep. 1  |                                       |              | [Lab 2: Array Search](./lab2) | [submit](https://autograder.luddy.indiana.edu/web/project/696)
 Sep. 4  | Labor Day
 Sep. 5  |                                       |              | Lab 2: Array Search due |
-Sep. 8  |                                       |              | [Lab: work on Project 1 FloodIt!](./proj1-flood-it) | [submit](https://autograder.luddy.indiana.edu/web/project/691)
+Sep. 8  | <mark>Quiz 1<mark>                    |              | [Lab: work on Project 1 FloodIt!](./proj1-flood-it) | [submit](https://autograder.luddy.indiana.edu/web/project/691)
 Sep. 11 |                                       |              | <mark>Project 1: FloodIt! due</mark> |
 
 **Resources**
