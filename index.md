@@ -22,6 +22,9 @@ Mondays and Wednesdays 1:15pm-2:30pm, Ballantine Hall (BH), Room 344.
 
 Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
 
+Expect at least one quiz per month during lab time.
+Quizzes last 15 minutes at the beginning of lab sessions.
+
 **Instructors and Office Hours**
 
 * Jeremy Siek (jsiek), office hours: Mondays 3:30pm to 4:30pm, Fridays 1:00-2:00pm in Luddy 3014.
