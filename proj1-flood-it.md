@@ -113,9 +113,9 @@ The `Coord` class contains some helpful functions:
 <!-- X-colored region to the flooded_list, provided the region contains a tile that -->
 <!-- is adjacent to a tile in the flooded_list. -->
 
-Given a `flooded_list` and a player selected color X, the `flood()` function should add every
-X-colored region to the `flooded_list`, provided that the region contains a tile that neighbors
-a tile in the `flooded_list`.
+Given a `flooded_list` and a player selected color X (parameter `color` in input),
+the `flood()` function should add every X-colored region to the `flooded_list`,
+provided that the region contains a tile that neighbors a tile in the `flooded_list`.
 
 ## Problem Set
 
