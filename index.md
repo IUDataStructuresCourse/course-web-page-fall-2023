@@ -23,7 +23,8 @@ Mondays and Wednesdays 1:15pm-2:30pm, Ballantine Hall (BH), Room 344.
 Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
 
 Expect at least one quiz per month during lab time.
-Quizzes last 15 minutes at the beginning of lab sessions.
+* 15 minutes, at the beginning of a lab session
+* Scope is everything turned in prior to the quiz, including homework and lab assignments
 
 **Instructors and Office Hours**
 
