@@ -140,6 +140,11 @@ This will display a graph of the execution time (along the y-axis)
 versus the number of tiles on the board (along the x-axis) and it will
 save the graph to PNG file named `result.png`.
 
+> [Development note] If your code is so slow that no graph is produced when running in batch mode,
+> try temporarily reducing the value of `MAX_BOARD_SIZE_FOR_AUTOPLAY` in `src/Constants.java`.
+> For each board size, the game is repeated 5 times to reduce the effect of noise.
+> Turning down the `NUM_GAMES_TO_AUTOPLAY` parameter may save you time during development.
+
 Look at the graph. Answer the following questions in your project write-up:
 
 + **[Question 1]** What function roughly fits that graph?
@@ -156,21 +161,17 @@ Look at the graph. Answer the following questions in your project write-up:
 
 Try to improve the time complexity of your flood function.
 
-Write new flood functions `flood1()`, `flood2()`... whose execution time does not grow so quickly
-as the number of tiles increases. When you run `floodN()` in batch mode, the timing for these alternate
-implementations will show up as gray lines.
+Write a new flood functions `flood1()`, whose execution time does not grow so quickly
+as the number of tiles increases. When you run `flood1()` in batch mode, the timing for
+the alternate implementation will show up as a gray line.
 
 Swap the names so that your most time efficient implementation is named `flood()`,
-so that it will be the version used interactively. Re-run with `"timing"` and produce a graph, in which the line
-of the most efficient version is highlighted in red.
+so that it will be the version used interactively. Re-run with `"timing"` and produce a graph,
+in which the line of the most efficient version is in red.
 
-+ **[Question 5]** What is the time complexity of your alternative implementations? Comment the functions with their
-  time complexity in your code. Write down the function names and their time complexity in your write-up.
-
-Development note: If your code is so slow that no graph is produced when running in batch mode,
-try temporarily reducing the value of `MAX_BOARD_SIZE_FOR_AUTOPLAY` in `src/Constants.java`.
-For each board size, the game is repeated 5 times to reduce the effect of noise.
-Turning down the `NUM_GAMES_TO_AUTOPLAY` parameter may save you time during development.
++ **[Question 5]** What is the time complexity of your alternative implementation?
+  Comment the function with its time complexity in your code and write down the
+  time complexity in your write-up.
 
 -----------------
 
