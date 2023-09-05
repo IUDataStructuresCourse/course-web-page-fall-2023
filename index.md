@@ -38,17 +38,17 @@ Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
 
 **Schedule**
 
-Day     | Lecture Topic                         | Reading Due  | Assignments and Due Dates
-Aug. 21 | [Introduction](./lectures/Aug-21.md)              |              |
-Aug. 23 | [Arrays, Rotation, Testing](./lectures/Aug-23.md) | Ch. 1        | 
-Aug. 25 |                                                   |              | [Lab 1: Array Search Testing](./lab1)
-Aug. 28 | [Algorithm Analysis](./lectures/Aug-28.md) [video](https://iu.mediaspace.kaltura.com/media/t/1_5ew3wcw4)       |              | Lab 1 due.
-Aug. 30 | [Algorithm Analysis continued](./lectures/Aug-30.md) [video](https://iu.mediaspace.kaltura.com/media/t/1_z2rhhygd)                     | Ch. 2        | [Homework 1](./homework/HW1.md) due.
-Sep. 1  |                                       |              | [Lab 2: Array Search](./lab2)
+Day     | Lecture Topic                         | Reading Due  | Assignments and Due Dates | Link
+Aug. 21 | [Introduction](./lectures/Aug-21.md)              |              | |
+Aug. 23 | [Arrays, Rotation, Testing](./lectures/Aug-23.md) | Ch. 1        | |
+Aug. 25 |                                                   |              | [Lab 1: Array Search Testing](./lab1) | [submit](https://autograder.luddy.indiana.edu/web/project/784)
+Aug. 28 | [Algorithm Analysis](./lectures/Aug-28.md)       |    | Lab 1 due | [video](https://iu.mediaspace.kaltura.com/media/t/1_5ew3wcw4)
+Aug. 30 | [Algorithm Analysis continued](./lectures/Aug-30.md)  | Ch. 2     | [Homework 1](./homework/HW1.md) due | [video](https://iu.mediaspace.kaltura.com/media/t/1_z2rhhygd)
+Sep. 1  |                                       |              | [Lab 2: Array Search](./lab2) | [submit](https://autograder.luddy.indiana.edu/web/project/696)
 Sep. 4  | Labor Day
-Sep. 5  |                                       |              | Lab 2: Array Search due
-Sep. 8  |                                       |              | [Lab: work on Project 1 FloodIt!](./proj1-flood-it)
-Sep. 11 |                                       |              | <mark>Project 1: FloodIt! due</mark>
+Sep. 5  |                                       |              | Lab 2: Array Search due |
+Sep. 8  |                                       |              | [Lab: work on Project 1 FloodIt!](./proj1-flood-it) | [submit](#)
+Sep. 11 |                                       |              | <mark>Project 1: FloodIt! due</mark> |
 
 **Resources**
 
