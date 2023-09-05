@@ -176,6 +176,10 @@ in which the line of the most efficient version is in red.
   Comment the function with its time complexity in your code and write down the
   time complexity in your write-up.
 
+### Last Step: Checking Your Submission
+
+Make sure all three files were submitted: `Flood.java` (both `flood()` and `flood1()`), `result.png` and `README.md`.
+
 -----------------
 
 * You have finally reached the end of Project 1. Congratulations!
