@@ -66,6 +66,11 @@ Sep. 11 |                                       |              | <mark>Project 1
 * Midterm Exam (25%)
 * Final Exam (35%)
 
+**Late Policy**
+
+100% | before 1st deadline
+90%  | before 2nd deadline (one week after 1st)
+0%   | after  2nd deadline
 
 **Bias-Based Incident Reporting.**
 
