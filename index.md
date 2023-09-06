@@ -22,6 +22,10 @@ Mondays and Wednesdays 1:15pm-2:30pm, Ballantine Hall (BH), Room 344.
 
 Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
 
+Expect at least one quiz per month during lab time.
+* 15 minutes, at the beginning of a lab session
+* Scope is everything turned in prior to the quiz, including homework and lab assignments
+
 **Instructors and Office Hours**
 
 * Jeremy Siek (jsiek), office hours: Mondays 3:30pm to 4:30pm, Fridays 1:00-2:00pm in Luddy 3014.
@@ -38,19 +42,20 @@ Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
 
 **Schedule**
 
-Day     | Lecture Topic                         | Reading Due  | Assignments and Due Dates
-Aug. 21 | [Introduction](./lectures/Aug-21.md)              |              |
-Aug. 23 | [Arrays, Rotation, Testing](./lectures/Aug-23.md) | Ch. 1        | 
-Aug. 25 |                                                   |              | [Lab 1: Array Search Testing](./lab1)
-Aug. 28 | [Algorithm Analysis](./lectures/Aug-28.md) [video](https://iu.mediaspace.kaltura.com/media/t/1_5ew3wcw4)       |              | Lab 1 due.
-Aug. 30 | [Algorithm Analysis continued](./lectures/Aug-30.md) [video](https://iu.mediaspace.kaltura.com/media/t/1_z2rhhygd)                     | Ch. 2        | [Homework 1](./homework/HW1.md) due.
-Sep. 1  |                                       |              | [Lab 2: Array Search](./lab2)
+Day     | Lecture Topic                         | Reading Due  | Assignments and Due Dates | Link
+Aug. 21 | [Introduction](./lectures/Aug-21.md)              |              | |
+Aug. 23 | [Arrays, Rotation, Testing](./lectures/Aug-23.md) | Ch. 1        | |
+Aug. 25 |                                                   |              | [Lab 1: Array Search Testing](./lab1) | [submit](https://autograder.luddy.indiana.edu/web/project/784)
+Aug. 28 | [Algorithm Analysis](./lectures/Aug-28.md)       |    | Lab 1 due | [video](https://iu.mediaspace.kaltura.com/media/t/1_5ew3wcw4)
+Aug. 30 | [Algorithm Analysis continued](./lectures/Aug-30.md)  | Ch. 2     | [Homework 1](./homework/HW1.md) due | [video](https://iu.mediaspace.kaltura.com/media/t/1_z2rhhygd)
+Sep. 1  |                                       |              | [Lab 2: Array Search](./lab2) | [submit](https://autograder.luddy.indiana.edu/web/project/696)
 Sep. 4  | Labor Day
-Sep. 5  |                                       |              | Lab 2: Array Search due
-Sep. 6  | [Linked Lists and Abstract Data Types](./lectures/Sep-6.md) | Ch. 3 sec. 1-5
-Sep. 8  |                                       |              | Lab: work on FloodIt! project
-Sep. 11 | More ADTs, Binary Trees               | Ch. 3 sec. 6-7, Ch. 4 sec 1-2 | Project 1 : FloodIt! due.
-Sep. 13 | Binary Search Trees                   | Ch. 4 sec. 3 and 7 
+Sep. 5  |                                       |              | Lab 2: Array Search due |
+Sep. 6  | [Linked Lists and Abstract Data Types](./lectures/Sep-6.md) | Ch. 3 sec. 1-5 |
+Sep. 8  | <mark>Quiz 1<mark>                    |              | [Lab: work on Project 1 FloodIt!](./proj1-flood-it) | [submit](https://autograder.luddy.indiana.edu/web/project/691) |
+Sep. 11 | More ADTs, Binary Trees               | Ch. 3 sec. 6-7, Ch. 4 sec 1-2 | <mark>Project 1: FloodIt! due</mark> |
+Sep. 13 | Binary Search Trees                   | Ch. 4 sec. 3 and 7  |
+
 
 **Resources**
 
@@ -68,6 +73,11 @@ Sep. 13 | Binary Search Trees                   | Ch. 4 sec. 3 and 7
 * Midterm Exam (25%)
 * Final Exam (35%)
 
+**Late Policy**
+
+100% | before 1st deadline
+90%  | before 2nd deadline (one week after 1st)
+0%   | after  2nd deadline
 
 **Bias-Based Incident Reporting.**
 
