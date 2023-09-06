@@ -47,8 +47,10 @@ Aug. 30 | [Algorithm Analysis continued](./lectures/Aug-30.md) [video](https://i
 Sep. 1  |                                       |              | [Lab 2: Array Search](./lab2)
 Sep. 4  | Labor Day
 Sep. 5  |                                       |              | Lab 2: Array Search due
+Sep. 6  | [Linked Lists and Abstract Data Types](./lectures/Sep-6.md) | Ch. 3 sec. 1-5
 Sep. 8  |                                       |              | Lab: work on FloodIt! project
-Sep. 11 |                                       |              | Project 1 : FloodIt! due.
+Sep. 11 | More ADTs, Binary Trees               | Ch. 3 sec. 6-7, Ch. 4 sec 1-2 | Project 1 : FloodIt! due.
+Sep. 13 | Binary Search Trees                   | Ch. 4 sec. 3 and 7 
 
 **Resources**
 
