@@ -143,6 +143,10 @@ This will display a graph of the execution time (along the y-axis)
 versus the number of tiles on the board (along the x-axis) and it will
 save the graph to PNG file named `result.png`.
 
+> [Development note] If `flood1()` is empty, you may temporarily change the
+> loop variable `k` in `Game.batchTest()` to 1 to plot `flood()` only.
+> Remember to change `k` back in Problem 3.
+
 > [Development note] If your code is so slow that no graph is produced when running in batch mode,
 > try temporarily reducing the value of `MAX_BOARD_SIZE_FOR_AUTOPLAY` in `src/Constants.java`.
 > For each board size, the game is repeated 5 times to reduce the effect of noise.
