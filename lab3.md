@@ -8,9 +8,9 @@ the input list.
 
 Section 7.6 of the textbook describes merge sort on an array. The steps of the algorithms are
 
-+ split the input sequence in half,
-+ recursively sort the two halves, and
-+ merge the two results into one linked list.
++ split the input sequence in half
++ recursively sort the two halves
++ merge the two results into one
 
 You’ll need to adapt the algorithm for linked lists.
 The main difference between the two versions is that the sorted list is new in the first,
@@ -43,12 +43,29 @@ should rearrange the nodes into the following order:
 
 ## Problem Set
 
+### Testing Merge Sort
+
+Look at the `MergeSort.java` in student support code. Beside `sort()` and `sort_in_place()`,
+it contains the type signatures for `merge()` and `merge_in_place()`. The sort functions call
+their respective merge functions to combine two sorted halves into one.
+
+Before implementing the two versions of merge sort, think about their correctness criteria.
+Write test cases for `merge()`, `sort()`, `merge_in_place()` and `sort_in_place()`.
+Run your test cases on Autograder against four buggy implementations and see whether they can
+catch all the bugs!
+
+<details open="true">
+  <summary>Hints: a few things to test...</summary>
+  <ul>
+    <li>Whether <code>merge()</code> and `sort()` create new output lists</li>
+  </ul>
+</details>
+
 ### Implementing Merge Sort
 
 Implement both `sort()` (functional) and `sort_in_place()` (in-place) in class `MergeSort`.
 Both functions have a `Node`-typed parameter and `Node` return type, which point to the first node
 in the input list and the first node in the output list respectively.
-
 The `Node` class is defined in `Node.java`.
 
 <!-- You’ll need to implement two versions of the merge algorithm, one that returns a new linked list and the other that works in-place, rearranging the nodes. -->
