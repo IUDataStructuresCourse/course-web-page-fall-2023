@@ -8,9 +8,11 @@ the input list.
 
 Section 7.6 of the textbook describes merge sort on an array. The steps of the algorithms are
 
-+ split the input sequence in half
-+ recursively sort the two halves
-+ merge the two results into one
+1. Split the input sequence in half
+2. Recursively sort the two halves
+3. Merge the two results into one:
+   - scan through the two input sequences and choose the smaller of the two
+     current elements for the output sequence
 
 You’ll need to adapt the algorithm for linked lists.
 The main difference between the two versions is that the sorted list is new in the first,
@@ -43,7 +45,7 @@ should rearrange the nodes into the following order:
 
 ## Problem Set
 
-### Testing Merge Sort
+### Problem 1: Testing Merge Sort
 
 Look at `MergeSort.java` in the student support code. Apart from `sort()` and `sort_in_place()`,
 it also contains type signatures for `merge()` and `merge_in_place()`. The sort functions call
@@ -69,7 +71,7 @@ catch all the bugs!
   </ul>
 </details>
 
-### Implementing Merge Sort
+### Problem 2: Implementing Merge Sort
 
 Implement both `sort()` (functional) and `sort_in_place()` (in-place) in class `MergeSort`.
 Both functions have a `Node`-typed parameter and `Node` return type, which point to the first node
@@ -84,11 +86,11 @@ The `Node` class is defined in `Node.java`. As is mentioned above, they call `me
 <!-- produces the following newly allocated list -->
 
 <!-- [1] -> [2] -> [2] -> [3] -> [5] -> [6] -> [7] -> [8] -->
-<!-- The idea of the merge algorithm is to scan through the two input sequences, choosing the smaller of the two current elements for the output sequence. -->
+<!--  -->
 
-### Lab Report
+### Problem 3: Lab Report
 
-Answer the following questions in your lab write-up `README.md`:
+Answer the following questions in your lab write-up (`README.md`):
 
 + **[Question 1]** What is the time and space complexity of your `merge()` function?
 + **[Question 2]** What is the time and space complexity of your `sort()` function?
