@@ -45,19 +45,25 @@ should rearrange the nodes into the following order:
 
 ### Testing Merge Sort
 
-Look at the `MergeSort.java` in student support code. Beside `sort()` and `sort_in_place()`,
-it contains the type signatures for `merge()` and `merge_in_place()`. The sort functions call
+Look at `MergeSort.java` in the student support code. Apart from `sort()` and `sort_in_place()`,
+it also contains type signatures for `merge()` and `merge_in_place()`. The sort functions call
 their respective merge functions to combine two sorted halves into one.
 
 Before implementing the two versions of merge sort, think about their correctness criteria.
-Write test cases for `merge()`, `sort()`, `merge_in_place()` and `sort_in_place()`.
+Write regular, corner, and random test cases for `merge()`, `sort()`, `merge_in_place()`,
+and `sort_in_place()`.
 Run your test cases on Autograder against four buggy implementations and see whether they can
 catch all the bugs!
 
 <details open="true">
   <summary>Hints: a few things to test...</summary>
   <ul>
-    <li>Whether <code>merge()</code> and `sort()` create new output lists</li>
+    <li>Whether <code>merge()</code> and <code>sort()</code> create <em>new</em> output lists</li>
+    <li>Whether the output lists of <code>sort()</code> and <code>sort_in_place()</code> are sorted</li>
+    <li>Whether the output lists of <code>sort()</code> and <code>sort_in_place()</code> are permutations
+        of their input lists.</li>
+    <li>Corner cases</li>
+    <li>...</li>
   </ul>
 </details>
 
