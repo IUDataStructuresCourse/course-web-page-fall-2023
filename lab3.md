@@ -1,21 +1,24 @@
-# Lab 3: Merge Sort with Linked Lists
+# Lab 3: Merge Sort on Linked Lists
 
-## Overview
+## Background and Overview
 
 In this lab you are asked to implement two versions of merge sort on linked lists:
 one that produces a _new_, sorted list and another that works _in-place_ by changing
 the input list.
 
-Section 7.6 of the textbook describes merge sort on an array. The steps of the algorithms are
+Section 7.6 of the textbook describes merge sort on an array.
+You’ll need to adapt the algorithm for linked lists. The steps of the algorithms are
 
-+ split the input sequence in half
-+ recursively sort the two halves
-+ merge the two results into one
+1. Split the input sequence in half
+2. Recursively sort the two halves
+3. Merge the two results into one:
+   - scan through the two input sequences and choose the smaller of the two
+     current elements for the output sequence
 
-You’ll need to adapt the algorithm for linked lists.
-The main difference between the two versions is that the sorted list is new in the first,
-[functional](https://en.wikipedia.org/wiki/Functional_programming) version,
-while it overwrites the input list in the second, in-place version.
+The main difference between the two versions that you are supposed to write
+is that the sorted list is new in the first, [functional](https://en.wikipedia.org/wiki/Functional_programming)
+version, while it overwrites the input list in the second, in-place version.
+We will explain the difference using examples:
 
 **[Example 1]** The `sort` function applied to the following linked list
 
@@ -41,56 +44,85 @@ should rearrange the nodes into the following order:
 [2] -> [3] -> [6] -> [8]
 ```
 
+## Support Code and Submission
+
++ Student support code is at [link](https://github.com/IUDataStructuresCourse/merge-sort-list-student-support-code).
+  You may find the helper functions in `Utils.java` helpful.
++ Submit your test file `MergeSortTest.java` ([Problem 1](#problem-1-testing-merge-sort)) to
+  [link](https://autograder.luddy.indiana.edu/web/project/825).
++ Submit your code file `MergeSort.java` ([Problem 2](#problem-2-implementing-merge-sort))
+  and lab write-up `README.md` ([Problem 3](#problem-3-lab-report)) to
+  [link](https://autograder.luddy.indiana.edu/web/project/707).
+
 ## Problem Set
 
-### Testing Merge Sort
+Download student support code and import the project into IntelliJ.
 
-Look at the `MergeSort.java` in student support code. Beside `sort()` and `sort_in_place()`,
-it contains the type signatures for `merge()` and `merge_in_place()`. The sort functions call
-their respective merge functions to combine two sorted halves into one.
+### Problem 1: Testing Merge Sort
+
+Look at `MergeSort.java` in the student support code. Apart from `sort()` and `sort_in_place()`,
+it also contains type signatures for `merge()` and `merge_in_place()`. The sort functions call
+their respective merge functions to combine two sorted halves into one. Similar to their sorting
+counterparts, `merge()` creates a _new_ list from two input lists while `merge_in_place()` works
+in-place by rearranging the nodes.
+
+**[Example 3]** The `merge()` function applied to the following two sorted lists
+
+```
+[1] -> [2] -> [5] -> [7]
+[2] -> [3] -> [6] -> [8]
+```
+
+produces the following newly allocated list
+
+```
+[1] -> [2] -> [2] -> [3] -> [5] -> [6] -> [7] -> [8]
+```
 
 Before implementing the two versions of merge sort, think about their correctness criteria.
-Write test cases for `merge()`, `sort()`, `merge_in_place()` and `sort_in_place()`.
+_Write regular, corner, and random test cases_ for `merge()`, `sort()`, `merge_in_place()`,
+and `sort_in_place()`.
+
 Run your test cases on Autograder against four buggy implementations and see whether they can
 catch all the bugs!
 
 <details open="true">
   <summary>Hints: a few things to test...</summary>
   <ul>
-    <li>Whether <code>merge()</code> and `sort()` create new output lists</li>
+    <li>Whether <code>merge()</code> and <code>sort()</code> create <em>new</em> output lists</li>
+    <li>Whether the output lists of <code>sort()</code> and <code>sort_in_place()</code> are sorted</li>
+    <li>Whether the output lists of <code>sort()</code> and <code>sort_in_place()</code> are permutations
+        of their input lists</li>
+    <li>Corner cases</li>
+    <li>...</li>
   </ul>
 </details>
 
-### Implementing Merge Sort
+### Problem 2: Implementing Merge Sort
 
 Implement both `sort()` (functional) and `sort_in_place()` (in-place) in class `MergeSort`.
+
 Both functions have a `Node`-typed parameter and `Node` return type, which point to the first node
 in the input list and the first node in the output list respectively.
+As is mentioned in Problem 1, they should call `merge()` and
+`merge_in_place()` respectively, which you are supposed to implement as well.
 The `Node` class is defined in `Node.java`.
 
-<!-- You’ll need to implement two versions of the merge algorithm, one that returns a new linked list and the other that works in-place, rearranging the nodes. -->
+Before running your code on Autograder, test locally using your own test cases from Problem 1.
 
-<!-- static Node merge(Node A, Node B) { ... } -->
+### Problem 3: Lab Report
 
-<!-- static Node merge_in_place(Node A, Node B) { ... } -->
-<!-- For example, merge applied to the following two sorted lists -->
+Answer the following questions in your lab write-up (`README.md`):
 
-<!-- [1] -> [2] -> [5] -> [7] -->
-<!-- [2] -> [3] -> [6] -> [8] -->
-<!-- produces the following newly allocated list -->
++ **[Question 1]** What is the time and space complexity of your `merge()` function?
++ **[Question 2]** What is the time and space complexity of your `sort()` function?
++ **[Question 3]** What is the time and space complexity of your `merge_in_place()` function?
++ **[Question 4]** What is the time and space complexity of your `sort_in_place()` function?
 
-<!-- [1] -> [2] -> [2] -> [3] -> [5] -> [6] -> [7] -> [8] -->
-<!-- The idea of the merge algorithm is to scan through the two input sequences, choosing the smaller of the two current elements for the output sequence. -->
+### Last Step: Checking Your Submission
 
-<!-- Testing -->
-<!-- Create a file named MergeSortTest.java that includes three tests for each of your merge and sort methods. -->
+Make sure `MergeSort.java`, `MergeSortTest.java` and `README.md` were submitted.
 
-<!-- Questions -->
-<!-- In a file named README.md answer the following questions. -->
+-----------------
 
-<!-- What is the time and space complexity of your merge function? -->
-<!-- What is the time and space complexity of your sort function? -->
-<!-- What is the time and space complexity of your merge_in_place function? -->
-<!-- What is the time and space complexity of your sort_in_place function? -->
-<!-- Submission -->
-<!-- Submit your MergeSort.java, MergeSortTest.java, and README.md files to the autograder: -->
+* You have reached the end of Lab 3. Yay!
