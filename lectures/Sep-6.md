@@ -272,7 +272,7 @@ element of a `Sequence`.
 Here's what you need to know about `BiPredicate`:
 
     interface BiPredicate {
-	    boolean test(T t, U u); // Evaluates this predicate on the given arguments.
+	    boolean test(T t, U u);
 	}
     
 Student in-class exercise: implement Sequence using an array
