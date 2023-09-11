@@ -53,9 +53,23 @@ their respective merge functions to combine two sorted halves into one. Similar 
 counterparts, `merge()` creates a _new_ list from two input lists while `merge_in_place()` works
 in-place by rearranging the nodes.
 
+**[Example 3]** The `merge()` function applied to the following two sorted lists
+
+```
+[1] -> [2] -> [5] -> [7]
+[2] -> [3] -> [6] -> [8]
+```
+
+produces the following newly allocated list
+
+```
+[1] -> [2] -> [2] -> [3] -> [5] -> [6] -> [7] -> [8]
+```
+
 Before implementing the two versions of merge sort, think about their correctness criteria.
-Write regular, corner, and random test cases for `merge()`, `sort()`, `merge_in_place()`,
+_Write regular, corner, and random test cases_ for `merge()`, `sort()`, `merge_in_place()`,
 and `sort_in_place()`.
+
 Run your test cases on Autograder against four buggy implementations and see whether they can
 catch all the bugs!
 
@@ -74,19 +88,12 @@ catch all the bugs!
 ### Problem 2: Implementing Merge Sort
 
 Implement both `sort()` (functional) and `sort_in_place()` (in-place) in class `MergeSort`.
+
 Both functions have a `Node`-typed parameter and `Node` return type, which point to the first node
 in the input list and the first node in the output list respectively.
-The `Node` class is defined in `Node.java`. As is mentioned above, they call `merge()` and
+As is mentioned in Problem 1, they should call `merge()` and
 `merge_in_place()` respectively, which you are supposed to implement as well.
-
-<!-- For example, merge applied to the following two sorted lists -->
-
-<!-- [1] -> [2] -> [5] -> [7] -->
-<!-- [2] -> [3] -> [6] -> [8] -->
-<!-- produces the following newly allocated list -->
-
-<!-- [1] -> [2] -> [2] -> [3] -> [5] -> [6] -> [7] -> [8] -->
-<!--  -->
+The `Node` class is defined in `Node.java`.
 
 ### Problem 3: Lab Report
 
