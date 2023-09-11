@@ -1,12 +1,13 @@
 # Lab 3: Merge Sort with Linked Lists
 
-## Overview
+## Background and Overview
 
 In this lab you are asked to implement two versions of merge sort on linked lists:
 one that produces a _new_, sorted list and another that works _in-place_ by changing
 the input list.
 
-Section 7.6 of the textbook describes merge sort on an array. The steps of the algorithms are
+Section 7.6 of the textbook describes merge sort on an array.
+You’ll need to adapt the algorithm for linked lists. The steps of the algorithms are
 
 1. Split the input sequence in half
 2. Recursively sort the two halves
@@ -14,10 +15,10 @@ Section 7.6 of the textbook describes merge sort on an array. The steps of the a
    - scan through the two input sequences and choose the smaller of the two
      current elements for the output sequence
 
-You’ll need to adapt the algorithm for linked lists.
-The main difference between the two versions is that the sorted list is new in the first,
-[functional](https://en.wikipedia.org/wiki/Functional_programming) version,
-while it overwrites the input list in the second, in-place version.
+The main difference between the two versions that you are supposed to write
+is that the sorted list is new in the first, [functional](https://en.wikipedia.org/wiki/Functional_programming)
+version, while it overwrites the input list in the second, in-place version.
+We will explain the difference using examples:
 
 **[Example 1]** The `sort` function applied to the following linked list
 
@@ -42,6 +43,14 @@ should rearrange the nodes into the following order:
 ```
 [2] -> [3] -> [6] -> [8]
 ```
+
+## Submission
+
++ Submit your test file `MergeSortTest.java` ([Problem 1](#problem-1-testing-merge-sort)) to
+  [link](https://autograder.luddy.indiana.edu/web/project/825).
++ Submit your code file `MergeSort.java` ([Problem 2](#problem-2-implementing-merge-sort))
+  and lab write-up `README.md` ([Problem 3](#problem-3-lab-report)) to
+  [link](https://autograder.luddy.indiana.edu/web/project/707).
 
 ## Problem Set
 
