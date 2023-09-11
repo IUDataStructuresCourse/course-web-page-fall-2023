@@ -144,7 +144,8 @@ versus the number of tiles on the board (along the x-axis) and it will
 save the graph to PNG file named `result.png`.
 
 > [Development note] If `flood1()` is empty, you may temporarily change the
-> loop variable `k` in `Game.batchTest()` to 1 to plot `flood()` only.
+> limit for loop variable `k` in `Game.batchTest()` to `k != 1`, so that only
+> `flood()` is used for plotting.
 > Remember to change `k` back in Problem 3.
 
 > [Development note] If your code is so slow that no graph is produced when running in batch mode,
