@@ -1,4 +1,4 @@
-# Lab 3: Merge Sort with Linked Lists
+# Lab 3: Merge Sort on Linked Lists
 
 ## Background and Overview
 
@@ -44,8 +44,10 @@ should rearrange the nodes into the following order:
 [2] -> [3] -> [6] -> [8]
 ```
 
-## Submission
+## Support Code and Submission
 
++ Student support code is at [link](https://github.com/IUDataStructuresCourse/merge-sort-list-student-support-code).
+  You may find the helper functions in `Utils.java` helpful.
 + Submit your test file `MergeSortTest.java` ([Problem 1](#problem-1-testing-merge-sort)) to
   [link](https://autograder.luddy.indiana.edu/web/project/825).
 + Submit your code file `MergeSort.java` ([Problem 2](#problem-2-implementing-merge-sort))
@@ -104,6 +106,8 @@ As is mentioned in Problem 1, they should call `merge()` and
 `merge_in_place()` respectively, which you are supposed to implement as well.
 The `Node` class is defined in `Node.java`.
 
+Before running your code on Autograder, test locally using your own test cases from Problem 1.
+
 ### Problem 3: Lab Report
 
 Answer the following questions in your lab write-up (`README.md`):
@@ -113,5 +117,10 @@ Answer the following questions in your lab write-up (`README.md`):
 + **[Question 3]** What is the time and space complexity of your `merge_in_place()` function?
 + **[Question 4]** What is the time and space complexity of your `sort_in_place()` function?
 
-<!-- Submission -->
-<!-- Submit your MergeSort.java, MergeSortTest.java, and README.md files to the autograder: -->
+### Last Step: Checking Your Submission
+
+Make sure `MergeSort.java`, `MergeSortTest.java` and `README.md` were submitted.
+
+-----------------
+
+* You have reached the end of Lab 2. Yay!
