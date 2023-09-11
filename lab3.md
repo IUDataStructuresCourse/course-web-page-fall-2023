@@ -47,7 +47,9 @@ should rearrange the nodes into the following order:
 
 Look at `MergeSort.java` in the student support code. Apart from `sort()` and `sort_in_place()`,
 it also contains type signatures for `merge()` and `merge_in_place()`. The sort functions call
-their respective merge functions to combine two sorted halves into one.
+their respective merge functions to combine two sorted halves into one. Similar to their sorting
+counterparts, `merge()` creates a _new_ list from two input lists while `merge_in_place()` works
+in-place by rearranging the nodes.
 
 Before implementing the two versions of merge sort, think about their correctness criteria.
 Write regular, corner, and random test cases for `merge()`, `sort()`, `merge_in_place()`,
@@ -61,7 +63,7 @@ catch all the bugs!
     <li>Whether <code>merge()</code> and <code>sort()</code> create <em>new</em> output lists</li>
     <li>Whether the output lists of <code>sort()</code> and <code>sort_in_place()</code> are sorted</li>
     <li>Whether the output lists of <code>sort()</code> and <code>sort_in_place()</code> are permutations
-        of their input lists.</li>
+        of their input lists</li>
     <li>Corner cases</li>
     <li>...</li>
   </ul>
@@ -72,13 +74,9 @@ catch all the bugs!
 Implement both `sort()` (functional) and `sort_in_place()` (in-place) in class `MergeSort`.
 Both functions have a `Node`-typed parameter and `Node` return type, which point to the first node
 in the input list and the first node in the output list respectively.
-The `Node` class is defined in `Node.java`.
+The `Node` class is defined in `Node.java`. As is mentioned above, they call `merge()` and
+`merge_in_place()` respectively, which you are supposed to implement as well.
 
-<!-- You’ll need to implement two versions of the merge algorithm, one that returns a new linked list and the other that works in-place, rearranging the nodes. -->
-
-<!-- static Node merge(Node A, Node B) { ... } -->
-
-<!-- static Node merge_in_place(Node A, Node B) { ... } -->
 <!-- For example, merge applied to the following two sorted lists -->
 
 <!-- [1] -> [2] -> [5] -> [7] -->
@@ -88,15 +86,14 @@ The `Node` class is defined in `Node.java`.
 <!-- [1] -> [2] -> [2] -> [3] -> [5] -> [6] -> [7] -> [8] -->
 <!-- The idea of the merge algorithm is to scan through the two input sequences, choosing the smaller of the two current elements for the output sequence. -->
 
-<!-- Testing -->
-<!-- Create a file named MergeSortTest.java that includes three tests for each of your merge and sort methods. -->
+### Lab Report
 
-<!-- Questions -->
-<!-- In a file named README.md answer the following questions. -->
+Answer the following questions in your lab write-up `README.md`:
 
-<!-- What is the time and space complexity of your merge function? -->
-<!-- What is the time and space complexity of your sort function? -->
-<!-- What is the time and space complexity of your merge_in_place function? -->
-<!-- What is the time and space complexity of your sort_in_place function? -->
++ **[Question 1]** What is the time and space complexity of your `merge()` function?
++ **[Question 2]** What is the time and space complexity of your `sort()` function?
++ **[Question 3]** What is the time and space complexity of your `merge_in_place()` function?
++ **[Question 4]** What is the time and space complexity of your `sort_in_place()` function?
+
 <!-- Submission -->
 <!-- Submit your MergeSort.java, MergeSortTest.java, and README.md files to the autograder: -->
