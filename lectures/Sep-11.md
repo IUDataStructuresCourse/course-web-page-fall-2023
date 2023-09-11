@@ -121,16 +121,16 @@ We can traverse a binary tree in several different ways:
 
 Example:
 
-				 10
-				/ \
-			   /   \
-			  5     14
-			 / \     \
-			2   7     19
+                 10
+                / \
+               /   \
+              5     14
+             / \     \
+            2   7     19
 
-			pre:  10,5,2,7,14,19
-			in:   2,5,7,10,14,19
-			post: 2,7,5,19,14,10
+            pre:  10,5,2,7,14,19
+            in:   2,5,7,10,14,19
+            post: 2,7,5,19,14,10
 
 
 ## Next and Previous operations with respect to inorder traversal
