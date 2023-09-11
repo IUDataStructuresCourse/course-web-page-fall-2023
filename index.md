@@ -52,7 +52,7 @@ Sep. 1  |                                       |              | [Lab 2: Array S
 Sep. 4  | Labor Day
 Sep. 5  |                                       |              | Lab 2: Array Search due |
 Sep. 6  | [Linked Lists and Abstract Data Types](./lectures/Sep-6.md) | Ch. 3 sec. 1-5 |
-Sep. 8  | <mark>Quiz 1<mark>                    |              | [Lab: work on Project 1 FloodIt!](./proj1-flood-it) | [submit](https://autograder.luddy.indiana.edu/web/project/691) |
+Sep. 8  | [Quiz 1](https://iu.instructure.com/courses/2165834/quizzes/4040693)                    |              | [Lab: work on Project 1 FloodIt!](./proj1-flood-it) | [submit](https://autograder.luddy.indiana.edu/web/project/691) |
 Sep. 11 | [More ADTs, Binary Trees](./lectures/Sep-11.md)               | Ch. 3 sec. 6-7, Ch. 4 sec 1-2 | <mark>Project 1: FloodIt! due</mark> |
 Sep. 13 | Binary Search Trees                   | Ch. 4 sec. 3 and 7  |
 
