@@ -56,6 +56,8 @@ should rearrange the nodes into the following order:
 
 ## Problem Set
 
+Download student support code and import the project into IntelliJ.
+
 ### Problem 1: Testing Merge Sort
 
 Look at `MergeSort.java` in the student support code. Apart from `sort()` and `sort_in_place()`,
@@ -123,4 +125,4 @@ Make sure `MergeSort.java`, `MergeSortTest.java` and `README.md` were submitted.
 
 -----------------
 
-* You have reached the end of Lab 2. Yay!
+* You have reached the end of Lab 3. Yay!
