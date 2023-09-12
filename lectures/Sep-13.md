@@ -135,7 +135,7 @@ or null if the key is already in the tree.
 
 <details>
   <summary>Solution</summary>
-  <code>
+  <textarea>
       public Node<K> insert(K key) {
         Node<K> n = find(key, root, null);
         if (n == null){
@@ -152,7 +152,7 @@ or null if the key is already in the tree.
         } else
             return null;
     }
-  </code>
+  </textarea>
 </details>
 
 
