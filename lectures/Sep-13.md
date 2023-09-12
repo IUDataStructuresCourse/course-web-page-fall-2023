@@ -44,47 +44,60 @@ public class BinarySearchTree<K> {
 }
 ```
 
-<!-- ## `find`, `search`, and `contains` methods of `BinarySearchTree`. -->
+## `find`, `search`, and `contains` methods of `BinarySearchTree`.
 
-<!-- Example: Search for 6, 9, 15 in the following tree: -->
+Example: Search for 6, 9, 15 in the following tree:
 
-<!--           8 -->
-<!--         /   \ -->
-<!--        /     \ -->
-<!--       3       10 -->
-<!--      / \        \ -->
-<!--     1   6       14 -->
-<!--        / \     / -->
-<!--       4   7   13 -->
+```
+          8
+        /   \
+       /     \
+      3       10
+     / \        \
+    1   6       14
+       / \     /
+      4   7   13
+```
 
-<!-- Find the node with the specified key, or if there is none, the parent of -->
-<!-- where such a node would be. -->
+The `find()` method looks for the node with the specified key; if there is none,
+the parent of where such a node would be.
 
-<!--     protected Node find(K key, Node curr, Node parent) { -->
-<!--         if (curr == null) -->
-<!--             return parent; -->
-<!--         else if (lessThan(key, curr.data)) -->
-<!--             return find(key, curr.left, curr); -->
-<!--         else if (lessThan(curr.data, key)) -->
-<!--             return find(key, curr.right, curr); -->
-<!--         else -->
-<!--             return curr; -->
-<!--     } -->
+```java
+    protected Node<K> find(K key, Node<K> curr, Node<K> parent) {
+        if (curr == null)
+            return parent;
+        else if (lessThan.test(key, curr.data))
+            return find(key, curr.left, curr);
+        else if (lessThan.test(curr.data, key))
+            return find(key, curr.right, curr);
+        else
+            return curr;
+    }
+```
 
-<!--     public Node search(K key) { -->
-<!--         Node n = find(key, root, null); -->
-<!--         if (n != null && n.data.equals(key)) -->
-<!--             return n; -->
-<!--         else -->
-<!--             return null; -->
-<!--     } -->
+The `search()` method looks for the specified key and returns the node
+if the key is found.
 
-<!--     public boolean contains(K key) { -->
-<!--         return search(key) != null; -->
-<!--     } -->
+```java
+    public Node<K> search(K key) {
+        Node<K> n = find(key, root, null);
+        if (n != null && n.data.equals(key))
+            return n;
+        else
+            return null;
+    }
+```
 
-<!-- What is the time complexity? answer: O(h), where h is the -->
-<!-- height of the tree -->
+The `contains()` method returns true if the key is found and false otherwise.
+
+```java
+    public boolean contains(K key) {
+        Node<K> p = search(key);
+        return p != null;
+    }
+```
+
+What is the time complexity? $O(h)$, where $h$ is the height of the tree.
 
 <!-- ## **Student in-class exercise**:  -->
 
