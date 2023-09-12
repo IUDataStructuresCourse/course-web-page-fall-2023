@@ -44,7 +44,9 @@ public class BinarySearchTree<K> {
 }
 ```
 
-## `find`, `search`, and `contains` methods of `BinarySearchTree`.
+## `find`, `search`, and `contains` methods of `BinarySearchTree`
+
+Book 4.3.1.
 
 Example: Search for 6, 9, 15 in the following tree:
 
@@ -99,41 +101,59 @@ The `contains()` method returns true if the key is found and false otherwise.
 
 What is the time complexity? $O(h)$, where $h$ is the height of the tree.
 
-<!-- ## **Student in-class exercise**:  -->
+## `insert` method of `BinarySearchTree`
 
-<!-- `insert` into a binary search tree using the `find` method. -->
+Book 4.3.3.
 
-<!-- Return the inserted node, -->
-<!-- or null if the key is already in the tree. -->
+Similarly we can perform insertions on BSTs. The `insert()` method takes
+the key to add to the tree and returns the new root.
 
+```java
+    protected Node<K> insert_rec(K key) {
+        return insert_helper(key, root);
+    }
 
+    protected Node<K> insert_helper(K key, Node<K> curr) {
+        if (curr == null)
+            return new Node<>(key, null, null);
+        else if (lessThan.test(key, curr.data))
+            curr.left = insert_helper(key, curr.left);
+        else if (lessThan.test(curr.data, key))
+            curr.right = insert_helper(key, curr.right);
+        else
+            ; // duplicate; do nothing
+        return curr;
+    }
+```
 
+What is the time complexity? $O(h)$, where $h$ is the height of the tree.
 
+## In-class Exercise: insert using `find`
 
+Insert into a binary search tree using the `find` method. Return the inserted node,
+or null if the key is already in the tree.
 
-
-
-
-<!-- Solution: -->
-
-<!--     public Node insert(K key) { -->
-<!--         Node n = find(key, root, null); -->
-<!--         if (n == null){ -->
-<!--             root = new Node(key); -->
-<!--             return root; -->
-<!--         } else if (lessThan(key, n.data)) { -->
-<!--             Node x = new Node(key); -->
-<!--             n.left = x; -->
-<!--             return x; -->
-<!--         }  else if (lessThan(n.data, key)) { -->
-<!--             Node x = new Node(key); -->
-<!--             n.right = x; -->
-<!--             return x; -->
-<!--         } else -->
-<!--             return null; -->
-<!--     } -->
-
-<!-- What is the time complexity? answer: O(h) where h is the height of the tree. -->
+<details>
+  <summary>Solution</summary>
+  <code>
+      public Node<K> insert(K key) {
+        Node<K> n = find(key, root, null);
+        if (n == null){
+            root = new Node<K>(key);
+            return root;
+        } else if (lessThan.test(key, n.data)) {
+            Node<K> x = new Node<K>(key);
+            n.left = x;
+            return x;
+        }  else if (lessThan.test(n.data, key)) {
+            Node<K> x = new Node<K>(key);
+            n.right = x;
+            return x;
+        } else
+            return null;
+    }
+  </code>
+</details>
 
 
 <!-- ## Remove node z -->
