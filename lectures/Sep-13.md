@@ -34,7 +34,7 @@ public class BinarySearchTree<K> {
 
     static class Node<K> {
         K data;
-        Node<K> left, right, parent;
+        Node<K> left, right;
         // ...
     }
 
