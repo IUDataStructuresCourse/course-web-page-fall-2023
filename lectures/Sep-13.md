@@ -133,10 +133,10 @@ What is the time complexity? $O(h)$, where $h$ is the height of the tree.
 Insert into a binary search tree using the `find` method. Return the inserted node,
 or null if the key is already in the tree.
 
-<details>
-  <summary>Solution</summary>
-  <textarea>
-      public Node<K> insert(K key) {
+Solution:
+
+```java
+    public Node<K> insert(K key) {
         Node<K> n = find(key, root, null);
         if (n == null){
             root = new Node<K>(key);
@@ -152,92 +152,99 @@ or null if the key is already in the tree.
         } else
             return null;
     }
-  </textarea>
-</details>
+```
 
+## `remove`  method of `BinarySearchTree`
 
-<!-- ## Remove node z -->
+* Case 1: no left child
 
-<!-- * Case 1: (no left child) -->
+```
+          |              |
+        z=o              A
+           \       ==>
+            A
+```
 
-<!--           |              | -->
-<!--         z=o              A -->
-<!--            \       ==> -->
-<!--             A -->
+* Case 2: no right child
 
-<!-- * Case 2: (no right child) -->
+```
+            |            |
+          z=o            A
+           /       ==>
+          A
+```
 
-<!--             |            | -->
-<!--           z=o            A -->
-<!--            /       ==> -->
-<!--           A -->
+* Case 3: two children
 
-<!-- * Case 3: Two children -->
+```
+             |
+           z=o
+            / \
+           A   B
+```
 
-<!--              | -->
-<!--            z=o -->
-<!--             / \ -->
-<!--            A   B -->
+The main idea is to replace z with the node after z, which is the
+first node y in subtree B.
 
-<!--     The main idea is to replace z with the node after z, which -->
-<!--     is the first node y in subtree B. -->
+Two cases to consider:
 
-<!--     Two cases to consider: -->
+- Case a) B is y
 
-<!--     Case a) B is y -->
+```
+             |                  |
+           z=o        ==>       y
+            / \                / \
+           A   y              A   C
+                \
+                 C
+```
 
-<!--              |                  | -->
-<!--            z=o        ==>       y -->
-<!--             / \                / \ -->
-<!--            A   y              A   C -->
-<!--                 \ -->
-<!--                  C -->
+- Case b) B is not y (y is properly inside B)
 
-<!--     Case b) B is not y (y is properly inside B) -->
+```
+             |                  |
+           z=o        ==>       y
+            / \                / \
+           A   B             A    B
+              ...                ...
+               |                  |
+               y                  C
+                \
+                 C
+```
 
-<!--              |                  | -->
-<!--            z=o        ==>       y -->
-<!--             / \                / \ -->
-<!--            A   B             A    B -->
-<!--               ...                ... -->
-<!--                |                  | -->
-<!--                y                  C -->
-<!--                 \ -->
-<!--                  C       -->
+What is the time complexity? $O(h)$, where $h$ is the height.
 
-<!--     What is the time complexity? answer: O(h) where h is the height -->
+Solution for `remove()`:
 
-<!-- Solution for `remove`: -->
+```java
+    public void remove(K key) {
+        Node n = remove_helper(root, key);
+        if (n != null) {
+            root = n;
+        }
+    }
 
-<!--     public void remove(T key) { -->
-<!--        Node n = remove_helper(root, key); -->
-<!-- 	   if (n != null) { -->
-<!-- 	      root = n; -->
-<!-- 	   } -->
-<!--     } -->
-
-<!--     private Node remove_helper(Node n, int key) { -->
-<!--         if (n == null) { -->
-<!--             return null; -->
-<!--         } else if (lessThan(key, n.data)) { // remove in left subtree -->
-<!--             n.left = remove_helper(n.left, key); -->
-<!-- 			n.left.parent = n; -->
-<!--             return n; -->
-<!--         } else if (lessThan(n.data, key)) { // remove in right subtree -->
-<!--             n.right = remove_helper(n.right, key); -->
-<!-- 			n.right.parent = n; -->
-<!--             return n; -->
-<!--         } else { // remove this node -->
-<!--             if (n.left == null) { -->
-<!--                 return n.right; -->
-<!--             } else if (n.right == null) { -->
-<!--                 return n.left; -->
-<!--             } else { // two children, replace with first of right subtree -->
-<!--                 Node min = n.right.first(); // min == n.right -->
-<!--                 n.data = min.data; -->
-<!--                 n.right = n.right.delete_first(); // another helper function -->
-<!-- 			    n.right.parent = n; -->
-<!--                 return n; -->
-<!--             } -->
-<!--         } -->
-<!--     } -->
+    private Node remove_helper(Node<K> curr, K key) {
+        if (curr == null) {
+            return null;
+        } else if (lessThan.test(key, curr.data)) { // remove in left subtree
+            curr.left = remove_helper(curr.left, key);
+            return curr;
+        } else if (lessThan.test(curr.data, key)) { // remove in right subtree
+            curr.right = remove_helper(curr.right, key);
+            return curr;
+        } else {      // remove this node
+            if (curr.left == null) {
+                return curr.right;
+            } else if (curr.right == null) {
+                return curr.left;
+            } else {   // two children, replace with first of right subtree
+                Node<K> min = curr.right.first();
+                curr.data = min.data;
+                curr.right = remove_helper(curr.right, min.data);
+                return curr;
+            }
+        }
+    }
+```
