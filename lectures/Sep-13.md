@@ -156,6 +156,8 @@ Solution:
 
 ## `remove`  method of `BinarySearchTree`
 
+Book 4.3.4.
+
 * Case 1: no left child
 
 ```
