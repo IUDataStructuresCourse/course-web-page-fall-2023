@@ -110,7 +110,8 @@ the key to add to the tree and returns the new root.
 
 ```java
     public Node<K> insert_rec(K key) {
-        return insert_helper(key, root);
+        root = insert_helper(key, root);
+        return root;
     }
 
     private Node<K> insert_helper(K key, Node<K> curr) {
