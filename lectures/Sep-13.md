@@ -134,8 +134,8 @@ What is the time complexity? $O(h)$, where $h$ is the height of the tree.
 Insert into a binary search tree using the `find` method. Return the inserted node,
 or null if the key is already in the tree.
 
-Solution:
-
+<details>
+<summary>Solution:</summary>
 ```java
     public Node<K> insert(K key) {
         Node<K> n = find(key, root, null);
@@ -154,6 +154,8 @@ Solution:
             return null;
     }
 ```
+</details>
+
 
 ## `remove`  method of `BinarySearchTree`
 
