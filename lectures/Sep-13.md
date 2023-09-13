@@ -188,32 +188,32 @@ Book 4.3.4.
 The main idea is to replace z with the node after z, which is the
 first node y in subtree B.
 
-Two cases to consider:
+<!-- Two cases to consider: -->
 
-- Case a) B is y
+<!-- - Case a) B is y -->
 
-```
-             |                  |
-           z=o        ==>       y
-            / \                / \
-           A   y              A   C
-                \
-                 C
-```
+<!-- ``` -->
+<!--              |                  | -->
+<!--            z=o        ==>       y -->
+<!--             / \                / \ -->
+<!--            A   y              A   C -->
+<!--                 \ -->
+<!--                  C -->
+<!-- ``` -->
 
-- Case b) B is not y (y is properly inside B)
+<!-- - Case b) B is not y (y is properly inside B) -->
 
-```
-             |                  |
-           z=o        ==>       y
-            / \                / \
-           A   B             A    B
-              ...                ...
-               |                  |
-               y                  C
-                \
-                 C
-```
+<!-- ``` -->
+<!--              |                  | -->
+<!--            z=o        ==>       y -->
+<!--             / \                / \ -->
+<!--            A   B             A    B -->
+<!--               ...                ... -->
+<!--                |                  | -->
+<!--                y                  C -->
+<!--                 \ -->
+<!--                  C -->
+<!-- ``` -->
 
 What is the time complexity? $O(h)$, where $h$ is the height.
 
