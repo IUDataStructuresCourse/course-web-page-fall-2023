@@ -21,6 +21,8 @@ interface Map<K,V> {
 }
 ```
 
+Code for this lecture can be downloaded [here](/course-web-page-fall-2023/assets/BST.tar.gz).
+
 ## Binary Search Tree and Node Classes
 
 `BinarySearchTree` is like `BinaryTree` (has a `root`) but also
