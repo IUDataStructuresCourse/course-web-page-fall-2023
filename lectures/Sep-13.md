@@ -134,28 +134,26 @@ What is the time complexity? $O(h)$, where $h$ is the height of the tree.
 Insert into a binary search tree using the `find` method. Return the inserted node,
 or null if the key is already in the tree.
 
-<details>
-<summary>Solution:</summary>
+Fill in the blanks:
+
 ```java
     public Node<K> insert(K key) {
         Node<K> n = find(key, root, null);
         if (n == null){
-            root = new Node<K>(key);
-            return root;
+            // ?
+            return /* ? */;
         } else if (lessThan.test(key, n.data)) {
-            Node<K> x = new Node<K>(key);
-            n.left = x;
-            return x;
+            // ?
+            return /* ? */;
         }  else if (lessThan.test(n.data, key)) {
-            Node<K> x = new Node<K>(key);
-            n.right = x;
-            return x;
+            // ?
+            return /* ? */;
         } else
-            return null;
+            return null;  // duplicate
     }
 ```
-</details>
 
+[Solution](./Sep-13-Sol)
 
 ## `remove`  method of `BinarySearchTree`
 
