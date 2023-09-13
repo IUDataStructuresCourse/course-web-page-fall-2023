@@ -109,11 +109,11 @@ Similarly we can perform insertions on BSTs. The `insert()` method takes
 the key to add to the tree and returns the new root.
 
 ```java
-    protected Node<K> insert_rec(K key) {
+    public Node<K> insert_rec(K key) {
         return insert_helper(key, root);
     }
 
-    protected Node<K> insert_helper(K key, Node<K> curr) {
+    private Node<K> insert_helper(K key, Node<K> curr) {
         if (curr == null)
             return new Node<>(key, null, null);
         else if (lessThan.test(key, curr.data))
@@ -186,7 +186,8 @@ Book 4.3.4.
 ```
 
 The main idea is to replace z with the node after z, which is the
-first node y in subtree B.
+first node y in subtree B. We then recursively delete y from B.
+
 
 <!-- Two cases to consider: -->
 
@@ -217,14 +218,11 @@ first node y in subtree B.
 
 What is the time complexity? $O(h)$, where $h$ is the height.
 
-Solution for `remove()`:
+Solution for `remove()` (similar to book Figure 4.25):
 
 ```java
     public void remove(K key) {
-        Node n = remove_helper(root, key);
-        if (n != null) {
-            root = n;
-        }
+        root = remove_helper(root, key);
     }
 
     private Node remove_helper(Node<K> curr, K key) {
