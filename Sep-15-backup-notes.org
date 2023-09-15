@@ -1,0 +1,72 @@
+* Merge Sort on _Linked Lists_
+
+** ~sort()~: functional merge sort
+
++ *input:*   head node N
++ *returns:* head node of the sorted list
+
+1. if input is empty or only contains one node?
+    * return N and we're done
+2. otherwise?
+    * copy and drop the 1ˢᵗ half of the list
+    * recursively sort the two halves
+    * merge the two sorted halves together
+      and return the head
+
+What will list N be after sorting?
+
+
+How to merge?
+
+*** ~merge()~
+
++ *input:* two sorted linked lists A B
++ *returns:* sorted linked lists
+
+1. if one of the input lists is empty?
+   * return the other and we're done
+2. otherwise?
+   1) if A <= B?
+       * create _new node_ with the data of A
+       * the next node should be the head of
+         recursively merging A.next with B
+       * return the new node
+   2) otherwise?
+       * create new node with the data of B
+       * the next node should be the head of
+         recursively merging A with B.next
+       * return the new node
+
+
+*example:* merge =1 -> 3 -> 4 -> 6 -> 8= with
+                 =2 -> 4 -> 5 -> 7 -> 9= ,
+we get =1 -> 2 -> 3 -> 4 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9=
+
+
+** ~sort_in_place()~: in-place merge sort
+
++ similar to ~sort()~
++ don't copy
+  * instead find the middle node =mid=
+  * record the next node as the head of 2ⁿᵈ half,
+    break the link
+    * example: =1 -> 2 -> 3 -> 4 -> 5=
++ recursively sort two halves in-place
++ merge the result lists in-place and
+   return the head
+
+How to merge?
+
+*** ~merge_in_place()~
+
++ similar to ~merge()~
++ don't create new node and copy data, instead:
+  * suppose A is the smaller node
+  * directly set the next node of A to be
+    the head of recursive merge
+  * return A
+
+
+*example:* merge =1 -> 3 -> 4 -> 6 -> 8= with
+                 =2 -> 4 -> 5 -> 7 -> 9= ,
+we get =1 -> 2 -> 3 -> 4 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9=
