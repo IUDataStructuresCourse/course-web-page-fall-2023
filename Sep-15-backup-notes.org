@@ -1,3 +1,7 @@
+#+TITLE: Lab 3 Notes
+#+DATE: <2023-09-15 Fri>
+#+OPTIONS: num:nil toc:nil
+
 * Merge Sort on _Linked Lists_
 
 ** ~sort()~: functional merge sort

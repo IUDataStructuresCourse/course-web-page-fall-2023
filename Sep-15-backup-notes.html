@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-15 Fri 12:22 -->
+<!-- 2023-09-16 Sat 14:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>Lab 3 Notes</title>
 <meta name="author" content="Tianyu Chen" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -196,34 +196,15 @@
 </head>
 <body>
 <div id="content" class="content">
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org86be0fa">1. Merge Sort on <span class="underline">Linked Lists</span></a>
-<ul>
-<li><a href="#org7fcffcf">1.1. <code>sort()</code>: functional merge sort</a>
-<ul>
-<li><a href="#org32e996f">1.1.1. <code>merge()</code></a></li>
-</ul>
-</li>
-<li><a href="#orgdd239b0">1.2. <code>sort_in_place()</code>: in-place merge sort</a>
-<ul>
-<li><a href="#org232fcce">1.2.1. <code>merge_in_place()</code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<h1 class="title">Lab 3 Notes</h1>
+
+<div id="outline-container-org9ecb3d7" class="outline-2">
+<h2 id="org9ecb3d7">Merge Sort on <span class="underline">Linked Lists</span></h2>
+<div class="outline-text-2" id="text-org9ecb3d7">
 </div>
-</div>
-<div id="outline-container-org86be0fa" class="outline-2">
-<h2 id="org86be0fa"><span class="section-number-2">1.</span> Merge Sort on <span class="underline">Linked Lists</span></h2>
-<div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-org7fcffcf" class="outline-3">
-<h3 id="org7fcffcf"><span class="section-number-3">1.1.</span> <code>sort()</code>: functional merge sort</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org2124d75" class="outline-3">
+<h3 id="org2124d75"><code>sort()</code>: functional merge sort</h3>
+<div class="outline-text-3" id="text-org2124d75">
 <ul class="org-ul">
 <li><b>input:</b>   head node N</li>
 <li><b>returns:</b> head node of the sorted list</li>
@@ -251,9 +232,9 @@ How to merge?
 </p>
 </div>
 
-<div id="outline-container-org32e996f" class="outline-4">
-<h4 id="org32e996f"><span class="section-number-4">1.1.1.</span> <code>merge()</code></h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-org245d833" class="outline-4">
+<h4 id="org245d833"><code>merge()</code></h4>
+<div class="outline-text-4" id="text-org245d833">
 <ul class="org-ul">
 <li><b>input:</b> two sorted linked lists A B</li>
 <li><b>returns:</b> sorted linked lists</li>
@@ -292,9 +273,9 @@ we get <code>1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 4 -&gt; 5 -&gt; 6 -&gt; 7 -&gt; 8 -
 </div>
 
 
-<div id="outline-container-orgdd239b0" class="outline-3">
-<h3 id="orgdd239b0"><span class="section-number-3">1.2.</span> <code>sort_in_place()</code>: in-place merge sort</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org6f4eb6b" class="outline-3">
+<h3 id="org6f4eb6b"><code>sort_in_place()</code>: in-place merge sort</h3>
+<div class="outline-text-3" id="text-org6f4eb6b">
 <ul class="org-ul">
 <li>similar to <code>sort()</code></li>
 <li>don't copy
@@ -316,9 +297,9 @@ How to merge?
 </p>
 </div>
 
-<div id="outline-container-org232fcce" class="outline-4">
-<h4 id="org232fcce"><span class="section-number-4">1.2.1.</span> <code>merge_in_place()</code></h4>
-<div class="outline-text-4" id="text-1-2-1">
+<div id="outline-container-org1d98a2f" class="outline-4">
+<h4 id="org1d98a2f"><code>merge_in_place()</code></h4>
+<div class="outline-text-4" id="text-org1d98a2f">
 <ul class="org-ul">
 <li>similar to <code>merge()</code></li>
 <li>don't create new node and copy data, instead:
@@ -342,8 +323,9 @@ we get <code>1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 4 -&gt; 5 -&gt; 6 -&gt; 7 -&gt; 8 -
 </div>
 </div>
 <div id="postamble" class="status">
+<p class="date">Date: 2023-09-15 Fri 00:00</p>
 <p class="author">Author: Tianyu Chen</p>
-<p class="date">Created: 2023-09-15 Fri 12:22</p>
+<p class="date">Created: 2023-09-16 Sat 14:17</p>
 </div>
 </body>
 </html>
