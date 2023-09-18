@@ -57,9 +57,13 @@ Sep. 11 | [More ADTs, Binary Trees](./lectures/Sep-11.md)               | Ch. 3 
 Sep. 13 | [Binary Search Trees](./lectures/Sep-13)                   | Ch. 4 sec. 3 and 7  |
 Sep. 15 |   |  | [Lab 3: Merge Sort on Linked Lists](./lab3) <br> [Lab Notes](./Sep-15-backup-notes) | [test](https://autograder.luddy.indiana.edu/web/project/825), [code](https://autograder.luddy.indiana.edu/web/project/707)
 Sep. 18 | [Balanced Search Trees (AVL)](./lectures/Sep-18.md) |  |  <mark>Lab 3 due</mark> |
+Sep. 20 | More AVL, Code Review (Flood It!)
 Sep. 22 |   |  | [Lab 4: Next Prev Binary Tree](./lab4) | [test](https://autograder.luddy.indiana.edu/web/project/831), [code](https://autograder.luddy.indiana.edu/web/project/693)
-Sep. 25 | |  |  <mark>Lab 4 due</mark> |
-
+Sep. 25 | Hash tables |  |  <mark>Lab 4 due</mark> |
+Sep. 27 | Code Review (Merge Sort), Assertions and Correctness
+Oct. 9  | Review for Midterm Exam
+Oct. 11 | **Midterm Exam** (in class)
+Oct. 13 | **Fall Break**
 
 **Resources**
 
