@@ -36,19 +36,19 @@ forwards or backwards within the binary tree:
     public Node first();
 ```
 
-+ `first()` returns the first node in the current subtree according to an inorder traversal.
++ `first()`: returns the first node in the current subtree according to an inorder traversal.
 
 ```java
     public Node last();
 ```
 
-+ `last()` returns the last node in the current subtree according to an inorder traversal.
++ `last()`: returns the last node in the current subtree according to an inorder traversal.
 
 ```java
     public Node nextAncestor();
 ```
 
-+ `nextAncestor()` returns the first ancestor that is next with respect to
++ `nextAncestor()`: returns the first ancestor that is next with respect to
 an inorder traversal or `null` if there is none.
     * We recommend that you use the `parent` field that has been added to the `Node`
       class for this purpose.
@@ -57,7 +57,7 @@ an inorder traversal or `null` if there is none.
     public Node prevAncestor();
 ```
 
-+ `prevAncestor()` returns the first ancestor that is previous with respect to
++ `prevAncestor()`: returns the first ancestor that is previous with respect to
 and inorder traversal or null if there is none.
     * Again, you'll need to use the `parent` field to walk up the tree.
 
@@ -72,32 +72,35 @@ to an inorder traversal:
     public Node previous();
 ```
 
-The idea for `next()` is that:
+* The idea for `next()` is that:
 1. if the current node has a right child, then the `first()` of
    that child's subtree is the next node.
 2. if the current node does not have a right child (if it is `null`),
    then the next node is it's `nextAncestor()`.
 
-The idea for `previous()` is the mirror image of the idea for `next()`.
+* The idea for `previous()` is the mirror image of the idea for `next()`.
 
 #### Part 3: Iter
 
 You can now move on to finish the implementation of the `Iter` class
 (which is nested inside the `BinaryTree` class) by filling in:
 
-* `get()`
-* `retreat()`
-* `advance()`
-* `equals()`
-* `clone()`
+* `get()`: returns `data` of the current node `curr`
+* `retreat()`: as its name suggests, sets the current node to be the previous node of `curr`
+* `advance()`: sets the current node to be the next node of `curr`
+* `equals()`: if `curr` of this `Iter` is equal to the `curr` of the other
+* `clone()`: returns a new iterator that copies `curr`
 
 These methods are 1-liners.
 
 ### Problem 2: Testing
 
 Write test cases in `BinaryTreeTest.java` with one method named `test()`.
-
 This method should thoroughly test the `BinaryTree` class.
+
+Test and debug your own code from Problem 1 locally and then submit both your code
+and your test cases to Autograder for grading.
+
 The Autograder will apply your tests to buggy implementations of the
 `BinaryTree` class. You receive 1 point for each bug detected.
 The Autograder will also apply your tests to a correct implementation
