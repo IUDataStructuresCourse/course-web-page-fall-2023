@@ -56,7 +56,7 @@ Sep. 8  | [Quiz 1](https://iu.instructure.com/courses/2165834/quizzes/4040693)  
 Sep. 11 | [More ADTs, Binary Trees](./lectures/Sep-11.md)               | Ch. 3 sec. 6-7,<br> Ch. 4 sec. 1-2 | Project 1: FloodIt! due |
 Sep. 13 | [Binary Search Trees](./lectures/Sep-13)                   | Ch. 4 sec. 3 and 7  |
 Sep. 15 |   |  | [Lab 3: Merge Sort on Linked Lists](./lab3) <br> [Lab Notes](./Sep-15-backup-notes) | [test](https://autograder.luddy.indiana.edu/web/project/825), [code](https://autograder.luddy.indiana.edu/web/project/707)
-Sep. 18 | [Balanced Search Trees (AVL)](./lectures/Sep-18.md) |  |  <mark>Lab 3 due</mark> |
+Sep. 18 | [Balanced Search Trees (AVL)](./lectures/Sep-18.md) |  |  Lab 3 due |
 Sep. 20 | [More AVL, Code Review (Flood It!)](./lectures/Sep-20.md)
 Sep. 22 |   |  | [Lab 4: Next Prev Binary Tree](./lab4) | [test](https://autograder.luddy.indiana.edu/web/project/831), [code](https://autograder.luddy.indiana.edu/web/project/693)
 Sep. 25 | Hash tables |  |  <mark>Lab 4 due</mark> |
