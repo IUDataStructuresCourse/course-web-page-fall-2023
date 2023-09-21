@@ -1,0 +1,71 @@
+#+TITLE: Lab 4 Notes
+#+DATE: <2023-09-22 Fri>
+#+OPTIONS: num:nil toc:nil
+
+* Next Prev Binary Tree
+
+** ~nextAncestor()~
+
++ returns the first ancestor that is
+   *next with respect to an inorder traversal*
+   or null if there is none
+   * _hint:_ use ~parent~ to go up in the binary tree
+
+*** [Example 1]
+
++ Consider node =g= in the following binary tree:
+
+#+BEGIN_SRC
+d, b, f, e, g, a, c
+   ?     ?  ^  -
+#+END_SRC
+
+#+BEGIN_SRC dot :file ./assets/images/lab4/bt1.png :cmdline -Gdpi=120 -Kdot -Tpng
+  digraph BT {
+    node[fontsize=20];
+    d, b, f, e, g, a, c;
+    g      [style="filled", fillcolor="green" ];  // myself
+    e, b, a[style="filled", fillcolor="yellow"];  // my ancestors
+    a -> b, c;
+    b -> d, e;
+    e -> f, g;
+  }
+#+END_SRC
+
+#+RESULTS:
+[[file:./assets/images/lab4/bt1.png]]
+
++ What about node =c=?
+
+** ~next()~
+
+*** [Example 2]
+
++ Consider node =b= in the following binary tree:
+
+#+BEGIN_SRC
+d, b, f, e, a, c
+   ^  -
+#+END_SRC
+
+#+BEGIN_SRC dot :file ./assets/images/lab4/bt2.png :cmdline -Gdpi=120 -Kdot -Tpng
+  digraph BT {
+    node[fontsize=20];
+    d, b, f, e, g, a, c;
+    g[style=invis];
+    a -> b, c;
+    b -> d, e;
+    e -> f;
+    e -> g[style=invis];
+  }
+#+END_SRC
+
+#+RESULTS:
+[[file:./assets/images/lab4/bt2.png]]
+
++ What about =e=?
+
+#+BEGIN_SRC
+d, b, f, e, a, c
+         ^  -
+#+END_SRC
