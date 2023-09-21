@@ -75,6 +75,7 @@ property.)
       1   3   7      12
            \
             4
+    
 Solution: 
 * Step 1: replace node 8 with node 9
 
@@ -238,7 +239,8 @@ O(h) = O(log n)
                               Tile[][] tiles,
                               Integer board_size) {
         for (int i = 0; i < flooded_list.size(); i++) {
-            checkNeighbor(flooded_list.get(i), board_size, flooded_list, color, tiles);
+            checkNeighbor(flooded_list.get(i), // get is O(n), solution: use an arraylist
+			              board_size, flooded_list, color, tiles);
         }
     }
 
@@ -250,7 +252,7 @@ O(h) = O(log n)
         List<Coord> neighborsList = currentTile.neighbors(board_size);
         for (int i = 0; i < neighborsList.size(); i++) {
             Coord neighbor = neighborsList.get(i);
-            if(!flooded_list.contains(neighbor)) {
+            if(!flooded_list.contains(neighbor)) { // contains is O(n)! solution: use a hashset
                   int x = neighbor.getX();
                   int y = neighbor.getY();
                     if(tiles[y][x].getColor() == color){
@@ -277,9 +279,10 @@ O(h) = O(log n)
             Coord c = queue.remove(0);
             for (Coord n : c.neighbors(board_size)) {
                 if (!visited[n.getY()][n.getX()] && tiles[n.getY()][n.getX()].getColor() == color) {
-                    queue.add(n);
-                    if (is_flooded.add(n)) 
+                    if (is_flooded.add(n)) {
+                        queue.add(n);
 					    flooded_list.add(n);
+	                }
                 }
                 visited[n.getY()][n.getX()] = true;
             }
