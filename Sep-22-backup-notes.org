@@ -39,6 +39,8 @@ d, b, f, e, g, a, c
 
 ** ~next()~
 
++ returns *the next node* according to an inorder traversal
+
 *** [Example 2]
 
 + Consider node =b= in the following binary tree:
