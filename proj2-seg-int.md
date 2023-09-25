@@ -4,6 +4,13 @@
 **[Note]** This is a group project. Students work in groups of 3 ~ 4 people.
   After completion, Every group member submits their solutions on Autograder <mark>individually</mark>.
 
+## Before We Start
+
++ **Required:** please read Textbook Ch. 4.4 carefully, especially the code listings
+  from Fig. 4.37 to Fig. 4.44.
++ Optional: read [CLRS](http://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)
+  Ch. 33.1 and 33.2 for an introduction to segment intersection.
+
 ## Introduction
 
 ![](assets/images/proj2/play.png)
