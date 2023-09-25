@@ -6,6 +6,8 @@
 
 ## Introduction
 
+![](assets/images/proj2/play.png)
+
 In this project, we consider a classic problem in computational
 geometry: Given a set of n line segments, identify an intersecting
 pair, if one exists. The naive approach is to check all possible pairs
@@ -61,7 +63,7 @@ You are expected to test your code locally as you develop the program.
 
 + Submit your code `AVLTree.java` and `BinarySearchTree.java` to [link](https://autograder.luddy.indiana.edu/web/project/700).
 + Submit your test cases `StudentTest.java` to [link](https://autograder.luddy.indiana.edu/web/project/833).
-  We have included a small test case in the support code to get you started.
+  * We have included a small test case in the support code to get you started.
 
 ## Student Support Code and Task Description
 
