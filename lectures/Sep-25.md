@@ -13,6 +13,9 @@ The Map Abstract Data Type (aka. "dictionary")
 	   boolean containsKey(K key);
 	}
 
+Compared to Binary Search Trees, the Map ADT does not provide an
+ordering of the elements.
+
 Motivation: maps are everywhere!
 
 * compilers
@@ -93,17 +96,16 @@ Towards proving that the average case time is O(1).
 
 * what's the expected length of a chain? (load factor)
 
-	n keys in m slots: n/m = alpha
+	n keys in m slots: n/m = λ
 
 * Search:
 	1. hash the key: O(1)
 	2. find the chain: O(1)
-	3. linear search in the chain: O(alpha)
+	3. linear search in the chain: O(λ)
 
-    total for search: O(1 + alpha)
+    total for search: O(1 + λ)
 
-Takeaway: need to grow table size m as n increases so that alpha stays
-small.
+Takeaway: need to grow table size m as n increases so that λ stays small.
 
 ## hash functions
     
@@ -141,5 +143,17 @@ where
 Using the division method and chaining, insert the
 keys 4, 1, 3, 2, 0 into a hash table with table size 3 (m=3).
 
-[solution](./Sep-25-solutions.md)
+[solution](./Sep-25-solutions.md#student-exercise-1)
 
+
+## Rehashing
+
+When the load factor gets too high, we need to grow the table.
+
+1. Allocate a new table that is double the size.
+
+2. Insert all of the entries from the old table into the new table,
+   using the new table size (the `m`) in the hash function.
+
+Rehashing is an O(n) operation, but by doubling the same of the table,
+it doesn't need to happen very often.
