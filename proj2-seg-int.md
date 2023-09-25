@@ -48,13 +48,38 @@ endpoint is green or red:
     proceed with the sweep.
 
 In the worst case, we need to process $O(n)$ endpoints. To achieve our
-desired complexity of $O(n log n)$, we need to process each endpoint in
-$O(log n)$ time. If we use a self-balancing binary search tree (such as
+desired complexity of $O(n log(n))$, we need to process each endpoint in
+$O(log(n))$ time. If we use a self-balancing binary search tree (such as
 an AVL tree) to hold the line segments intersecting the sweep line,
 then we can find the segments that are above and below a given segment
-in $O(log n)$ time.
+in $O(log(n))$ time.
 
-## Student Support Code
+## Submission
+
+As usual, this project contains a programming part and a testing part.
+You are expected to test your code locally as you develop the program.
+
++ Submit your code `AVLTree.java` and `BinarySearchTree.java` to [link](https://autograder.luddy.indiana.edu/web/project/700).
++ Submit your test cases `StudentTest.java` to [link](https://autograder.luddy.indiana.edu/web/project/833).
+  We have included a small test case in the support code to get you started.
+
+## Student Support Code and Task Description
+
+```
+.
+├── SegmentIntersection.iml
+├── src
+│   ├── AVLTree.java             // your code
+│   ├── BinarySearchTree.java    // your code
+│   ├── Constants.java
+│   ├── Driver.java
+│   ├── GUI.java
+│   ├── LineSegment.java
+│   ├── OrderedSet.java
+│   └── Sweeper.java
+└── test
+    └── StudentTest.java         // your tests
+```
 
 Implementations of the GUI and the Line Sweep Algorithm are provided
 to you in full in the
@@ -62,7 +87,7 @@ to you in full in the
 
 Your task is to complete the implementation of the
 `BinarySearchTree` and `AVLTree` class.
-**You are NOT supposed to modify any code outside the two classes**
+⚠️**You are NOT supposed to modify any code outside the two classes**
 (marked as "read-only" in the project structure below).
 Implement all of the methods marked `TODO` according to their descriptions
 in the comments. **DO NOT** change their function signatures.
@@ -134,8 +159,6 @@ The root has no parent so its parent is `null`.
   Algorithm. Be sure to read through this code to help you understand
   how the algorithm works.
 
-<!-- ## Submission -->
+-----------------
 
-<!-- Make sure that your project compiles and passes your tests. -->
-<!-- Submit `BinarySearchTree.java`, `AVLTree.java`, and `StudentTest.java` -->
-<!-- to the autograder SegmentIntersection project. -->
+* You have finally reached the end of Project 2. Congratulations!
