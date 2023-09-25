@@ -61,12 +61,17 @@ to you in full in the
 [student support code](https://github.com/IUDataStructuresCourse/segment-intersection-student-support-code).
 
 Your task is to complete the implementation of the
-`BinarySearchTree` and `AVLTree` class. The `BinarySearchTree` class
-is an elaboration of the class described in lecture and that you used
-in lab. The `AVLTree` class is a subclass of `BinarySeachTree` and
+`BinarySearchTree` and `AVLTree` class.
+**You are NOT supposed to modify any code outside the two classes**
+(marked as "read-only" in the project structure below).
+Implement all of the methods marked `TODO` according to their descriptions
+in the comments. **DO NOT** change their function signatures.
+
+The `BinarySearchTree` class is an elaboration of the class described in
+lecture and that you used in [Lab 4](./lab4).
+The `AVLTree` class is a subclass of `BinarySeachTree` and
 overrides the `insert()` and `remove()` methods to ensure that the tree remains
-balanced at all times (which gives us the O(log(n)) time bound we
-crave).
+balanced at all times (which gives us the $O(log(n)$) time bound we crave).
 
 Below is a summary of the components in the code base.
 However, before you begin writing any code, you need to understand the
@@ -83,7 +88,7 @@ you should look.
   are used by the Line Sweep Algorithm to determine the line segments
   that are immediately above or below the current segment.
 
-* `BinarySearchTree` is a generic class corresponding
+* `BinarySearchTree` **[YOUR TASK]** is a generic class corresponding
   to a binary search tree. The ordering for the data in the tree
   is specified by a function of type `BiPredicate` and provided at
   construction time. Nodes in the tree are represented by the inner
@@ -94,7 +99,7 @@ you should look.
   tree) and `height` (which is the height of the subtree rooted at
   this node).
 
-* `AVLTree` is a class representing a height-balanced tree. Since
+* `AVLTree` **[YOUR TASK]** is a class representing a height-balanced tree. Since
   `AVLTree` is a subclass of `BinarySearchTree`, you will need a fully
   functioning implementation of `BinarySearchTree` before you can begin
   working on this class. However, this is the most interesting and
@@ -128,8 +133,6 @@ The root has no parent so its parent is `null`.
 * `Sweeper` [read-only] is the class that implements the Line Sweep
   Algorithm. Be sure to read through this code to help you understand
   how the algorithm works.
-
-Your task is to implement all of the methods marked TODO.
 
 <!-- ## Submission -->
 
