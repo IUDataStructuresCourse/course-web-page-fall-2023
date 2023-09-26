@@ -68,6 +68,8 @@ Oct. 13 | **Fall Break**
 
 **Resources**
 
+* Midterm Exam with solutions from [2022](./midterm-a.pdf)
+
 * Final Exam with solutions from [2017](./final-2017.pdf) and [2021](./final-2021.pdf).
 
 * [Autograder](https://autograder.luddy.indiana.edu/web/course/59) for submitting coding assignments.
