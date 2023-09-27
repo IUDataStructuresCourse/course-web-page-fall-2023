@@ -59,7 +59,7 @@ Sep. 15 |   |  | [Lab 3: Merge Sort on Linked Lists](./lab3) <br> [Lab Notes](./
 Sep. 18 | [Balanced Search Trees (AVL)](./lectures/Sep-18.md) |  |  Lab 3 due |
 Sep. 20 | [More AVL, Code Review (Flood It!)](./lectures/Sep-20.md)
 Sep. 22 |   |  | [Lab 4: Next Prev Binary Tree](./lab4) <br> [Lab Notes](./Sep-22-backup-notes) | [test](https://autograder.luddy.indiana.edu/web/project/831), [code](https://autograder.luddy.indiana.edu/web/project/693)
-Sep. 25 | [Hash tables](./lectures/Sep-25.md) |  |  <mark>Lab 4 due</mark> |
+Sep. 25 | [Hash tables](./lectures/Sep-25.md) |  |  Lab 4 due |
 Sep. 27 | Code Review (Merge Sort), <br> Assertions and Correctness | Ch. 4 sec. 4
 Sep. 29 |    <mark>Quiz 2 in Lab</mark>  |  | Lab: work on <br> [Project 2 Segment Intersection](./proj2-seg-int) | [test](https://autograder.luddy.indiana.edu/web/project/833), [code](https://autograder.luddy.indiana.edu/web/project/700)
 Oct. 6 |     |  | Lab: finish <br> [Project 2 Segment Intersection](./proj2-seg-int) | [test](https://autograder.luddy.indiana.edu/web/project/833), [code](https://autograder.luddy.indiana.edu/web/project/700)
