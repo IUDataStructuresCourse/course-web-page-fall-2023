@@ -255,12 +255,12 @@ We can document and check this precondition by placing an
 `assert` statement at the beginning of `find_first_true_sorted`.
 
     int find_first_true_sorted(boolean[] A, int begin, int end) {
-	    assert is_sorted(A, begin, end);
+        assert is_sorted(A, begin, end);
         if (begin == end) {
             ...
-		} else {
-		    ...
-		}
+        } else {
+            ...
+        }
     }
 
 where `is_sorted` is a helper function:
@@ -280,7 +280,7 @@ considerably, so by default, Java does not check assertions.
 However, you can turn on assertion checking with the flag
 
     -ea
-	
+    
 in the VM options of IntelliJ's Run/Debug Configurations.
 
 With the addition of `assert is_sorted(...)`, if you accidentally test
@@ -314,15 +314,15 @@ So we need the following helper function:
 Now the postcondition can be written as
 
     all_false(A, begin, result) && (result == end || A[result] == true)
-	
+    
 Similar to the precondition, you can add an `assert` statement for the
 postcondition, but this time at the end of the function, before the
 `return`.
 
     public static int fft_sorted(boolean[] A, int begin, int end) {
         assert is_sorted(A, begin, end) 
-		   && 0 <= begin && begin <= end && end <= A.length;
-	    int result;
+           && 0 <= begin && begin <= end && end <= A.length;
+        int result;
         if (begin == end) {
             result = end;
         } else {
@@ -334,9 +334,9 @@ postcondition, but this time at the end of the function, before the
                 result = fft_sorted(A, mid + 1, end);
             }
         }
-		assert all_false(A, begin, result) 
-			   && (result == end || A[result] == true);
-		return result;
+        assert all_false(A, begin, result) 
+               && (result == end || A[result] == true);
+        return result;
     }
 
 ## Correctness of Binary Search
@@ -350,31 +350,31 @@ need to make sure that the postcondition is satisfied.
 
 ### The first call to `fft_sorted`:
 
-	...
-	if (A[mid]) {
-		result = fft_sorted(A, begin, mid);
-		...
+    ...
+    if (A[mid]) {
+        result = fft_sorted(A, begin, mid);
+        ...
 
 Is the precondition satisifed, that is, is the range `[begin,mid)`
 sorted? Yes, because `mid <= end` and `[begin,end)` is sorted.
 We could add an `assert` for this:
 
-	...
-	if (A[mid]) {
+    ...
+    if (A[mid]) {
         assert is_sorted(A, begin, mid);
-		result = fft_sorted(A, begin, mid);
-		...
+        result = fft_sorted(A, begin, mid);
+        ...
 
 After the call, we know that the postcondition is true.
 Let's write that explicitly as an `assert`.
 
-	...
-	if (A[mid]) {
+    ...
+    if (A[mid]) {
         assert is_sorted(A, begin, mid);
-		result = fft_sorted(A, begin, mid);
+        result = fft_sorted(A, begin, mid);
         assert all_false(A, begin, result) 
-		       && (result == mid || A[result] == true);
-		...
+               && (result == mid || A[result] == true);
+        ...
 
 Notice how `end` became `mid` because we called `fft_sorted` with `mid`
 as the argument for the `end` parameter.
@@ -383,7 +383,7 @@ Looking at the next couple statements, we have the `assert` for the
 postcondition and the return:
 
         assert all_false(A, begin, result) 
-		       && (result == end || A[result] == true);
+               && (result == end || A[result] == true);
         return result;
 
 Is the postcondition satisfied?
@@ -396,15 +396,15 @@ Is the postcondition satisfied?
   `result == mid || A[result] == true`. Let's consider both cases.
   
     * Suppose `result == mid`. We know `A[mid] == true`,
-	  so therefore `A[result] == true`.
-	  
-	* Suppose `A[result] == true`. We're immediately done.
+      so therefore `A[result] == true`.
+      
+    * Suppose `A[result] == true`. We're immediately done.
 
 ### The second call to `fft_sorted`:
 
     ...
-	} else {
-		result = fft_sorted(A, mid + 1, end);
+    } else {
+        result = fft_sorted(A, mid + 1, end);
     ...
 
 Is the precondition satisified? That is, is `[mid+1,end)` sorted?
@@ -412,18 +412,18 @@ Yes, because `begin < mid + 1` .
 We could add an `assert` for this:
 
     ...
-	} else {
-		assert is_sorted(A, mid+1, end);
-		result = fft_sorted(A, mid + 1, end);
+    } else {
+        assert is_sorted(A, mid+1, end);
+        result = fft_sorted(A, mid + 1, end);
     ...
 
 After the call, we know that the postcondition is true.
 Let's write that explicitly as an `assert`.
 
     ...
-	} else {
-		assert is_sorted(A, mid+1, end);
-		result = fft_sorted(A, mid + 1, end);
+    } else {
+        assert is_sorted(A, mid+1, end);
+        result = fft_sorted(A, mid + 1, end);
         assert all_false(A, mid + 1, result)
                && (result == end || A[result] == true);
     ...
@@ -434,9 +434,9 @@ Notice how `begin` became `mid + 1` because we called `fft_sorted` with
 Looking at the next couple statements, we have the `assert` for the
 postcondition and the return:
 
-	assert all_false(A, begin, result) 
-		   && (result == end || A[result] == true);
-	return result;
+    assert all_false(A, begin, result) 
+           && (result == end || A[result] == true);
+    return result;
 
 Is the postcondition satisfied?
 
@@ -455,11 +455,11 @@ Is the postcondition satisfied?
 Here's the nonrecursive case of `fft_sorted`:
 
     if (begin == end) {
-		result = end;
+        result = end;
     } ...
-	assert all_false(A, begin, result)
-			&& (result == end || A[result] == true);
-	return result;
+    assert all_false(A, begin, result)
+            && (result == end || A[result] == true);
+    return result;
 
 Is the postcondition satisfied?
 
