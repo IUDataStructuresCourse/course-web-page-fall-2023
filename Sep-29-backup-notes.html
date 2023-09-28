@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-28 Thu 15:30 -->
+<!-- 2023-09-28 Thu 15:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Project 2 Notes</title>
@@ -205,13 +205,13 @@
 <b>🚧Under construction🚧</b>
 </p>
 
-<div id="outline-container-org90ac541" class="outline-2">
-<h2 id="org90ac541">Segment Intersection (AVL Trees)</h2>
-<div class="outline-text-2" id="text-org90ac541">
+<div id="outline-container-orga76ab70" class="outline-2">
+<h2 id="orga76ab70">Segment Intersection (AVL Trees)</h2>
+<div class="outline-text-2" id="text-orga76ab70">
 </div>
-<div id="outline-container-org8f3d2d9" class="outline-3">
-<h3 id="org8f3d2d9">Project Overview and General Remarks</h3>
-<div class="outline-text-3" id="text-org8f3d2d9">
+<div id="outline-container-orgbe778ca" class="outline-3">
+<h3 id="orgbe778ca">Project Overview and General Remarks</h3>
+<div class="outline-text-3" id="text-orgbe778ca">
 <ul class="org-ul">
 <li>The line sweep algorithm is provide to you
 <ul class="org-ul">
@@ -243,13 +243,13 @@ algorithm per se, just the data structures used</li>
 </div>
 </div>
 
-<div id="outline-container-orge0964ab" class="outline-3">
-<h3 id="orge0964ab">BST Implementation Details</h3>
-<div class="outline-text-3" id="text-orge0964ab">
+<div id="outline-container-orga578aff" class="outline-3">
+<h3 id="orga578aff">BST Implementation Details</h3>
+<div class="outline-text-3" id="text-orga578aff">
 </div>
-<div id="outline-container-org8ac72ae" class="outline-4">
-<h4 id="org8ac72ae">One Specification Caveat of <code>insert()</code>&#x2026;</h4>
-<div class="outline-text-4" id="text-org8ac72ae">
+<div id="outline-container-org2ba5308" class="outline-4">
+<h4 id="org2ba5308">One Specification Caveat of <code>insert()</code>&#x2026;</h4>
+<div class="outline-text-4" id="text-org2ba5308">
 <p>
 We should note that the <a href="https://en.wikipedia.org/wiki/Design_by_contract">contract</a> of <code>insert()</code> is different
 between the student support code and the textbook, so a direct
@@ -264,7 +264,7 @@ to the newly-inserted node.</li>
 </ul>
 
 <p>
-You need to adapt the code a little&#x2026;
+You need to adapt the code&#x2026; (fortunately not too much)
 </p>
 
 <p>
@@ -281,18 +281,43 @@ Same for <code>remove()</code>.
 </div>
 </div>
 
-<div id="outline-container-org8555b18" class="outline-4">
-<h4 id="org8555b18">Possible helper functions</h4>
+<div id="outline-container-orgea691b4" class="outline-4">
+<h4 id="orgea691b4">Possible helper functions</h4>
+<div class="outline-text-4" id="text-orgea691b4">
+</div>
+<ul class="org-ul">
+<li><a id="org9b07e2d"></a>Setting the children of a node<br />
+<div class="outline-text-5" id="text-org9b07e2d">
+<p>
+Question: how to set the left child of <code>n</code> to be <code>l</code>?
+</p>
+
+<ul class="org-ul">
+<li>Previously we used <code>n.left = l</code> in the lecture. Does it still apply?
+<ul class="org-ul">
+<li>No. It doesn't set the parent of <code>l</code> to be <code>n</code>.
+<ul class="org-ul">
+<li>We didn't have <code>parent</code> before!</li>
+</ul></li>
+<li>Side question: why do we need <code>parent</code> this time?
+<ul class="org-ul">
+<li>Hint: <a href="./lab4">Lab 4</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 
-<div id="outline-container-org048acf0" class="outline-3">
-<h3 id="org048acf0">AVL Specific Implementation Details</h3>
-<div class="outline-text-3" id="text-org048acf0">
+<div id="outline-container-org41473ae" class="outline-3">
+<h3 id="org41473ae">AVL Specific Implementation Details</h3>
+<div class="outline-text-3" id="text-org41473ae">
 </div>
-<div id="outline-container-org4fcf950" class="outline-4">
-<h4 id="org4fcf950">Where to re-balance?</h4>
-<div class="outline-text-4" id="text-org4fcf950">
+<div id="outline-container-orgc8815e7" class="outline-4">
+<h4 id="orgc8815e7">Where to re-balance?</h4>
+<div class="outline-text-4" id="text-orgc8815e7">
 <p>
 Quote textbook p. 125:
 </p>
@@ -324,8 +349,8 @@ Please do update the height during re-balancing.
 </div>
 </div>
 
-<div id="outline-container-org849b2c5" class="outline-4">
-<h4 id="org849b2c5">How to re-balance?</h4>
+<div id="outline-container-orgc35339d" class="outline-4">
+<h4 id="orgc35339d">How to re-balance?</h4>
 </div>
 </div>
 </div>
@@ -333,7 +358,7 @@ Please do update the height during re-balancing.
 <div id="postamble" class="status">
 <p class="date">Date: 2023-09-29 Fri 00:00</p>
 <p class="author">Author: Tianyu Chen</p>
-<p class="date">Created: 2023-09-28 Thu 15:30</p>
+<p class="date">Created: 2023-09-28 Thu 15:51</p>
 </div>
 </body>
 </html>
