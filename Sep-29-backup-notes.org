@@ -6,6 +6,24 @@
 
 *🚧Under construction🚧*
 
+
+
+
+
+
+* First Things First
+
+*Quiz 2.* 15 minutes, closed-book
+
++ On Canvas: [[https://iu.instructure.com/courses/2165834/quizzes/4049366][link]]
++ Multiple choices: *select ALL answers that apply!*
++ Access code: _TBA_
+
+
+
+
+
+
 * Segment Intersection (AVL Trees)
 
 ** Project Overview and General Remarks
@@ -33,6 +51,12 @@ We should note that the [[https://en.wikipedia.org/wiki/Design_by_contract][cont
 between the student support code and the textbook, so a direct
 copy-and-paste apparently won't work!
 
+#+BEGIN_SRC java
+  public Node<K> insert(K key) {
+      // ... YOUR CODE
+  }
+#+END_SRC
+
 + Your code is expected to return (quote the support code):
   "the location where the insert occurred", that is, a reference
   to the newly-inserted node.
@@ -44,7 +68,14 @@ Also, make sure to update:
 + *height* (~updateHeight()~) for all ancestors
 + *size of the tree* (~numNodes~)
 
-Same for ~remove()~.
+Same for ~remove()~. The height of an empty tree is $-1$:
+
+#+BEGIN_SRC java
+  static protected <K> int get_height(Node<K> n) {
+      if (n == null) return -1;
+      else return n.height;
+  }
+#+END_SRC
 
 *** Possible helper functions
 
@@ -78,6 +109,9 @@ we case split on the parent of =n=, producing 3 cases:
 
 ** AVL Specific Implementation Details
 
+Do normal BST insert or remove.
+Fix the AVL property using ~balance()~.
+
 *** Where to re-balance?
 
 Quote textbook p. 125:
@@ -99,4 +133,49 @@ sub-tree before you return.
 
 Please do update the height during re-balancing.
 
-*** How to re-balance?
+*** When to re-balance
+
+This is where height comes in. ~isAVL()~ is defined as:
+
+#+BEGIN_SRC java
+  static class Node<K> implements Location<K> {
+      public boolean isAVL() {
+          int h1, h2;
+          h1 = get_height(left);
+          h2 = get_height(right);
+          return Math.abs(h2 - h1) < 2;
+      }
+  }
+
+  public class AVLTree<K> extends BinarySearchTree<K> {
+      public boolean isAVL() {
+          if (root == null)
+              return true;
+          else
+              return root.isAVL();
+      }
+    }
+#+END_SRC
+
+A tree is an AVL tree (balanced) if
+1) it is empty, or
+2) the height difference of its two sub-trees $<2$
+
+We re-balance when the tree is /not/ AVL.
+
+*** How to re-balance? Rotations
+
+**** Single rotations: ~right_rotate()~ and ~left_rotate()~
+
+Consider rotate right (Figure 4.40), is the following code correct?
+
+#+BEGIN_SRC java
+  private Node right_rotate(Node y) {
+      Node x = y.left;
+      set_left(y, x.right);
+      set_right(x, y);
+      return x;
+  }
+#+END_SRC
+
+**** Double rotations

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-28 Thu 16:08 -->
+<!-- 2023-09-28 Thu 17:11 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Project 2 Notes</title>
@@ -193,6 +193,38 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
@@ -205,13 +237,38 @@
 <b>🚧Under construction🚧</b>
 </p>
 
-<div id="outline-container-org2d5f068" class="outline-2">
-<h2 id="org2d5f068">Segment Intersection (AVL Trees)</h2>
-<div class="outline-text-2" id="text-org2d5f068">
+
+
+
+
+
+<div id="outline-container-orge91d94f" class="outline-2">
+<h2 id="orge91d94f">First Things First</h2>
+<div class="outline-text-2" id="text-orge91d94f">
+<p>
+<b>Quiz 2.</b> 15 minutes, closed-book
+</p>
+
+<ul class="org-ul">
+<li>On Canvas: <a href="https://iu.instructure.com/courses/2165834/quizzes/4049366">link</a></li>
+<li>Multiple choices: <b>select ALL answers that apply!</b></li>
+<li>Access code: <span class="underline">TBA</span></li>
+</ul>
 </div>
-<div id="outline-container-org55d7655" class="outline-3">
-<h3 id="org55d7655">Project Overview and General Remarks</h3>
-<div class="outline-text-3" id="text-org55d7655">
+</div>
+
+
+
+
+
+
+<div id="outline-container-org22094da" class="outline-2">
+<h2 id="org22094da">Segment Intersection (AVL Trees)</h2>
+<div class="outline-text-2" id="text-org22094da">
+</div>
+<div id="outline-container-orgf388ee2" class="outline-3">
+<h3 id="orgf388ee2">Project Overview and General Remarks</h3>
+<div class="outline-text-3" id="text-orgf388ee2">
 <ul class="org-ul">
 <li>The line sweep algorithm is provide to you
 <ul class="org-ul">
@@ -243,18 +300,25 @@ algorithm per se, just the data structures used</li>
 </div>
 </div>
 
-<div id="outline-container-org2f7b37c" class="outline-3">
-<h3 id="org2f7b37c">BST Implementation Details</h3>
-<div class="outline-text-3" id="text-org2f7b37c">
+<div id="outline-container-org2daca33" class="outline-3">
+<h3 id="org2daca33">BST Implementation Details</h3>
+<div class="outline-text-3" id="text-org2daca33">
 </div>
-<div id="outline-container-org424f5aa" class="outline-4">
-<h4 id="org424f5aa">One Specification Caveat of <code>insert()</code>&#x2026;</h4>
-<div class="outline-text-4" id="text-org424f5aa">
+<div id="outline-container-orgdc00f11" class="outline-4">
+<h4 id="orgdc00f11">One Specification Caveat of <code>insert()</code>&#x2026;</h4>
+<div class="outline-text-4" id="text-orgdc00f11">
 <p>
 We should note that the <a href="https://en.wikipedia.org/wiki/Design_by_contract">contract</a> of <code>insert()</code> is different
 between the student support code and the textbook, so a direct
 copy-and-paste apparently won't work!
 </p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #ba2f59; font-weight: bold;">Node</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">K</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #6c3163; font-weight: bold;">insert</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">K</span> <span style="color: #715ab1;">key</span><span style="color: #3a81c3;">)</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">... YOUR CODE</span>
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
 
 <ul class="org-ul">
 <li>Your code is expected to return (quote the support code):
@@ -276,22 +340,30 @@ Also, make sure to update:
 </ul>
 
 <p>
-Same for <code>remove()</code>.
+Same for <code>remove()</code>. The height of an empty tree is \(-1\):
 </p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #3a81c3; font-weight: bold;">static</span> <span style="color: #3a81c3; font-weight: bold;">protected</span> <span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">K</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">get_height</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">Node</span><span style="color: #6c3163;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">K</span><span style="color: #6c3163;">&gt;</span> <span style="color: #715ab1;">n</span><span style="color: #3a81c3;">)</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #3a81c3; font-weight: bold;">if</span> <span style="color: #6c3163;">(</span>n == <span style="color: #4e3163;">null</span><span style="color: #6c3163;">)</span> <span style="color: #3a81c3; font-weight: bold;">return</span> -<span style="color: #4e3163;">1</span>;
+    <span style="color: #3a81c3; font-weight: bold;">else</span> <span style="color: #3a81c3; font-weight: bold;">return</span> n.height;
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
 </div>
 </div>
 
-<div id="outline-container-org827020e" class="outline-4">
-<h4 id="org827020e">Possible helper functions</h4>
-<div class="outline-text-4" id="text-org827020e">
+<div id="outline-container-org19ea1b8" class="outline-4">
+<h4 id="org19ea1b8">Possible helper functions</h4>
+<div class="outline-text-4" id="text-org19ea1b8">
 <p>
 Optional. You may do it differently.
 </p>
 </div>
 
 <ul class="org-ul">
-<li><a id="org1c8358b"></a><code>set_left()</code> and <code>set_right()</code>: setting the children of a node<br />
-<div class="outline-text-5" id="text-org1c8358b">
+<li><a id="org5fc71eb"></a><code>set_left()</code> and <code>set_right()</code>: setting the children of a node<br />
+<div class="outline-text-5" id="text-org5fc71eb">
 <p>
 Question: how to set the left child of <code>n</code> to be <code>l</code>?
 </p>
@@ -319,8 +391,8 @@ Question: how to set the left child of <code>n</code> to be <code>l</code>?
 </div>
 </li>
 
-<li><a id="org58469c5"></a><code>replace()</code>: replace a tree with its sub-tree<br />
-<div class="outline-text-5" id="text-org58469c5">
+<li><a id="orge90cee0"></a><code>replace()</code>: replace a tree with its sub-tree<br />
+<div class="outline-text-5" id="text-orge90cee0">
 <p>
 Replace a tree with root <code>n</code> with a sub-tree with root <code>m</code>,
 we case split on the parent of <code>n</code>, producing 3 cases:
@@ -343,13 +415,18 @@ we case split on the parent of <code>n</code>, producing 3 cases:
 </div>
 </div>
 
-<div id="outline-container-org11bcac4" class="outline-3">
-<h3 id="org11bcac4">AVL Specific Implementation Details</h3>
-<div class="outline-text-3" id="text-org11bcac4">
+<div id="outline-container-org6877015" class="outline-3">
+<h3 id="org6877015">AVL Specific Implementation Details</h3>
+<div class="outline-text-3" id="text-org6877015">
+<p>
+Do normal BST insert or remove.
+Fix the AVL property using <code>balance()</code>.
+</p>
 </div>
-<div id="outline-container-orge3c13d3" class="outline-4">
-<h4 id="orge3c13d3">Where to re-balance?</h4>
-<div class="outline-text-4" id="text-orge3c13d3">
+
+<div id="outline-container-org5770277" class="outline-4">
+<h4 id="org5770277">Where to re-balance?</h4>
+<div class="outline-text-4" id="text-org5770277">
 <p>
 Quote textbook p. 125:
 </p>
@@ -381,8 +458,73 @@ Please do update the height during re-balancing.
 </div>
 </div>
 
-<div id="outline-container-orgc0ee500" class="outline-4">
-<h4 id="orgc0ee500">How to re-balance?</h4>
+<div id="outline-container-org3865205" class="outline-4">
+<h4 id="org3865205">When to re-balance</h4>
+<div class="outline-text-4" id="text-org3865205">
+<p>
+This is where height comes in. <code>isAVL()</code> is defined as:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #3a81c3; font-weight: bold;">static</span> <span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">Node</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">K</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #3a81c3; font-weight: bold;">implements</span> <span style="color: #ba2f59; font-weight: bold;">Location</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">K</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #ba2f59; font-weight: bold;">boolean</span> <span style="color: #6c3163; font-weight: bold;">isAVL</span><span style="color: #6c3163;">()</span> <span style="color: #6c3163;">{</span>
+        <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">h1</span>, <span style="color: #715ab1;">h2</span>;
+        h1 = get_height<span style="color: #2d9574;">(</span>left<span style="color: #2d9574;">)</span>;
+        h2 = get_height<span style="color: #2d9574;">(</span>right<span style="color: #2d9574;">)</span>;
+        <span style="color: #3a81c3; font-weight: bold;">return</span> Math.abs<span style="color: #2d9574;">(</span>h2 - h1<span style="color: #2d9574;">)</span> &lt; <span style="color: #4e3163;">2</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">AVLTree</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">K</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #3a81c3; font-weight: bold;">extends</span> <span style="color: #ba2f59; font-weight: bold;">BinarySearchTree</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">K</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #ba2f59; font-weight: bold;">boolean</span> <span style="color: #6c3163; font-weight: bold;">isAVL</span><span style="color: #6c3163;">()</span> <span style="color: #6c3163;">{</span>
+        <span style="color: #3a81c3; font-weight: bold;">if</span> <span style="color: #2d9574;">(</span>root == <span style="color: #4e3163;">null</span><span style="color: #2d9574;">)</span>
+            <span style="color: #3a81c3; font-weight: bold;">return</span> <span style="color: #4e3163;">true</span>;
+        <span style="color: #3a81c3; font-weight: bold;">else</span>
+            <span style="color: #3a81c3; font-weight: bold;">return</span> root.isAVL<span style="color: #2d9574;">()</span>;
+    <span style="color: #6c3163;">}</span>
+  <span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+
+<p>
+A tree is an AVL tree (balanced) if
+</p>
+<ol class="org-ol">
+<li>it is empty, or</li>
+<li>the height difference of its two sub-trees \(<2\)</li>
+</ol>
+
+<p>
+We re-balance when the tree is <i>not</i> AVL.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26d1fe2" class="outline-4">
+<h4 id="org26d1fe2">How to re-balance? Rotations</h4>
+<div class="outline-text-4" id="text-org26d1fe2">
+</div>
+<ul class="org-ul">
+<li><a id="org35cee7d"></a>Single rotations: <code>right_rotate()</code> and <code>left_rotate()</code><br />
+<div class="outline-text-5" id="text-org35cee7d">
+<p>
+Consider rotate right (Figure 4.40), is the following code correct?
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #3a81c3; font-weight: bold;">private</span> <span style="color: #ba2f59; font-weight: bold;">Node</span> <span style="color: #6c3163; font-weight: bold;">right_rotate</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">Node</span> <span style="color: #715ab1;">y</span><span style="color: #3a81c3;">)</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #ba2f59; font-weight: bold;">Node</span> <span style="color: #715ab1;">x</span> = y.left;
+    set_left<span style="color: #6c3163;">(</span>y, x.right<span style="color: #6c3163;">)</span>;
+    set_right<span style="color: #6c3163;">(</span>x, y<span style="color: #6c3163;">)</span>;
+    <span style="color: #3a81c3; font-weight: bold;">return</span> x;
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="org3758b75"></a>Double rotations<br /></li>
+</ul>
 </div>
 </div>
 </div>
@@ -390,7 +532,7 @@ Please do update the height during re-balancing.
 <div id="postamble" class="status">
 <p class="date">Date: 2023-09-29 Fri 00:00</p>
 <p class="author">Author: Tianyu Chen</p>
-<p class="date">Created: 2023-09-28 Thu 16:08</p>
+<p class="date">Created: 2023-09-28 Thu 17:11</p>
 </div>
 </body>
 </html>
