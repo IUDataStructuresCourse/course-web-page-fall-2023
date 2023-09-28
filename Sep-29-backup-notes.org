@@ -1,0 +1,39 @@
+#+TITLE: Project 2 Notes
+#+DATE: <2023-09-29 Fri>
+#+OPTIONS: num:nil toc:nil
+
+[[./index][🔙HOME]]
+
+*🚧Under construction🚧*
+
+* Segment Intersection (AVL Trees)
+
+** Project Overview and General Remarks
+
++ The line sweep algorithm is provide to you
+  * No need to worry about the segment intersection algorithm per se,
+    just the data structures used
++ Implement ~BinarySearchTree~ and ~AVLTree~
+  * ~BinarySearchTree~ /implements/ the ~OrderedSet~ interface:
+    * ~height()~: *need to maintain the height during operations*
+    * ~search()~, ~contains()~, ~insert()~, ~remove()~: [[https://iudatastructurescourse.github.io/course-web-page-fall-2023/lectures/Sep-13][lecture notes]]
+    * ~keys()~: in-order traversal of the BST
+      * returns a sorted list
+  * ~AVLTree~ /extends/ ~BinarySearchTree~ by overriding:
+    * ~insert()~: balance the tree by (single, double) rotations
+    * ~remove()~: balance the tree by (single, double) rotations
+      * where?
+      * how?
+
+** BST Implementation Details
+
+** AVL Specific Implementation Details
+
+#+BEGIN_QUOTE
+We will show how to re-balance the tree at the first (i.e., deepest) such node,
+and we will prove that this rebalancing guarantees that the entire tree satisfies
+the AVL property.
+#+END_QUOTE
+
+In fact, we need to re-balance the tree from the current node of the operation
+(~insert()~ or ~remove()~) *all the way up* to the root node!
