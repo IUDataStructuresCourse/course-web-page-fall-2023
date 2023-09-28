@@ -6,8 +6,8 @@
 
     static Node merge(Node A, Node B) {
         if (A == null) { return B; }
-        if (B == null) { return A; }
-        if (A.data < B.data) {
+        else if (B == null) { return A; }
+        else if (A.data < B.data) {
             return new Node(A.data, merge(A.next, B));
         } else {
             return new Node(B.data, merge(A, B.next));
@@ -15,21 +15,23 @@
     }
 
     static Node sort(Node N) {
-        int length = Utils.length(N);
+        int length = Utils.length(N); // O(n)
         if (length <= 1) {
-            if (N == null) {
-                return null;
-            } else {
-                return new Node(N.data, null); // new list returned
-            }
-        }
-        int middle = length / 2;
-        Node left_side = Utils.take(N, middle);
-        Node right_side = Utils.drop(N, middle);
-        Node leftSorted = sort(left_side);
-        Node rightSorted = sort(right_side);
-        return merge(leftSorted, rightSorted);
+		    return N;
+        } else {
+		  int middle = length / 2;
+		  Node left_side = Utils.take(N, middle);
+		  Node right_side = Utils.drop(N, middle);
+		  Node leftSorted = sort(left_side);
+		  Node rightSorted = sort(right_side);
+		  return merge(leftSorted, rightSorted); // O(n)
+		}
     }
+
+
+
+
+
 
 ### Solution 2
 
@@ -40,7 +42,7 @@
                 return null;
             }
             first = new Node(B.data, null);
-            A = A.next;
+            A = A.next; // B = B.next; ?
         } else if (B == null) {
             first = new Node(A.data, null);
             A = A.next;
@@ -134,9 +136,10 @@
         }
         int mid = Utils.length(N) / 2;
         Node middle = Utils.nth_node(N, mid);
+		Node middle_next = middle.next;
         middle.next = null;
         Node left = sort_in_place(N);
-        Node right = sort_in_place(Utils.nth_node(N, mid+1));
+        Node right = sort_in_place(middle_next);
         return merge_in_place(left, right);
     }
 
@@ -149,7 +152,7 @@
                 return null;
             }
             first = B;
-            A = A.next;
+            A = A.next; // B = B.next; 
         } else if (B == null) {
             first = A;
             A = A.next;
@@ -186,7 +189,7 @@
     }
 
     static Node sort_in_place(Node N) {
-        if (N.next == null) {
+        if (N == null || N.next == null) {
             return N;
         }
         Node curr = N;
