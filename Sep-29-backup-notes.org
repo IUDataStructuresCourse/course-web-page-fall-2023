@@ -167,7 +167,8 @@ We re-balance when the tree is /not/ AVL.
 
 **** Single rotations: ~right_rotate()~ and ~left_rotate()~
 
-Consider rotate right (Figure 4.40), is the following code correct?
+Consider right rotate (book Figure 4.40),
+is the following code correct?
 
 #+BEGIN_SRC java
   private Node right_rotate(Node y) {
@@ -178,4 +179,8 @@ Consider rotate right (Figure 4.40), is the following code correct?
   }
 #+END_SRC
 
+Left rotate is the mirror of right rotate.
+
 **** Double rotations
+
+Book Figure 4.43
