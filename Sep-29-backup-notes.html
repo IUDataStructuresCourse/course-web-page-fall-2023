@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-28 Thu 14:51 -->
+<!-- 2023-09-28 Thu 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Project 2 Notes</title>
@@ -205,18 +205,18 @@
 <b>🚧Under construction🚧</b>
 </p>
 
-<div id="outline-container-orgddc1759" class="outline-2">
-<h2 id="orgddc1759">Segment Intersection (AVL Trees)</h2>
-<div class="outline-text-2" id="text-orgddc1759">
+<div id="outline-container-org90ac541" class="outline-2">
+<h2 id="org90ac541">Segment Intersection (AVL Trees)</h2>
+<div class="outline-text-2" id="text-org90ac541">
 </div>
-<div id="outline-container-org016aa4e" class="outline-3">
-<h3 id="org016aa4e">Project Overview and General Remarks</h3>
-<div class="outline-text-3" id="text-org016aa4e">
+<div id="outline-container-org8f3d2d9" class="outline-3">
+<h3 id="org8f3d2d9">Project Overview and General Remarks</h3>
+<div class="outline-text-3" id="text-org8f3d2d9">
 <ul class="org-ul">
 <li>The line sweep algorithm is provide to you
 <ul class="org-ul">
-<li>No need to worry about the segment intersection algorithm per se,
-just the data structures used</li>
+<li>No need to worry about the segment intersection
+algorithm per se, just the data structures used</li>
 </ul></li>
 <li>Implement <code>BinarySearchTree</code> and <code>AVLTree</code>
 <ul class="org-ul">
@@ -243,25 +243,89 @@ just the data structures used</li>
 </div>
 </div>
 
-<div id="outline-container-orge194332" class="outline-3">
-<h3 id="orge194332">BST Implementation Details</h3>
+<div id="outline-container-orge0964ab" class="outline-3">
+<h3 id="orge0964ab">BST Implementation Details</h3>
+<div class="outline-text-3" id="text-orge0964ab">
+</div>
+<div id="outline-container-org8ac72ae" class="outline-4">
+<h4 id="org8ac72ae">One Specification Caveat of <code>insert()</code>&#x2026;</h4>
+<div class="outline-text-4" id="text-org8ac72ae">
+<p>
+We should note that the <a href="https://en.wikipedia.org/wiki/Design_by_contract">contract</a> of <code>insert()</code> is different
+between the student support code and the textbook, so a direct
+copy-and-paste apparently won't work!
+</p>
+
+<ul class="org-ul">
+<li>Your code is expected to return (quote the support code):
+"the location where the insert occurred", that is, a reference
+to the newly-inserted node.</li>
+<li>However, the code in the book returns the root of the tree.</li>
+</ul>
+
+<p>
+You need to adapt the code a little&#x2026;
+</p>
+
+<p>
+Also, make sure to update:
+</p>
+<ul class="org-ul">
+<li><b>height</b> (<code>updateHeight()</code>) for all ancestors</li>
+<li><b>size of the tree</b> (<code>numNodes</code>)</li>
+</ul>
+
+<p>
+Same for <code>remove()</code>.
+</p>
+</div>
 </div>
 
-<div id="outline-container-org3f21c27" class="outline-3">
-<h3 id="org3f21c27">AVL Specific Implementation Details</h3>
-<div class="outline-text-3" id="text-org3f21c27">
+<div id="outline-container-org8555b18" class="outline-4">
+<h4 id="org8555b18">Possible helper functions</h4>
+</div>
+</div>
+
+<div id="outline-container-org048acf0" class="outline-3">
+<h3 id="org048acf0">AVL Specific Implementation Details</h3>
+<div class="outline-text-3" id="text-org048acf0">
+</div>
+<div id="outline-container-org4fcf950" class="outline-4">
+<h4 id="org4fcf950">Where to re-balance?</h4>
+<div class="outline-text-4" id="text-org4fcf950">
+<p>
+Quote textbook p. 125:
+</p>
+
 <blockquote>
 <p>
-We will show how to re-balance the tree at the first (i.e., deepest) such node,
-and we will prove that this rebalancing guarantees that the entire tree satisfies
+We will show how to re-balance the tree at the first
+(i.e., deepest) such node, and we will prove that this
+re-balancing guarantees that the entire tree satisfies
 the AVL property.
 </p>
 </blockquote>
 
 <p>
-In fact, we need to re-balance the tree from the current node of the operation
-(<code>insert()</code> or <code>remove()</code>) <b>all the way up</b> to the root node!
+Slightly confusing. In fact, we need to re-balance the tree
+from the current node of the operation, <code>insert()</code> or <code>remove()</code>,
+<b>all the way up</b> to the root node!
 </p>
+
+<p>
+If you define <code>insert()</code> and <code>remove()</code> recursively,
+you need to call <code>balance()</code> on the current root of the
+sub-tree before you return.
+</p>
+
+<p>
+Please do update the height during re-balancing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org849b2c5" class="outline-4">
+<h4 id="org849b2c5">How to re-balance?</h4>
 </div>
 </div>
 </div>
@@ -269,7 +333,7 @@ In fact, we need to re-balance the tree from the current node of the operation
 <div id="postamble" class="status">
 <p class="date">Date: 2023-09-29 Fri 00:00</p>
 <p class="author">Author: Tianyu Chen</p>
-<p class="date">Created: 2023-09-28 Thu 14:51</p>
+<p class="date">Created: 2023-09-28 Thu 15:30</p>
 </div>
 </body>
 </html>
