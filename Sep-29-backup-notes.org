@@ -48,15 +48,33 @@ Same for ~remove()~.
 
 *** Possible helper functions
 
-**** Setting the children of a node
+Optional. You may do it differently.
+
+**** ~set_left()~ and ~set_right()~: setting the children of a node
 
 Question: how to set the left child of =n= to be =l=?
 
-+ Previously we used ~n.left = l~ in the lecture. Does it still apply?
-  * No. It doesn't set the parent of =l= to be =n=.
++ Previously we used ~n.left = l~ in the lecture.
+  * Does it still apply?
+    * No. It doesn't set the parent of =l= to be =n=.
     * We didn't have ~parent~ before!
   * Side question: why do we need ~parent~ this time?
     * Hint: [[./lab4][Lab 4]]
++ Define two helper functions. Each does 3 things:
+    1. ~n.left = l~ (or ~n.right = r~)
+    2. ~l.parent = n~ if ~l != null~
+    3. update the height of =n= - why?
+
+**** ~replace()~: replace a tree with its sub-tree
+
+Replace a tree with root =n= with a sub-tree with root =m=,
+we case split on the parent of =n=, producing 3 cases:
+
+1. no parent (~n.parent == null~)
+2. has parent and =n= is left child (~n == n.parent.left~)
+   * set the left child of parent to be =m=
+3. has parent and =n= is right child (~n == n.parent.right~)
+   * set the right child of parent to be =m=
 
 ** AVL Specific Implementation Details
 

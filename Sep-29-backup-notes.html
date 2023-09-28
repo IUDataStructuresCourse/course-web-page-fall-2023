@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-28 Thu 15:51 -->
+<!-- 2023-09-28 Thu 16:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Project 2 Notes</title>
@@ -205,13 +205,13 @@
 <b>🚧Under construction🚧</b>
 </p>
 
-<div id="outline-container-orga76ab70" class="outline-2">
-<h2 id="orga76ab70">Segment Intersection (AVL Trees)</h2>
-<div class="outline-text-2" id="text-orga76ab70">
+<div id="outline-container-org2d5f068" class="outline-2">
+<h2 id="org2d5f068">Segment Intersection (AVL Trees)</h2>
+<div class="outline-text-2" id="text-org2d5f068">
 </div>
-<div id="outline-container-orgbe778ca" class="outline-3">
-<h3 id="orgbe778ca">Project Overview and General Remarks</h3>
-<div class="outline-text-3" id="text-orgbe778ca">
+<div id="outline-container-org55d7655" class="outline-3">
+<h3 id="org55d7655">Project Overview and General Remarks</h3>
+<div class="outline-text-3" id="text-org55d7655">
 <ul class="org-ul">
 <li>The line sweep algorithm is provide to you
 <ul class="org-ul">
@@ -243,13 +243,13 @@ algorithm per se, just the data structures used</li>
 </div>
 </div>
 
-<div id="outline-container-orga578aff" class="outline-3">
-<h3 id="orga578aff">BST Implementation Details</h3>
-<div class="outline-text-3" id="text-orga578aff">
+<div id="outline-container-org2f7b37c" class="outline-3">
+<h3 id="org2f7b37c">BST Implementation Details</h3>
+<div class="outline-text-3" id="text-org2f7b37c">
 </div>
-<div id="outline-container-org2ba5308" class="outline-4">
-<h4 id="org2ba5308">One Specification Caveat of <code>insert()</code>&#x2026;</h4>
-<div class="outline-text-4" id="text-org2ba5308">
+<div id="outline-container-org424f5aa" class="outline-4">
+<h4 id="org424f5aa">One Specification Caveat of <code>insert()</code>&#x2026;</h4>
+<div class="outline-text-4" id="text-org424f5aa">
 <p>
 We should note that the <a href="https://en.wikipedia.org/wiki/Design_by_contract">contract</a> of <code>insert()</code> is different
 between the student support code and the textbook, so a direct
@@ -281,22 +281,27 @@ Same for <code>remove()</code>.
 </div>
 </div>
 
-<div id="outline-container-orgea691b4" class="outline-4">
-<h4 id="orgea691b4">Possible helper functions</h4>
-<div class="outline-text-4" id="text-orgea691b4">
+<div id="outline-container-org827020e" class="outline-4">
+<h4 id="org827020e">Possible helper functions</h4>
+<div class="outline-text-4" id="text-org827020e">
+<p>
+Optional. You may do it differently.
+</p>
 </div>
+
 <ul class="org-ul">
-<li><a id="org9b07e2d"></a>Setting the children of a node<br />
-<div class="outline-text-5" id="text-org9b07e2d">
+<li><a id="org1c8358b"></a><code>set_left()</code> and <code>set_right()</code>: setting the children of a node<br />
+<div class="outline-text-5" id="text-org1c8358b">
 <p>
 Question: how to set the left child of <code>n</code> to be <code>l</code>?
 </p>
 
 <ul class="org-ul">
-<li>Previously we used <code>n.left = l</code> in the lecture. Does it still apply?
+<li>Previously we used <code>n.left = l</code> in the lecture.
 <ul class="org-ul">
-<li>No. It doesn't set the parent of <code>l</code> to be <code>n</code>.
+<li>Does it still apply?
 <ul class="org-ul">
+<li>No. It doesn't set the parent of <code>l</code> to be <code>n</code>.</li>
 <li>We didn't have <code>parent</code> before!</li>
 </ul></li>
 <li>Side question: why do we need <code>parent</code> this time?
@@ -304,20 +309,47 @@ Question: how to set the left child of <code>n</code> to be <code>l</code>?
 <li>Hint: <a href="./lab4">Lab 4</a></li>
 </ul></li>
 </ul></li>
+<li>Define two helper functions. Each does 3 things:
+<ol class="org-ol">
+<li><code>n.left = l</code> (or <code>n.right = r</code>)</li>
+<li><code>l.parent = n</code> if <code>l != null</code></li>
+<li>update the height of <code>n</code> - why?</li>
+</ol></li>
 </ul>
+</div>
+</li>
+
+<li><a id="org58469c5"></a><code>replace()</code>: replace a tree with its sub-tree<br />
+<div class="outline-text-5" id="text-org58469c5">
+<p>
+Replace a tree with root <code>n</code> with a sub-tree with root <code>m</code>,
+we case split on the parent of <code>n</code>, producing 3 cases:
+</p>
+
+<ol class="org-ol">
+<li>no parent (<code>n.parent == null</code>)</li>
+<li>has parent and <code>n</code> is left child (<code>n == n.parent.left</code>)
+<ul class="org-ul">
+<li>set the left child of parent to be <code>m</code></li>
+</ul></li>
+<li>has parent and <code>n</code> is right child (<code>n == n.parent.right</code>)
+<ul class="org-ul">
+<li>set the right child of parent to be <code>m</code></li>
+</ul></li>
+</ol>
 </div>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org41473ae" class="outline-3">
-<h3 id="org41473ae">AVL Specific Implementation Details</h3>
-<div class="outline-text-3" id="text-org41473ae">
+<div id="outline-container-org11bcac4" class="outline-3">
+<h3 id="org11bcac4">AVL Specific Implementation Details</h3>
+<div class="outline-text-3" id="text-org11bcac4">
 </div>
-<div id="outline-container-orgc8815e7" class="outline-4">
-<h4 id="orgc8815e7">Where to re-balance?</h4>
-<div class="outline-text-4" id="text-orgc8815e7">
+<div id="outline-container-orge3c13d3" class="outline-4">
+<h4 id="orge3c13d3">Where to re-balance?</h4>
+<div class="outline-text-4" id="text-orge3c13d3">
 <p>
 Quote textbook p. 125:
 </p>
@@ -349,8 +381,8 @@ Please do update the height during re-balancing.
 </div>
 </div>
 
-<div id="outline-container-orgc35339d" class="outline-4">
-<h4 id="orgc35339d">How to re-balance?</h4>
+<div id="outline-container-orgc0ee500" class="outline-4">
+<h4 id="orgc0ee500">How to re-balance?</h4>
 </div>
 </div>
 </div>
@@ -358,7 +390,7 @@ Please do update the height during re-balancing.
 <div id="postamble" class="status">
 <p class="date">Date: 2023-09-29 Fri 00:00</p>
 <p class="author">Author: Tianyu Chen</p>
-<p class="date">Created: 2023-09-28 Thu 15:51</p>
+<p class="date">Created: 2023-09-28 Thu 16:08</p>
 </div>
 </body>
 </html>
