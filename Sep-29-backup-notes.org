@@ -4,9 +4,6 @@
 
 [[https://iudatastructurescourse.github.io/course-web-page-fall-2023/][🔙HOME]]
 
-*🚧Under construction🚧*
-
-
 
 
 
@@ -17,7 +14,7 @@
 
 + On Canvas: [[https://iu.instructure.com/courses/2165834/quizzes/4049366][link]]
 + Multiple choices: *select ALL answers that apply!*
-+ Access code: _TBA_
++ Access code: _binary_
 
 
 
