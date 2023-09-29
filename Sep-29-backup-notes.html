@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-28 Thu 20:34 -->
+<!-- 2023-09-29 Fri 09:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Project 2 Notes</title>
@@ -233,18 +233,13 @@
 <a href="https://iudatastructurescourse.github.io/course-web-page-fall-2023/">🔙HOME</a>
 </p>
 
-<p>
-<b>🚧Under construction🚧</b>
-</p>
 
 
 
 
-
-
-<div id="outline-container-orgab228f4" class="outline-2">
-<h2 id="orgab228f4">First Things First</h2>
-<div class="outline-text-2" id="text-orgab228f4">
+<div id="outline-container-org226fc15" class="outline-2">
+<h2 id="org226fc15">First Things First</h2>
+<div class="outline-text-2" id="text-org226fc15">
 <p>
 <b>Quiz 2.</b> 15 minutes, closed-book
 </p>
@@ -252,7 +247,7 @@
 <ul class="org-ul">
 <li>On Canvas: <a href="https://iu.instructure.com/courses/2165834/quizzes/4049366">link</a></li>
 <li>Multiple choices: <b>select ALL answers that apply!</b></li>
-<li>Access code: <span class="underline">TBA</span></li>
+<li>Access code: <span class="underline">binary</span></li>
 </ul>
 </div>
 </div>
@@ -262,13 +257,13 @@
 
 
 
-<div id="outline-container-orgfd3545d" class="outline-2">
-<h2 id="orgfd3545d">Segment Intersection (AVL Trees)</h2>
-<div class="outline-text-2" id="text-orgfd3545d">
+<div id="outline-container-org1cddf67" class="outline-2">
+<h2 id="org1cddf67">Segment Intersection (AVL Trees)</h2>
+<div class="outline-text-2" id="text-org1cddf67">
 </div>
-<div id="outline-container-org0b1ac56" class="outline-3">
-<h3 id="org0b1ac56">Project Overview and General Remarks</h3>
-<div class="outline-text-3" id="text-org0b1ac56">
+<div id="outline-container-org19584b0" class="outline-3">
+<h3 id="org19584b0">Project Overview and General Remarks</h3>
+<div class="outline-text-3" id="text-org19584b0">
 <ul class="org-ul">
 <li>The line sweep algorithm is provided to you
 <ul class="org-ul">
@@ -280,7 +275,8 @@ algorithm per se, just the data structures used</li>
 <li><code>BinarySearchTree</code> <i>implements</i> the <code>OrderedSet</code> interface:
 <ul class="org-ul">
 <li><code>height()</code>: <b>need to maintain the height during operations</b></li>
-<li><code>search()</code>, <code>contains()</code>, <code>insert()</code>, <code>remove()</code>: <a href="https://iudatastructurescourse.github.io/course-web-page-fall-2023/lectures/Sep-13">lecture notes</a></li>
+<li><code>search()</code>, <code>contains()</code>, <code>insert()</code>, <code>remove()</code>:
+<a href="https://iudatastructurescourse.github.io/course-web-page-fall-2023/lectures/Sep-13">lecture notes</a></li>
 <li><code>keys()</code>: in-order traversal of the BST
 <ul class="org-ul">
 <li>returns a sorted list</li>
@@ -291,7 +287,8 @@ algorithm per se, just the data structures used</li>
 <li><code>insert()</code>: balance the tree by (single, double) rotations</li>
 <li><code>remove()</code>: balance the tree by (single, double) rotations
 <ul class="org-ul">
-<li>Where, when, how? (We'll find out later)</li>
+<li>Where, when, how?
+(We'll find out later)</li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -299,13 +296,13 @@ algorithm per se, just the data structures used</li>
 </div>
 </div>
 
-<div id="outline-container-org218faf4" class="outline-3">
-<h3 id="org218faf4">BST Implementation Details</h3>
-<div class="outline-text-3" id="text-org218faf4">
+<div id="outline-container-org46779e0" class="outline-3">
+<h3 id="org46779e0">BST Implementation Details</h3>
+<div class="outline-text-3" id="text-org46779e0">
 </div>
-<div id="outline-container-org28bec8d" class="outline-4">
-<h4 id="org28bec8d">One caveat of <code>insert()</code>&#x2026;</h4>
-<div class="outline-text-4" id="text-org28bec8d">
+<div id="outline-container-orgb8c2052" class="outline-4">
+<h4 id="orgb8c2052">One caveat of <code>insert()</code>&#x2026;</h4>
+<div class="outline-text-4" id="text-orgb8c2052">
 <p>
 We should note that the <a href="https://en.wikipedia.org/wiki/Design_by_contract">contracts</a> of <code>insert()</code> are different
 between the student support code version and the textbook
@@ -327,7 +324,7 @@ to the newly-inserted node.</li>
 </ul>
 
 <p>
-You need to adapt the code&#x2026; (fortunately not too much)
+You need to adapt the code&#x2026;
 </p>
 
 <p>
@@ -352,17 +349,17 @@ Same for <code>remove()</code>. The height of an empty tree is \(-1\):
 </div>
 </div>
 
-<div id="outline-container-orgb34eb15" class="outline-4">
-<h4 id="orgb34eb15">Possible helper functions</h4>
-<div class="outline-text-4" id="text-orgb34eb15">
+<div id="outline-container-org4386e4f" class="outline-4">
+<h4 id="org4386e4f">Possible helper functions</h4>
+<div class="outline-text-4" id="text-org4386e4f">
 <p>
 Optional. You may do it differently.
 </p>
 </div>
 
 <ul class="org-ul">
-<li><a id="orgca92f04"></a><code>set_left()</code> and <code>set_right()</code>: setting the children of a node<br />
-<div class="outline-text-5" id="text-orgca92f04">
+<li><a id="org2b50976"></a><code>set_left()</code> and <code>set_right()</code>: setting the children of a node<br />
+<div class="outline-text-5" id="text-org2b50976">
 <p>
 Question: how to set the left child of <code>n</code> to be <code>l</code>?
 </p>
@@ -390,8 +387,8 @@ Question: how to set the left child of <code>n</code> to be <code>l</code>?
 </div>
 </li>
 
-<li><a id="org1d12df4"></a><code>replace()</code>: replace a tree with its sub-tree<br />
-<div class="outline-text-5" id="text-org1d12df4">
+<li><a id="orgbe1edd2"></a><code>replace()</code>: replace a tree with its sub-tree<br />
+<div class="outline-text-5" id="text-orgbe1edd2">
 <p>
 Replace a tree with root <code>n</code> with a sub-tree with root <code>m</code>,
 we case split on the parent of <code>n</code>, producing 3 cases:
@@ -414,18 +411,18 @@ we case split on the parent of <code>n</code>, producing 3 cases:
 </div>
 </div>
 
-<div id="outline-container-org5c20c9d" class="outline-3">
-<h3 id="org5c20c9d">AVL Specific Implementation Details</h3>
-<div class="outline-text-3" id="text-org5c20c9d">
+<div id="outline-container-org5bd377f" class="outline-3">
+<h3 id="org5bd377f">AVL Specific Implementation Details</h3>
+<div class="outline-text-3" id="text-org5bd377f">
 <p>
 Do normal BST insert or remove.
 Fix the AVL property using <code>balance()</code>.
 </p>
 </div>
 
-<div id="outline-container-org96a7aca" class="outline-4">
-<h4 id="org96a7aca">Where to re-balance?</h4>
-<div class="outline-text-4" id="text-org96a7aca">
+<div id="outline-container-orgced6f0a" class="outline-4">
+<h4 id="orgced6f0a">Where to re-balance?</h4>
+<div class="outline-text-4" id="text-orgced6f0a">
 <p>
 Quote textbook p. 125:
 </p>
@@ -457,9 +454,9 @@ Update the height whenever we re-balance a node.
 </div>
 </div>
 
-<div id="outline-container-orgef2c340" class="outline-4">
-<h4 id="orgef2c340">When to re-balance?</h4>
-<div class="outline-text-4" id="text-orgef2c340">
+<div id="outline-container-org403b265" class="outline-4">
+<h4 id="org403b265">When to re-balance?</h4>
+<div class="outline-text-4" id="text-org403b265">
 <p>
 This is where height comes into play. <code>isAVL()</code> is defined as:
 </p>
@@ -499,13 +496,13 @@ We re-balance when the tree is <i>not</i> AVL.
 </div>
 </div>
 
-<div id="outline-container-org7450029" class="outline-4">
-<h4 id="org7450029">How to re-balance? Rotations</h4>
-<div class="outline-text-4" id="text-org7450029">
+<div id="outline-container-org5580f46" class="outline-4">
+<h4 id="org5580f46">How to re-balance? Rotations</h4>
+<div class="outline-text-4" id="text-org5580f46">
 </div>
 <ul class="org-ul">
-<li><a id="orgc5a18fb"></a>Single rotations: <code>right_rotate()</code> and <code>left_rotate()</code><br />
-<div class="outline-text-5" id="text-orgc5a18fb">
+<li><a id="org04128b0"></a>Single rotations: <code>right_rotate()</code> and <code>left_rotate()</code><br />
+<div class="outline-text-5" id="text-org04128b0">
 <p>
 Consider right rotate (book Figure 4.40),
 is the following code correct?
@@ -527,8 +524,8 @@ Left rotate is the mirror of right rotate.
 </div>
 </li>
 
-<li><a id="orgf0a697d"></a>Double rotations<br />
-<div class="outline-text-5" id="text-orgf0a697d">
+<li><a id="orgf7dde98"></a>Double rotations<br />
+<div class="outline-text-5" id="text-orgf7dde98">
 <p>
 Book Figure 4.43
 </p>
@@ -542,7 +539,7 @@ Book Figure 4.43
 <div id="postamble" class="status">
 <p class="date">Date: 2023-09-29 Fri 00:00</p>
 <p class="author">Author: Tianyu Chen</p>
-<p class="date">Created: 2023-09-28 Thu 20:34</p>
+<p class="date">Created: 2023-09-29 Fri 09:51</p>
 </div>
 </body>
 </html>

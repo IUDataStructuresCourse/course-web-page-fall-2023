@@ -31,13 +31,15 @@
 + Implement ~BinarySearchTree~ and ~AVLTree~
   * ~BinarySearchTree~ /implements/ the ~OrderedSet~ interface:
     * ~height()~: *need to maintain the height during operations*
-    * ~search()~, ~contains()~, ~insert()~, ~remove()~: [[https://iudatastructurescourse.github.io/course-web-page-fall-2023/lectures/Sep-13][lecture notes]]
+    * ~search()~, ~contains()~, ~insert()~, ~remove()~:
+      [[https://iudatastructurescourse.github.io/course-web-page-fall-2023/lectures/Sep-13][lecture notes]]
     * ~keys()~: in-order traversal of the BST
       * returns a sorted list
   * ~AVLTree~ /extends/ ~BinarySearchTree~ by overriding:
     * ~insert()~: balance the tree by (single, double) rotations
     * ~remove()~: balance the tree by (single, double) rotations
-      * Where, when, how? (We'll find out later)
+      * Where, when, how?
+        (We'll find out later)
 
 ** BST Implementation Details
 
@@ -58,7 +60,7 @@ version, so a direct copy-and-paste apparently won't work!
   to the newly-inserted node.
 + However, the code in the book returns the root of the tree.
 
-You need to adapt the code... (fortunately not too much)
+You need to adapt the code...
 
 Also, make sure to update:
 + *height* (~updateHeight()~) for all ancestors
