@@ -2,7 +2,7 @@
 #+DATE: <2023-09-29 Fri>
 #+OPTIONS: num:nil toc:nil
 
-[[./index][🔙HOME]]
+[[https://iudatastructurescourse.github.io/course-web-page-fall-2023/][🔙HOME]]
 
 *🚧Under construction🚧*
 
@@ -28,7 +28,7 @@
 
 ** Project Overview and General Remarks
 
-+ The line sweep algorithm is provide to you
++ The line sweep algorithm is provided to you
   * No need to worry about the segment intersection
     algorithm per se, just the data structures used
 + Implement ~BinarySearchTree~ and ~AVLTree~
@@ -40,16 +40,15 @@
   * ~AVLTree~ /extends/ ~BinarySearchTree~ by overriding:
     * ~insert()~: balance the tree by (single, double) rotations
     * ~remove()~: balance the tree by (single, double) rotations
-      * where?
-      * how?
+      * Where, when, how? (We'll find out later)
 
 ** BST Implementation Details
 
-*** One Specification Caveat of ~insert()~...
+*** One caveat of ~insert()~...
 
-We should note that the [[https://en.wikipedia.org/wiki/Design_by_contract][contract]] of ~insert()~ is different
-between the student support code and the textbook, so a direct
-copy-and-paste apparently won't work!
+We should note that the [[https://en.wikipedia.org/wiki/Design_by_contract][contracts]] of ~insert()~ are different
+between the student support code version and the textbook
+version, so a direct copy-and-paste apparently won't work!
 
 #+BEGIN_SRC java
   public Node<K> insert(K key) {
@@ -86,11 +85,11 @@ Optional. You may do it differently.
 Question: how to set the left child of =n= to be =l=?
 
 + Previously we used ~n.left = l~ in the lecture.
-  * Does it still apply?
+  * Does it still work?
     * No. It doesn't set the parent of =l= to be =n=.
-    * We didn't have ~parent~ before!
-  * Side question: why do we need ~parent~ this time?
-    * Hint: [[./lab4][Lab 4]]
+    * We didn't have ~parent~ in the BST lecture.
+  * But why do we need ~parent~ this time?
+    * Hint: [[https://iudatastructurescourse.github.io/course-web-page-fall-2023/lab4][Lab 4]]
 + Define two helper functions. Each does 3 things:
     1. ~n.left = l~ (or ~n.right = r~)
     2. ~l.parent = n~ if ~l != null~
@@ -131,11 +130,11 @@ If you define ~insert()~ and ~remove()~ recursively,
 you need to call ~balance()~ on the current root of the
 sub-tree before you return.
 
-Please do update the height during re-balancing.
+Update the height whenever we re-balance a node.
 
-*** When to re-balance
+*** When to re-balance?
 
-This is where height comes in. ~isAVL()~ is defined as:
+This is where height comes into play. ~isAVL()~ is defined as:
 
 #+BEGIN_SRC java
   static class Node<K> implements Location<K> {
@@ -157,7 +156,7 @@ This is where height comes in. ~isAVL()~ is defined as:
     }
 #+END_SRC
 
-A tree is an AVL tree (balanced) if
+A tree is an AVL tree (balanced) if:
 1) it is empty, or
 2) the height difference of its two sub-trees $<2$
 
