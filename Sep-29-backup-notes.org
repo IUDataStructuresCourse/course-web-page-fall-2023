@@ -94,9 +94,9 @@ Question: how to set the left child of =n= to be =l=?
     2. ~l.parent = n~ if ~l != null~
     3. update the height of =n= - why?
 
-**** ~replace()~: replace a tree with its sub-tree
+**** ~replace()~: replace a tree
 
-Replace a tree with root =n= with a sub-tree with root =m=,
+Replace a tree with root =n= with another tree with root =m=,
 we case split on the parent of =n=, producing 3 cases:
 
 1. no parent (~n.parent == null~)
