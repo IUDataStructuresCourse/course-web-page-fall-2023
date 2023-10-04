@@ -1,6 +1,6 @@
 # Lecture: Heaps and Priority Queues, Continued
 
-## Heaps
+## Recap: Heaps
 
             __16__
            /      \
