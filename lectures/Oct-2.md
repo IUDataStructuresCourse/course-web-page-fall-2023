@@ -156,14 +156,14 @@ In general,
 
     num. nodes at hight h ≤ ⌈ n / 2^(h+1) ⌉
 
-So we can sum these up, from h=0 to log(n), with O(h) cost for each:
+So we can sum these up, from `h=0` to `log(n)`, with `O(h)` cost for each:
 
                log(n)
     time(n) =  ∑      h × ⌈ n / 2^(h+1) ⌉
                h=0
     
-Pull out the `n` and make the denominator a little smaller (change `h+1` to `h`),
-which makes the right-hand side bigger.
+Pull out the `n`, multiply the right-hand side by 2 (change `h+1` to `h`),
+and remove the ceiling.
 
                    log(n)
     time(n) ≤  n × ∑      h / 2^h

@@ -18,7 +18,7 @@ time, top-to-bottom.
             [16,14,10, 8, 7, 9, 3, 2, 4, 1]
 
 Def. A **max heap** is a heap in which for every node other than the root, 
-A[i] ≤ A[parent(i)]
+`A[i] ≤ A[parent(i)]`.
 
 This is called the **heap property** or max-heap property.
 One can instead create a min-heap by flipping this around.
@@ -50,8 +50,8 @@ Similar to `extract_max` but does a swap instead of move.
     }
 
 Time complexity:
-The for loop executes n times, and max_heapify is O(log(n)),
-so we have O(n log(n)).
+The for loop executes n times, and max_heapify is `O(log(n))`,
+so we have `O(n log(n))`.
 
 ### `insert` method
 
@@ -65,6 +65,8 @@ so we have O(n log(n)).
         data.add(k);
         increase_key(data.size() - 1);
     }
+	
+The time complexity is amortized `log(n)`.
 
 ## Aside: Loop Invariants
 
@@ -106,9 +108,9 @@ Answer: the invariant is that the trees rooted at
   positions from i+1 to the end are max heaps.
 
 What is the time complexity?
-Answer: O(n log(n)) is the easy answer, but not tight. 
+Answer: `O(n log(n))` is the easy answer, but not tight. 
 
-The tight upper bound is O(n) which can be obtained by
+The tight upper bound is `O(n)` which can be obtained by
 observing that the time for `max_heapify` depends on the
 height of the node, and `build_max_heap` calls `max_heapify
 many times on nodes with a low height.
@@ -138,8 +140,8 @@ So we can sum these up, from h=0 to log(n), with O(h) cost for each:
     time(n) =  ∑      h × ⌈ n / 2^(h+1) ⌉
                h=0
     
-Pull out the `n` and make the denominator a little smaller (change `h+1` to `h`),
-which makes the right-hand side bigger.
+Pull out the `n`, multiply the right-hand side by 2 (change `h+1` to `h`),
+and remove the ceiling.
 
                    log(n)
     time(n) ≤  n × ∑      h / 2^h
