@@ -70,8 +70,11 @@ Oct. 13 | **Fall Break**
 
 **Resources**
 
-* Midterm Exam from 2022 [with solutions](./midterm-a-2022.pdf)
-    and [without solutions](./midterm-a-2022-questions.pdf).
+* Midterm Exams from
+  * 2021 [with solutions](./midterm-2021-solns.pdf) 
+     and [without solutions](./midterm-2021.pdf).
+  * 2022 [with solutions](./midterm-a-2022.pdf)
+     and [without solutions](./midterm-a-2022-questions.pdf).
 
 * Final Exam with solutions from [2021](./final-2021.pdf) and [2022](./final-2022.pdf).
 
