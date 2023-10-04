@@ -66,6 +66,32 @@ so we have O(n log(n)).
         increase_key(data.size() - 1);
     }
 
+## Aside: Loop Invariants
+
+A *loop invariant* is a statement about the current state of affairs
+that it true at the beginning of each loop iteration.
+
+The tricky thing about a loop invariant is that the state of affairs
+is changing, so it must be abstract enough to capture some property
+that stays the same. That usually means that it is some kind of
+formula involving the loop index. One usually obtains a loop invariant
+by means of guess and check. First, make a guess at the loop
+invariant.  Then check whether it satisfies the following 3
+conditions:
+
+1. show that the loop invariant is true before the start of the loop
+2. assuming that the loop invariant is true at the beginning of the loop body
+   and assuming that the loop condition is true,
+   show that the loop invariant is true at the end of the loop body.
+   (Do this for a hypothetical iteration of the loop.)
+3. show that the loop invariant combined with the loop condition
+   being false logically implies the correctness criteria for the
+   algorithm.
+
+If all 3 are satisfied, then you have a valid loop invariant.
+Otherwise, you need to revise your guess and check again.
+
+
 ## `build_max_heap` method (take 2, time permitting)
 
     void build_max_heap() {
