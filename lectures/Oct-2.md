@@ -148,38 +148,54 @@ height. The worst cast is a complete tree. For example,
        / \   / \
       o   o o   o    height 0, 4 nodes
 
-	Height 0: n / 2     =  n / 2^(0+1)
+	num. nodes at height 2 =  1 = ⌈ n / 8 ⌉  =  ⌈ n / 2^(2+1) ⌉
 
-	Height 1: n / 4     =  n / 2^(1+1)
+	num. nodes at height 1 =  2 = ⌈ n / 4 ⌉  =  ⌈ n / 2^(1+1) ⌉
 
-	Height 2: n / 8     =  n / 2^(2+1)
+	num. nodes at height 0 =  4 = ⌈ n / 2 ⌉  =  ⌈ n / 2^(0+1) ⌉
 
-In general, there are at most n / 2^(h+1) nodes at a given height h.
+In general, 
+
+    num. nodes at hight h <= ⌈ n / 2^(h+1) ⌉
 
 So we can sum these up, from h=0 to log(n), with O(h) cost for each:
 
-sum from h=0 to log(n) of (n / 2^(h+1)) * O(h)
-  = O(n * sum from h=0 to log(n) of h / 2^h)
+    log(n)
+    ∑      h × ⌈ n / 2^(h+1) ⌉
+	h=0
+	
+Pull out the `n` and made the denominator a little bigger (change `h+1` to `h`).
+
+	       log(n)
+    <= n × ∑      h / 2^h
+	       h=0
 
 recall formula A.8: 
 
-   sum from k=0 to ∞ of (k * x^k) = x / (1 - x)², for |x| < 1
+    ∞
+    ∑   k × x^k    =   x / (1 - x)², for |x| < 1
+    k=0
 
    let x = 1/2:
+   
+    ∞
+    ∑  (k / 2^k) = (1/2) / (1 - (1/2))²   = (1/2) / (1/2)² = (1/2) / (1/4) = 2
+    k=0
 
-   sum from k=0 to ∞ of (k / 2^k) = (1/2) / (1 - (1/2))²
-    = (1/2) / (1 \times 1 - 2\times 1/2 + 1/4)
-    = (1/2) / (1/4) = 2
+and we have
 
-so we get
-
-    sum from h=0 to log(n) of (h / 2^h)  < 2
-
+    log(n)             ∞
+    ∑     h / 2^h  <  ∑  h / 2^h = 2
+    h=0               h=0
+	
 Thus
     
-	  O( n * sum from h=0 to log(n) of (h / 2^h))
-	= O( n * 2 )
-	= O(n).
+	    log(n)
+    n × ∑     h / 2^h   <   n × 2
+	    h=0
+		  
+
+So the total cost of `build_max_heap` is O(n).
 
 
 ## `maximum` method
