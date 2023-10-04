@@ -63,6 +63,7 @@ Sep. 25 | [Hash tables](./lectures/Sep-25.md) | Ch. 5 sec. 1,2,3,5,6 |  Lab 4 du
 Sep. 27 | [Code Review (Merge Sort), <br> Assertions and Correctness](./lectures/Sep-27.md)
 Sep. 29 |    [Quiz 2](https://iu.instructure.com/courses/2165834/quizzes/4049366)  |  | Lab: work on <br> [Project 2 Segment Intersection](./proj2-seg-int) <br> [_Lab Notes_](./Sep-29-backup-notes) | [test](https://autograder.luddy.indiana.edu/web/project/833), [code](https://autograder.luddy.indiana.edu/web/project/700)
 Oct. 2 | [Heaps and Priority Queues](./lectures/Oct-2.md) | Ch. 6 sec. 1-4, 9 |
+Oct. 4 | 
 Oct. 6 |     |  | Lab: finish <br> [Project 2 Segment Intersection](./proj2-seg-int) | [test](https://autograder.luddy.indiana.edu/web/project/833), [code](https://autograder.luddy.indiana.edu/web/project/700)
 Oct. 9  | Review for Midterm Exam | | <mark> Project 2: Segment Intersection due </mark> |
 Oct. 11 | **<mark>Midterm Exam</mark>** (in class)

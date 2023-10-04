@@ -140,7 +140,7 @@ many times on nodes with a low height.
 Consider how many nodes there can be in an n-element heap at each
 height. The worst cast is a complete tree. For example,
 
-       n = 7
+         n = 7
 
           _o_        height 2, 1 node
          /   \
@@ -148,54 +148,56 @@ height. The worst cast is a complete tree. For example,
        / \   / \
       o   o o   o    height 0, 4 nodes
 
-	num. nodes at height 2 =  1 = ⌈ n / 8 ⌉  =  ⌈ n / 2^(2+1) ⌉
-
-	num. nodes at height 1 =  2 = ⌈ n / 4 ⌉  =  ⌈ n / 2^(1+1) ⌉
-
-	num. nodes at height 0 =  4 = ⌈ n / 2 ⌉  =  ⌈ n / 2^(0+1) ⌉
+    num. nodes at height 2 =  1 = ⌈ n / 8 ⌉  =  ⌈ n / 2^(2+1) ⌉
+    num. nodes at height 1 =  2 = ⌈ n / 4 ⌉  =  ⌈ n / 2^(1+1) ⌉
+    num. nodes at height 0 =  4 = ⌈ n / 2 ⌉  =  ⌈ n / 2^(0+1) ⌉
 
 In general, 
 
-    num. nodes at hight h <= ⌈ n / 2^(h+1) ⌉
+    num. nodes at hight h ≤ ⌈ n / 2^(h+1) ⌉
 
 So we can sum these up, from h=0 to log(n), with O(h) cost for each:
 
-    log(n)
-    ∑      h × ⌈ n / 2^(h+1) ⌉
-	h=0
-	
-Pull out the `n` and made the denominator a little bigger (change `h+1` to `h`).
-
-	       log(n)
-    <= n × ∑      h / 2^h
-	       h=0
-
-recall formula A.8: 
-
-    ∞
-    ∑   k × x^k    =   x / (1 - x)², for |x| < 1
-    k=0
-
-   let x = 1/2:
-   
-    ∞
-    ∑  (k / 2^k) = (1/2) / (1 - (1/2))²   = (1/2) / (1/2)² = (1/2) / (1/4) = 2
-    k=0
-
-and we have
-
-    log(n)             ∞
-    ∑     h / 2^h  <  ∑  h / 2^h = 2
-    h=0               h=0
-	
-Thus
+               log(n)
+    time(n) =  ∑      h × ⌈ n / 2^(h+1) ⌉
+               h=0
     
-	    log(n)
-    n × ∑     h / 2^h   <   n × 2
-	    h=0
-		  
+Pull out the `n` and make the denominator a little smaller (change `h+1` to `h`),
+which makes the right-hand side bigger.
 
-So the total cost of `build_max_heap` is O(n).
+                   log(n)
+    time(n) ≤  n × ∑      h / 2^h
+                   h=0
+
+Reorganize the `h / 2^h`
+
+                   log(n)
+    time(n) ≤  n × ∑      h × (1/2)^h        (1)
+                   h=0
+
+Recall formula A.8.
+
+    ∞
+    ∑   k × x^k    =   x / (1 - x)², for |x| < 1           (A.8)
+    k=0
+
+Let `x = 1/2` and exchange `k` for `h` in A.8 to get the following.
+
+    ∞
+    ∑   h × (1/2)^h    =   (1/2) / (1 - (1/2))²   =  (1/2) / (1/4)  =  2
+    h=0
+   
+Note that
+
+    log(n)                      ∞
+    ∑      h × (1/2)^h    ≤    ∑   h × (1/2)^h   =  2
+    h=0                         h=0
+
+So with inequation (1) we have
+   
+    time(n) ≤  n × 2
+
+So the time complexity of `build_max_heap` is O(n).
 
 
 ## `maximum` method
