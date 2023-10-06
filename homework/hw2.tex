@@ -1,0 +1,205 @@
+\documentclass[12pt,answers]{exam}
+%\documentclass[12pt]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{xypic}
+
+\lstdefinestyle{basic}{showstringspaces=false,columns=fullflexible,language=Java,
+%escapechar=@,xleftmargin=1pc,%
+%basicstyle=\small\bfseries\itshape,%
+%keywordstyle=\underbar,
+mathescape=true,%
+lineskip=-1pt,%
+keepspaces=true,%
+%basicstyle=\small\sffamily,%
+basicstyle=\footnotesize\ttfamily,%
+commentstyle=\mdseries\rmfamily,%
+%morekeywords={class,object,with,fun,new,end,int,bool,string},%
+deletekeywords={error,apply,values,and,equal,eq},%
+moredelim=**[is][\color{red}]{`}{`}
+}
+\lstset{style=basic}
+
+\firstpageheader{\bf\large Data Structures\\ CSCI H343, Fall 2023 \\[1ex]}%
+{}%
+{\bf Homework 2 \\[1ex]Name:\enspace\hbox to 2in{\hrulefill}}
+\firstpageheadrule
+
+\runningheader{H343 Data Structures\\[1ex]}%
+{Homework 2 \\ }%
+{Fall 2023 \\[1ex] Name:\enspace\hbox to 2in{\hrulefill}}
+
+\runningfooter{}{Page \thepage\ of \numpages}{}
+\runningheadrule
+\runningfootrule
+
+\extraheadheight{.75in}
+\extrafootheight{-.5in}
+
+\addpoints
+\boxedpoints
+
+\begin{document}
+
+\vspace{20pt}
+
+\begin{center} 
+This homework has \numquestions\ questions, for a total of \numpoints\ 
+points. 
+\end{center} 
+
+
+% 10 questions
+% ~~ 2 questions write code
+% topics:
+%
+% projects
+%   * floodit                        
+%   * segment intersection (BST, AVL)
+%
+% BST                              
+% AVL                               
+% big-O
+%    algorithm -> big-O             
+%    prove function in big-O        
+% Java basics:
+%   * arrays  
+%   * lists
+%   * dictionaries, sets
+%   * loops
+%   * recursion                       
+%   * aliasing, mutation,             
+%     parameter passing,              
+%     identity vs. equality           
+%   * classes & objects & self     
+% arrays
+%   * rotation                         
+% linked lists
+%   singly linked lists              
+%   iterators                         
+% proof of correctness, loop invariants
+
+% 2023
+% 1. implement product algorithm on Iter
+% 2. remove from AVL tree
+% 3. big-O proof
+% 4. Java basics: recursion
+% 5. Testing array search
+% 6. big-O of O(n^2) flood algorithm
+% 7. Next/previous in BST
+% 8. linked lists, filter, fill in the blanks
+% 9. big-O of binary search
+% 10. big-O of a simple function that is O(2^n)
+% 11. proof of correctness of linked-list insert using induction
+
+% 2022
+% 1. java parameter passing, builtins and objects
+% 2. implement iterator on array, fill in blanks
+% 3. BST find, implement
+% 4. big-O proof: if f <~ g, then f + g <~ g
+% 5. big-O of code: double nested loop that is Θ(n log n)
+% 6. linked lists, insert sorted, fill in blanks
+% 7. AVL insert and rotation
+% 8. LinkedList method time complexity
+% 9. ArrayList method time complexity
+% 10. binary search, fill in blanks
+% 11. loop invariant
+  
+% 2021
+% 1. java objects and fields
+% 2. next prev
+% 3. fill in blanks, next, first, nextAncestor
+% 4. loop invariant
+% 5. big-O of flood
+% 6. find_first_equal on Iterator interface  
+% 7. recognize BST, AVL tree
+% 8. big O proof  
+% 9. AVL remove node, rotate, etc.
+% 10. big-O of anagram detection
+  
+  
+% 2020:
+% 1. identity versus equality, aliasing
+% 2. big-O collections
+% 3. rotate array, fill in the blanks
+% 4. max_heapify, fill in the blanks
+% 5. implement the \texttt{find} method for BST
+% 6. implement the \texttt{put} method for hash tables
+% 7. identify BST's, max heap's
+% 8. draw insertion into an AVL tree
+% 9. big-O of anagram detector, nested loops O(n^2)
+% 10. big-O prove 4n+2 in O(n^2)
+
+
+\begin{questions}
+
+  \question[6] Prove that the following \texttt{insert} function
+produces a list whose length is one greater than the length of the
+input \texttt{list}. In other words, prove that
+\begin{lstlisting}
+  length(insert(x, list)) == 1 + length(list)
+\end{lstlisting}
+
+\noindent Do the proof by induction on the \texttt{length} of the
+\texttt{list}. Indicate where you use the induction hypothesis.
+
+\begin{lstlisting}
+public static Node<Integer> insert(int x, Node<Integer> list) {
+    if (list == null) {
+        return new Node<Integer>(x, null);
+    } else if (x <= list.data) {
+        return new Node<Integer>(x, list);
+    } else {
+        return new Node<Integer>(list.data, insert(x, list.next));
+    }
+}
+\end{lstlisting}
+The \texttt{length} of a list is defined as follows
+\begin{lstlisting}
+public static <T> int length(Node<T> node) {
+    if (node == null) {
+        return 0;
+    } else {
+        return 1 + length(node.next);
+    }
+}
+\end{lstlisting}
+
+\begin{solution}
+  \scriptsize
+  
+\textbf{Base Case:} \textbf{(2 points)}
+We have \texttt{length(list) == 0} and therefore \texttt{list == null}.
+\begin{lstlisting}
+length(insert(x, null)) == length(new Node(x, null)) == 1 + length(null)
+\end{lstlisting}
+
+\textbf{Induction Step:}
+Suppose we have a list \texttt{M} of length $k + 1$.
+From that we know two things: \texttt{M != null}
+and the length of \texttt{M.next} is $k$.
+We have two cases to consider regarding whether \texttt{x <= M.data}.
+
+Suppose \texttt{x <= M.data}. \textbf{(2 points)}
+\begin{lstlisting}
+length(insert(x, M)) == length(new Node(x, M)) == 1 + length(M)
+\end{lstlisting}
+
+
+Next, suppose that \texttt{x > M.data}.  \textbf{(2 points)}
+\begin{lstlisting}
+length(insert(x, M))
+== length(new Node(M.data, insert(x, M.next)))
+== 1 + length(insert(x, M.next))
+== 1 + (1 + length(M.next))           // by the induction hypothesis
+== 1 + length(M)
+\end{lstlisting}
+
+  
+\end{solution}
+\end{questions}
+
+\end{document}
