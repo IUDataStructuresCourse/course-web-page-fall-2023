@@ -65,7 +65,7 @@ Sep. 29 |    [Quiz 2](https://iu.instructure.com/courses/2165834/quizzes/4049366
 Oct. 2 | [Heaps and Priority Queues](./lectures/Oct-2.md) | Ch. 6 sec. 1-4, 9 |
 Oct. 4 | [Heaps Continued](./lectures/Oct-4.md)
 Oct. 6 |     |  | Lab: finish <br> [Project 2 Segment Intersection](./proj2-seg-int) | [test](https://autograder.luddy.indiana.edu/web/project/833), [code](https://autograder.luddy.indiana.edu/web/project/700)
-Oct. 9  | Review for Midterm Exam | | <mark> Project 2: Segment Intersection due </mark> |
+Oct. 9  | [Review for Midterm Exam](./lectures/Oct-9.md) | | <mark> Project 2: Segment Intersection due </mark> |
 Oct. 11 | **<mark>Midterm Exam</mark>** (in class)
 Oct. 13 | **Fall Break**
 
