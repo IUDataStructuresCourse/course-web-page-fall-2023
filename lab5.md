@@ -30,11 +30,11 @@ class BinomialHeap<K> {
     PList<BinomialHeap<K>> children;
     BiPredicate<K, K> lessEq;
 
-    boolean isHeap() {
+    BinomialHeap<K> link(BinomialHeap<K> other) {
         // ...
     }
 
-    BinomialHeap<K> link(BinomialHeap<K> other) {
+    boolean isHeap() {
         // ...
     }
 }
@@ -68,25 +68,32 @@ public class BinomialQueue<K> {
         // ...
     }
 
-    public boolean isHeap();
+    public boolean isHeap() {
+        // ...
+    }
 
     static <K> PList<BinomialHeap<K>>
-        insert(BinomialHeap<K> n, PList<BinomialHeap<K>> ns);
+        insert(BinomialHeap<K> n, PList<BinomialHeap<K>> ns) {
+        // ...
+    }
 
     static <K> PList<BinomialHeap<K>>
-        merge(PList<BinomialHeap<K>> ns1, PList<BinomialHeap<K>> ns2);
-
+        merge(PList<BinomialHeap<K>> ns1, PList<BinomialHeap<K>> ns2) {
+        //...
+    }
 }
 ```
 
-+ The `insert()` method in `BinomialQueue` should put the tree `n` into
++ **[YOUR TASK]** The `isHeap()` method verifies that the binomial queue
+  (which is a forest of binomial trees) satisfies the heap property.
++ **[YOUR TASK]** The `insert()` method in `BinomialQueue` should put the tree `n` into
   the forest `ns` while maintaining two invariants:
 
-    1. the trees in the forest must be sorted by increasing heights
+    1. the trees in the forest must be sorted by *increasing heights*
     2. there should not be two trees with the same height
 
-+ The `merge()` method in `BinomialQueue` should combine two forests
-  into a single forest that satisfies the two invariants listed above.
++ **[YOUR TASK]** The `merge()` method in `BinomialQueue` should combine two forests
+  into a single forest that satisfies the two invariants above.
 
 ### Problem 3: Testing
 
