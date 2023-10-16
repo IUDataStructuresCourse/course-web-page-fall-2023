@@ -12,10 +12,10 @@ Please review the lecture notes [here](./) before you start.
 ## Support Code and Submission
 
 + Student support code is at [link](https://github.com/IUDataStructuresCourse/binomial-queue-student-support-code).
-<!-- + Submit your code file `BinaryTree.java` ([Problem 1](#problem-1-tree-traversal)) to -->
-<!--   [link](https://autograder.luddy.indiana.edu/web/project/693). -->
-<!-- + Submit your test file `BinaryTreeTest.java` ([Problem 2](#problem-2-testing)) to -->
-<!--   [link](https://autograder.luddy.indiana.edu/web/project/831). -->
++ Submit your code file `BinomialQueue.java` ([Problem 1 and 2](#problem-1-binomialheap)) to
+  [link](https://autograder.luddy.indiana.edu/web/project/701).
++ Submit your test file `StudentTest.java` ([Problem 3](#problem-3-testing)) to
+  [link](https://autograder.luddy.indiana.edu/web/project/708).
 
 ## Problem Set
 
