@@ -68,6 +68,7 @@ Oct. 6 |     |  | Lab: finish <br> [Project 2 Segment Intersection](./proj2-seg-
 Oct. 9  | [Review for Midterm Exam](./lectures/Oct-9.md) | | Project 2: Segment Intersection due |
 Oct. 11 | **Midterm Exam** (in class)
 Oct. 13 | **Fall Break**
+Oct. 16 | [Binomial Queues](./lectures/Oct-16.md) | Ch. 6 sec. 8 |
 Oct. 20 | | | [Lab 5: Binomial Heaps](./lab5) | [test](https://autograder.luddy.indiana.edu/web/project/708), [code](https://autograder.luddy.indiana.edu/web/project/701)
 Oct. 23 | | | <mark>Lab 5 due</mark> |
 
