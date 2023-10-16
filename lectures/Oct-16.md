@@ -201,10 +201,10 @@ with the larger key to be on top to maintain the max heap property.
     // @precondition this.height == other.height
     BinomialHeap<K> link(BinomialHeap<K> other) {
         if (lessEq.test(other.key, this.key)) {
-            PList<BinomialHeap<K>> kids = new PList<>(other, this.children);
+            PList<BinomialHeap<K>> kids = PList.addFront(other, this.children);
             return new BinomialHeap<>(this.key, this.height + 1, kids);
         } else {
-            PList<BinomialHeap<K>> kids = new PList<>(this, other.children);
+            PList<BinomialHeap<K>> kids = PList.addFront(this, other.children);
             return new BinomialHeap<>(other.key, other.height + 1, kids);
         }
     }
