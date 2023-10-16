@@ -7,7 +7,7 @@ by implementing the `isHeap()` method in the `BinomialHeap` and
 `BinomialQueue` classes and the `insert()` and `merge()`
 methods in the `BinomialQueue` class.
 
-Please review the lecture notes [here](./Oct-16.md) before you start.
+Please review the lecture notes [here](./lectures/Oct-16) before you start.
 
 ## Support Code and Submission
 
