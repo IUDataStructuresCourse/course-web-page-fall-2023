@@ -25,11 +25,13 @@ size 3. For {a,b,c} we have {a,b}, {a,c}, {b,c}.  In general, we have:
 The name "binomial" comes from the Binomial Theorem, which describes
 the expansion of powers of a binomial:
 
-    (x + y)^n = Sum from k=0 to n of (n choose k) * x^(n-k) * y^k
+                n
+    (x + y)ⁿ  = Σ   ( n ) * xⁿ⁻ᵏ * yᵏ
+	            k=0 ( k )
 
 For example,
 
-    (x + y)^4 = x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + y^4
+    (x + y)⁴ = x⁴ + 4 x³ y + 6 x² y² + 4 x y³ + y⁴
 
 Recall Pascal's Triangle
     
@@ -52,14 +54,14 @@ the two cells diagonally above it:
     ( k )   ( k-1 )   ( k   )
 
 
-Def. A **binomial tree** Bn is a tree whose root has n children, where
-the first child is B{n-1}, the second is B{n-2}, ..., on down to
-the last child, which is B0.
+Def. A **binomial tree** Bₙ is a tree whose root has n children, where
+the first child is Bₙ₋₁, the second is Bₙ₋₂, ..., on down to
+the last child, which is B₀.
 
-     B0   B1   B2   B3
+     Bₒ   B₁   B₂    B₃
      o    o    o     o---\
           |    |\    | \  \
-          B0   B1 B0 B2 B1 B0
+          Bₒ   B₁ Bₒ  B₂ B₁ B₀
 
 Consider the number of nodes at each depth within a binomial tree.
 
@@ -78,9 +80,9 @@ depth k of tree Bn.
 Each binomial tree Bn can be formed by taking two trees of B{n-1}
 and putting one of them as a child of the other's root.
 
-    B2                B3
+    B₂                B₃
     o                _o
-    |\      B2     _/ |\
+    |\      B₂     _/ |\
     o o  ∪  o  =  o   o o
     |       |\    |\  |
     o       o o   o o o
@@ -95,10 +97,10 @@ Turning them on their side and aligning by depth:
     =
     1 1   1 2 1     1 3 3 1
 
-The height of a binomial tree Bn is n.  binomial tree Bn has 2^n
+The height of a binomial tree Bₙ is n.  binomial tree Bₙ has 2ⁿ
 nodes.  So height = log nodes. It's balanced!
 
-Student exercise: draw B4. how many nodes does it have?  How many
+Student exercise: draw B₄. how many nodes does it have?  How many
 nodes at each depth?  Solution:
 
     depth
@@ -185,8 +187,8 @@ If two binomial trees have the same height, linking them is easy.
 Just make one of the trees the first child of the other.  Pick the one
 with the larger key to be on top to maintain the max heap property.
 
-    Bk  ∪  Bk =  B{k+1}
-    B2  ∪  B2 =  B3
+    Bₖ  ∪  Bₖ =  Bₖ₊₁
+    B₂  ∪  B₂ =  B₃
 
     o       o      o______
     |\      |\     |   \  \
@@ -221,14 +223,14 @@ Insert tree
 
 into forest
 
-    B0 B1 B2
+    B₀ B₁ B₂
     o  o  o
        |  |\
        o  o o
           |
           o
 
-First we link the two B1's:
+First we link the two B₁'s:
 
     o   o   o
     | ∪ | = |\
@@ -236,10 +238,10 @@ First we link the two B1's:
             |
             o
 
-and we continue with the insert, which forces us to link the new B2
-with the other B2 to get B3 (see above), so we get the forest:
+and we continue with the insert, which forces us to link the new B₂
+with the other B₂ to get B₃ (see above), so we get the forest:
 
-    B0 B3
+    B₀ B₃
 
 
 You will implement the `insert` method in lab.
@@ -264,8 +266,8 @@ analogous to the merge of merge sort.
 
 Examples:
 
-    merge [B0 B2] with [B1 B4] = [B0,B1,B2,B4],
-    merge [B0 B1] with [B1 B4] = [B0 B2 B4].
+    merge [B₀ B₂] with [B₁ B₄] = [B₀,B₁,B₂,B₄],
+    merge [B₀ B₁] with [B₁ B₄] = [B₀ B₂ B₄].
 
 You will implement `merge` in lab.
 
