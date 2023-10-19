@@ -29,7 +29,7 @@ Please review [[https://iudatastructurescourse.github.io/course-web-page-fall-20
      the forest, cons the tree to the front and we're done
    * otherwise, find the tree whose height is equal to the tree to
      insert, link the two trees and recursively insert the result into the
-     result of the forest
+     rest of the forest
 + ~merge()~, two ways:
   * the slower $O(log^2(n))$ way: insert the trees in one forest one by one
     into the other
