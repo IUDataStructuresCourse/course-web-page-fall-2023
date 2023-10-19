@@ -28,8 +28,8 @@ Expect at least one quiz per month during lab time.
 
 **Instructors and Office Hours**
 
-* Jeremy Siek (jsiek), office hours: Mondays 3:30pm to 4:30pm, Fridays 1:00-2:00pm in Luddy 3014.
-* Tianyu Chen (chen512), office hours: Fridays 3:00-5:00pm in Luddy 3014.
+* Jeremy Siek (jsiek), office hours in Luddy 3014: Mondays 3:30pm to 4:30pm, Tuesdays 4:30-5:30pm, Fridays 1:00-2:00pm.
+* Tianyu Chen (chen512), office hours in Luddy 3014: Fridays 3:00-5:00pm.
 
 **Textbook**
 
