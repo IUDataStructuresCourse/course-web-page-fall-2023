@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-10-19 Thu 15:05 -->
+<!-- 2023-10-19 Thu 15:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lab 5 Notes</title>
@@ -233,18 +233,18 @@
 <a href="https://iudatastructurescourse.github.io/course-web-page-fall-2023/">🔙HOME</a>
 </p>
 
-<div id="outline-container-org02a9ce1" class="outline-2">
-<h2 id="org02a9ce1">Binomial Heaps</h2>
-<div class="outline-text-2" id="text-org02a9ce1">
+<div id="outline-container-org3a8fea8" class="outline-2">
+<h2 id="org3a8fea8">Binomial Heaps</h2>
+<div class="outline-text-2" id="text-org3a8fea8">
 <p>
 Please review <a href="https://iudatastructurescourse.github.io/course-web-page-fall-2023/lectures/Oct-16.html">Monday's lecture notes</a> before you start.
 <b>Also, directly copying code from textbook Section 6.8 does not work!</b>
 </p>
 </div>
 
-<div id="outline-container-org57555b8" class="outline-3">
-<h3 id="org57555b8">The <code>BinomialHeap</code> class:</h3>
-<div class="outline-text-3" id="text-org57555b8">
+<div id="outline-container-org8cf872b" class="outline-3">
+<h3 id="org8cf872b">The <code>BinomialHeap</code> class:</h3>
+<div class="outline-text-3" id="text-org8cf872b">
 <ul class="org-ul">
 <li>corresponds to a tree</li>
 <li>each node has a <code>PList</code> of children, sorted in descending heights</li>
@@ -258,9 +258,9 @@ Please review <a href="https://iudatastructurescourse.github.io/course-web-page-
 </div>
 </div>
 
-<div id="outline-container-orgd675308" class="outline-3">
-<h3 id="orgd675308">The <code>BinomialQueue</code> class:</h3>
-<div class="outline-text-3" id="text-orgd675308">
+<div id="outline-container-orgd11c0cd" class="outline-3">
+<h3 id="orgd11c0cd">The <code>BinomialQueue</code> class:</h3>
+<div class="outline-text-3" id="text-orgd11c0cd">
 <ul class="org-ul">
 <li>corresponds to a forest</li>
 <li>trees sorted in ascending heights</li>
@@ -284,6 +284,25 @@ into the other</li>
 </ul></li>
 </ul></li>
 </ul>
+
+<div class="org-src-container">
+<pre class="src src-text">  B0            B1          B2
+
+                18           65
+                 |           | \
+                16          24  21
+                             |
+                            12
+
+  13            26            65
+                 |            | \
+                14           24  51
+                              |
+                             23
+------------------------------------------------------- merge
+                      ??
+</pre>
+</div>
 </div>
 </div>
 </div>
@@ -291,7 +310,7 @@ into the other</li>
 <div id="postamble" class="status">
 <p class="date">Date: 2023-10-20 Fri 00:00</p>
 <p class="author">Author: Tianyu Chen</p>
-<p class="date">Created: 2023-10-19 Thu 15:05</p>
+<p class="date">Created: 2023-10-19 Thu 15:19</p>
 </div>
 </body>
 </html>

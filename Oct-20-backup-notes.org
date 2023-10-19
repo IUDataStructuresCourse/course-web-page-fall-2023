@@ -35,3 +35,21 @@ Please review [[https://iudatastructurescourse.github.io/course-web-page-fall-20
     into the other
   * the appropriate $O(log(n))$ way: analogous to long addition of binary numbers
     * [example] (adapted from textbook Fig. 6.36 - 6.38)
+
+#+BEGIN_SRC text
+    B0            B1          B2
+
+                  18           65
+                   |           | \
+                  16          24  21
+                               |
+                              12
+
+    13            26            65
+                   |            | \
+                  14           24  51
+                                |
+                               23
+  ------------------------------------------------------- merge
+                        ??
+#+END_SRC
