@@ -30,10 +30,11 @@ Please review [[https://iudatastructurescourse.github.io/course-web-page-fall-20
    * otherwise, find tree whose height is equal to the tree to insert,
      link those two trees and recursively insert result into the rest of
      the forest
-+ ~merge()~, two ways:
-  * the slower $O(log^2(n))$ way: insert trees in one forest one by one
++ ~merge()~, two ways, both acceptable for this lab:
+  * the slow $O(log^2(n))$ way: insert trees in one forest one by one
     into the other
   * the appropriate $O(log(n))$ way: analogous to long addition of binary numbers
+    * has proper time complexity, but is a little tricky to implement
     * [example] (adapted from textbook Fig. 6.36 - 6.38)
 
 #+BEGIN_SRC text
