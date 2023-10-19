@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-10-19 Thu 14:42 -->
+<!-- 2023-10-19 Thu 15:05 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lab 5 Notes</title>
@@ -233,18 +233,18 @@
 <a href="https://iudatastructurescourse.github.io/course-web-page-fall-2023/">🔙HOME</a>
 </p>
 
-<div id="outline-container-orge40582d" class="outline-2">
-<h2 id="orge40582d">Binomial Heaps</h2>
-<div class="outline-text-2" id="text-orge40582d">
+<div id="outline-container-org02a9ce1" class="outline-2">
+<h2 id="org02a9ce1">Binomial Heaps</h2>
+<div class="outline-text-2" id="text-org02a9ce1">
 <p>
 Please review <a href="https://iudatastructurescourse.github.io/course-web-page-fall-2023/lectures/Oct-16.html">Monday's lecture notes</a> before you start.
 <b>Also, directly copying code from textbook Section 6.8 does not work!</b>
 </p>
 </div>
 
-<div id="outline-container-org9d9c6cf" class="outline-3">
-<h3 id="org9d9c6cf">The <code>BinomialHeap</code> class:</h3>
-<div class="outline-text-3" id="text-org9d9c6cf">
+<div id="outline-container-org57555b8" class="outline-3">
+<h3 id="org57555b8">The <code>BinomialHeap</code> class:</h3>
+<div class="outline-text-3" id="text-org57555b8">
 <ul class="org-ul">
 <li>corresponds to a tree</li>
 <li>each node has a <code>PList</code> of children, sorted in descending heights</li>
@@ -258,9 +258,9 @@ Please review <a href="https://iudatastructurescourse.github.io/course-web-page-
 </div>
 </div>
 
-<div id="outline-container-orgd1254a8" class="outline-3">
-<h3 id="orgd1254a8">The <code>BinomialQueue</code> class:</h3>
-<div class="outline-text-3" id="text-orgd1254a8">
+<div id="outline-container-orgd675308" class="outline-3">
+<h3 id="orgd675308">The <code>BinomialQueue</code> class:</h3>
+<div class="outline-text-3" id="text-orgd675308">
 <ul class="org-ul">
 <li>corresponds to a forest</li>
 <li>trees sorted in ascending heights</li>
@@ -270,17 +270,17 @@ forest is a heap</li>
 <ul class="org-ul">
 <li>if the height of the tree is less than that of the first tree in
 the forest, cons the tree to the front and we're done</li>
-<li>otherwise, find the tree whose height is equal to the tree to
-insert, link the two trees and recursively insert the result into the
-rest of the forest</li>
+<li>otherwise, find tree whose height is equal to the tree to insert,
+link those two trees and recursively insert result into the rest of
+the forest</li>
 </ul></li>
 <li><code>merge()</code>, two ways:
 <ul class="org-ul">
-<li>the slower \(O(log^2(n))\) way: insert the trees in one forest one by one
+<li>the slower \(O(log^2(n))\) way: insert trees in one forest one by one
 into the other</li>
 <li>the appropriate \(O(log(n))\) way: analogous to long addition of binary numbers
 <ul class="org-ul">
-<li>[example]</li>
+<li>[example] (adapted from textbook Fig. 6.36 - 6.38)</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -291,7 +291,7 @@ into the other</li>
 <div id="postamble" class="status">
 <p class="date">Date: 2023-10-20 Fri 00:00</p>
 <p class="author">Author: Tianyu Chen</p>
-<p class="date">Created: 2023-10-19 Thu 14:42</p>
+<p class="date">Created: 2023-10-19 Thu 15:05</p>
 </div>
 </body>
 </html>
