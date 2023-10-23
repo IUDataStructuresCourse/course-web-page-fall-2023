@@ -74,6 +74,7 @@ Oct. 20 | | | [Lab 5: Binomial Heaps](./lab5) <br> [_Lab Notes_](./Oct-20-backup
 Oct. 23 | No class on Oct. 23 | | <mark>Lab 5 due</mark> |
 Oct. 25 | | | |
 Oct. 27 | | | [Lab 6: Generic Quicksort](./lab6) | [test](https://autograder.luddy.indiana.edu/web/project/709), [code](https://autograder.luddy.indiana.edu/web/project/699)
+Oct. 30 | | | <mark>Lab 6 due</mark> |
 
 **Resources**
 
