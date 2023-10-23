@@ -23,6 +23,9 @@ $O(nlog(n))$ time complexity.
 ## Support Code and Submission
 
 + Student support code is at [link](https://github.com/IUDataStructuresCourse/quick-sort-student-support-code).
+  Please make sure to go through existing code before you start.
+  * There are a few helper functions in `Algorithms.java` that you may use,
+    for example, `iter_swap()` swaps the elements at iterator positions `i` and `j`.
 + Submit your code file `QuickSort.java` to
   [link](https://autograder.luddy.indiana.edu/web/project/699).
 + Submit your test file `StudentTest.java` to
