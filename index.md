@@ -72,6 +72,8 @@ Oct. 16 | [Binomial Queues](./lectures/Oct-16.md) | Ch. 6 sec. 8 |
 Oct. 18 | [Quicksort](./lectures/Oct-18.md)   | Ch. 7, sec. 1-7 | 
 Oct. 20 | | | [Lab 5: Binomial Heaps](./lab5) <br> [_Lab Notes_](./Oct-20-backup-notes) | [test](https://autograder.luddy.indiana.edu/web/project/708), [code](https://autograder.luddy.indiana.edu/web/project/701)
 Oct. 23 | No class on Oct. 23 | | <mark>Lab 5 due</mark> |
+Oct. 25 | | | |
+Oct. 27 | | | [Lab 6: Generic Quicksort](./lab6) | [test](https://autograder.luddy.indiana.edu/web/project/709), [code](https://autograder.luddy.indiana.edu/web/project/699)
 
 **Resources**
 
