@@ -71,7 +71,7 @@ Oct. 13 | **Fall Break**
 Oct. 16 | [Binomial Queues](./lectures/Oct-16.md) | Ch. 6 sec. 8 |
 Oct. 18 | [Quicksort](./lectures/Oct-18.md)   | Ch. 7, sec. 1-7 | 
 Oct. 20 | | | [Lab 5: Binomial Heaps](./lab5) | [test](https://autograder.luddy.indiana.edu/web/project/708), [code](https://autograder.luddy.indiana.edu/web/project/701)
-Oct. 23 | | | <mark>Lab 5 due</mark> |
+Oct. 23 | **Class Canceled** | | <mark>Lab 5 due</mark> |
 
 **Resources**
 
