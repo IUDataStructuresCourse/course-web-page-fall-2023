@@ -1,0 +1,56 @@
+#+TITLE: Lab 5 Notes
+#+DATE: <2023-10-20 Fri>
+#+OPTIONS: num:nil toc:nil
+
+[[https://iudatastructurescourse.github.io/course-web-page-fall-2023/][🔙HOME]]
+
+* Binomial Heaps
+
+Please review [[https://iudatastructurescourse.github.io/course-web-page-fall-2023/lectures/Oct-16.html][Monday's lecture notes]] before you start.
+*Also, directly copying code from textbook Section 6.8 does not work!*
+
+** The ~BinomialHeap~ class:
+
++ corresponds to a tree
++ each node has a ~PList~ of children, sorted in descending heights
++ ~link()~ connects two $B_k$ and get one $B_{k+1}$:
+  * keys of the root nodes are compared by ~lessEq.test()~
+  * used in ~insert()~ and (the binary long addition version of) ~merge()~
++ ~isHeap()~ decides if the tree satisfies the (max) heap property
+
+** The ~BinomialQueue~ class:
+
++ corresponds to a forest
++ trees sorted in ascending heights
++ ~isHeap()~: if each tree satisfies the heap property, then the entire
+   forest is a heap
++ ~insert()~:
+   * if the height of the tree is less than that of the first tree in
+     the forest, cons the tree to the front and we're done
+   * otherwise, find tree whose height is equal to the tree to insert,
+     link those two trees and recursively insert result into the rest of
+     the forest
++ ~merge()~, two ways, both acceptable for this lab:
+  * the slow $O(log^2(n))$ way: insert trees in one forest one by one
+    into the other
+  * the appropriate $O(log(n))$ way: analogous to long addition of binary numbers
+    * has proper time complexity, but is a little tricky to implement
+    * [example] (adapted from textbook Fig. 6.36 - 6.38)
+
+#+BEGIN_SRC text
+    B0            B1          B2
+
+                  18           65
+                   |           | \
+                  16          24  21
+                               |
+                              12
+
+    13            26            65
+                   |            | \
+                  14           24  51
+                                |
+                               23
+  ------------------------------------------------------- merge
+                        ??
+#+END_SRC
