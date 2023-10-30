@@ -6,6 +6,8 @@ pair of vertices in the set.
 Finding connected components has become an important algorithm
 in the realm of big-data graph analytics.
 
+## Problem Description
+
 Your task is to implement connected components using *depth-first search*.
 In the `ConnectedComponents` class, implement the following method:
 
