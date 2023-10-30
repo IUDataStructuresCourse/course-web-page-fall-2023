@@ -75,7 +75,7 @@ Oct. 23 | No class on Oct. 23 | | Lab 5 due |
 Oct. 25 | Quicksort continued, [Sorting in Linear Time](./lectures/Oct-25.md) | | |
 Oct. 27 | [Quiz 3](https://iu.instructure.com/courses/2165834/quizzes/4058718) | | [Lab 6: Generic Quicksort](./lab6) | [test](https://autograder.luddy.indiana.edu/web/project/709), [code](https://autograder.luddy.indiana.edu/web/project/699)
 Oct. 30 | [Graphs, Breadth and Depth-first Search](./lectures/Oct-30.md) | | <mark>Lab 6 due</mark> |
-Nov. 3 | | | [Lab 7: Connected Components (DFS)](./lab7) | [test](https://autograder.luddy.indiana.edu/web/project/705), [code](https://autograder.luddy.indiana.edu/web/project/702)
+Nov. 3 | | | [Lab 7: Connected Components](./lab7) | [test](https://autograder.luddy.indiana.edu/web/project/705), [code](https://autograder.luddy.indiana.edu/web/project/702)
 
 
 **Resources**
