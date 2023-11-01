@@ -1,6 +1,6 @@
 # Lecture: Depth-first Search
 
-This search chooses to go deeper at each step, following an out-edge
+Depth-first search chooses to go deeper at each step, following an out-edge
 from the current vertex to a never-before-seen vertex. If there are no
 out-edges to never-before-seen vertices, then the search backtracks to
 the last visited vertex with out-edges to never-before-seen vertices
@@ -10,7 +10,7 @@ Show DFS on the following graph, starting at g:
 
 ![**Depth-first search starting from vertex g.**](./digraph2.png)
 
-Similar to BFS, DFS traverses a tree, a *depth-first tree*:
+Similar to BFS, DFS traverses a tree, a **depth-first tree**:
 
 ![**Depth-first tree rooted at vertex g.**](./digraph6.png)
 
@@ -30,35 +30,32 @@ Perform DFS on the following graph
 
 ![**DFS exercise.**](./digraph4.png)
 
-Solutions (there are multiple depth-first trees)
-
-![**Solution 1 DFS tree.**](./digraph7.png)
-
-![**Solution 2 DFS tree.**](./digraph8.png)
-
 Are any of the DFS trees the same as a BFS tree for this graph?
 Why not?
+
+(Solution at the bottom of the lecture.)
+
 
 ## Edge Categories
 
 We can categorizes the edges of the graph with respect to the depth-first 
 tree in the following way:
-- tree edge: an edge on the tree, e.g., g → c in the graph above.
-- back edge: an edge that connects a descendent to an ancestor
+- **tree edge**: an edge on the tree, e.g., g → c in the graph above.
+- **back edge**: an edge that connects a descendant to an ancestor
   with respect to the tree, e.g., f → g.
-- forward edge: an edge that connects an ancestor to a descendent
+- **forward edge**: an edge that connects an ancestor to a descendant
   wrt. the tree, e.g., f → e
-- cross edge: all other edges, e.g., k → l.
+- **cross edge**: all other edges, e.g., k → l.
 
 A graph has a cycle if and only if there is a back edge.
 
 The DFS algorithm can compute the categories if we use a color
 scheme to mark the vertices instead of just using a `done` flag.
 The colors are:
-- white: the vertex has not been discovered
-- gray: the vertex has been discovered but some of its descendents
+- **white**: the vertex has not been discovered
+- **gray**: the vertex has been discovered but some of its descendents
   have not yet been discovered
-- black: the vertex and all of its descendents have been discovered
+- **black**: the vertex and all of its descendents have been discovered
 
 During DFS, when considering an out-edge of the current vertex, the edge
 can be categorized as follows:
@@ -97,3 +94,12 @@ c,e,b,a,d,f.
 Why is that? A vertex is finished *after* every vertex that depends
 on it is finished. That's the same as topological ordering
 except we've swapped *before* for *after*.
+
+## Exercise Solutions
+
+There are multiple depth-first trees:
+
+![**Solution 1 DFS tree.**](./digraph7.png)
+
+![**Solution 2 DFS tree.**](./digraph8.png)
+
