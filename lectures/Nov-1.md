@@ -14,8 +14,43 @@ Similar to BFS, DFS traverses a tree, a **depth-first tree**:
 
 ![**Depth-first tree rooted at vertex g.**](./digraph6.png)
 
-For generic search problems, that is, looking for a vertex with
-a particular property, DFS and BFS both are good choices.
+Sometimes all the nodes in a graph are not reachable from the
+starting node. Consider the following graph, starting at vertex A.
+
+![**Depth-first search starting from vertex A.**](./digraph15.png)
+
+The search from A will reach B, C, and D, but not E, F, G and H.
+In such situations, one can restart the depth-first search
+at another vertex. For example, we could restart at the first vertex
+(alphabetically) that has not yet been visited, which would be E.
+The depth-first search from E would then reach the remaining vertices,
+including F, G, and H. But what happens with vertex D? It is reachable
+from both A and E. The usual thing is to not revisit any nodes,
+even after restarting. So vertex D would be visited in the search
+that started from A but not in the search that started from E.
+
+There are two ways to implement DFS. The first is like the algorithm
+for BFS, but replaces the queue with a stack.
+
+    while not stack.empty()
+	  u = stack.pop()
+	  for v in G.adjacent(u)
+	    if not visited[v]
+		  visited[v] = true
+		  parent[v] = u
+		  stack.push(v)
+
+The second algorithm for DFS is recursive:
+
+    DFS(u, G, parent, visited) =
+	  for v in G.adjacent(u)
+	    if not visited[v]
+	      visited[v] = true
+		  parent[v] = u
+		  DFS(v, G, parent, visited)
+
+DFS and BFS both are good choices for generic search problems, that is,
+when you're searching for a vertex.
 
 - BFS may require more storage if the graph has many high degree
   vertices because the queue gets big. 
@@ -38,7 +73,11 @@ Why not?
 
 ## Edge Categories
 
-We can categorizes the edges of the graph with respect to the depth-first 
+In the following we'll continue to use this example graph:
+
+![**Depth-first search starting from vertex g.**](./digraph2.png)
+
+We can categorize the edges of the graph with respect to the depth-first 
 tree in the following way:
 - **tree edge**: an edge on the tree, e.g., g → c in the graph above.
 - **back edge**: an edge that connects a descendant to an ancestor
