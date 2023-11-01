@@ -1,0 +1,12 @@
+digraph G {
+
+  { rank = same; A B C }
+  { rank = same; D E }
+
+  A -> B [style = invis];
+  A -> D;
+  B -> C;
+  D -> E;
+  E -> B [constraint = false];
+  
+}
