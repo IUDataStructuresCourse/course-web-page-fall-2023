@@ -43,6 +43,10 @@ perform the depth-first search.
 + Submit your test file `StudentTest.java` to
   [link](https://autograder.luddy.indiana.edu/web/project/705).
 
+## Example
+
+![example](assets/images/lab7/example.png)
+
 -----------------
 
 * You have reached the end of Lab 7. Yay!
