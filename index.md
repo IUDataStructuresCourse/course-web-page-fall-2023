@@ -84,7 +84,7 @@ Nov. 20 <br> - <br> Nov. 24 | **Thanksgiving Break**
 Nov. 27 | | | <mark>Project 3: Routing Wires due</mark>
 Dec. 1  | <mark>Quiz 5</mark> | | Lab 8: DNA Alignment
 Dec. 4  | | | <mark>Lab 8 due</mark>
-Dec. 11 | <mark>**Final Exam**</mark> [3-5pm](https://bulletin.indiana.edu/registration/examination-policies/fall-final-exams.html)
+Dec. 11 | **<mark>Final Exam</mark>** [3-5pm](https://bulletin.indiana.edu/registration/examination-policies/fall-final-exams.html)
 
 **Resources**
 
