@@ -78,8 +78,8 @@ Oct. 30 | [Graphs and Breadth-first Search](./lectures/Oct-30.md) | | Lab 6 due 
 Nov. 1 | [Depth-first Search](./lectures/Nov-1.md) | Ch. 9 sec. 3
 Nov. 3 | | | [Lab 7: Connected Components](./lab7) | [test](https://autograder.luddy.indiana.edu/web/project/705), [code](https://autograder.luddy.indiana.edu/web/project/702)
 Nov. 6 | [Shortest Paths](./lectures/Nov-6.md) | Ch. 9 sec. 6| <mark>Lab 7 due</mark> |
-Nov. 10    | Project: Routing Wires, Quiz
-Nov. 17    | Work on Routing Wires
+Nov. 10 | | | Project: Routing Wires, Quiz
+Nov. 17 | | | Work on Routing Wires
 Nov. 20-24 | **Thanksgiving Break**
 Nov. 27 | | | Routing Wires due
 Dec. 1  | | | Lab: DNA Alignment, Quiz
