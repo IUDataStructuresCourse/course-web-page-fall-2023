@@ -54,6 +54,27 @@ Note that a path can have the same source and destination points.
 
 ## Support Code and Submission
 
+```
+.
+├── src
+│   ├── Board.java
+│   ├── Coord.java
+│   ├── Endpoints.java
+│   ├── Routing.java         // your code
+│   └── Wire.java
+├── test
+│   ├── StudentTest.java     // your tests
+│   ├── Utilities.java
+│   └── inputs               // your test input files
+│       └── wire0.in
+└── wire-routing.iml
+```
+
++ Student support code is at [link](https://github.com/IUDataStructuresCourse/routing-wires-student-support-code).
+  Please make sure to go through existing code before you start.
++ Submit your code file `Routing.java` and write-up file `README.md` to
+  [link](https://autograder.luddy.indiana.edu/web/project/704).
+
 ## Programming Task
 
 We need you to implement the `findPaths` method.  It takes the board
