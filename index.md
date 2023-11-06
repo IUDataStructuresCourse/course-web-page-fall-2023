@@ -80,7 +80,7 @@ Nov. 3 | | | [Lab 7: Connected Components](./lab7) | [test](https://autograder.l
 Nov. 6 | [Shortest Paths](./lectures/Nov-6.md) | Ch. 9 sec. 6| <mark>Lab 7 due</mark> |
 Nov. 10 | <mark>Quiz 4</mark> | | Lab: work on <br> [Project 3 Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/704)
 Nov. 17 | | | Lab: finish <br> [Project 3 Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/704)
-Nov. 20- <br> Nov. 24 | **Thanksgiving Break**
+Nov. 20 <br> - <br> Nov. 24 | **Thanksgiving Break**
 Nov. 27 | | | <mark>Project 3: Routing Wires due</mark>
 Dec. 1  | <mark>Quiz 5</mark> | | Lab 8: DNA Alignment
 Dec. 4  | | | <mark>Lab 8 due</mark>
