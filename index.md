@@ -78,13 +78,13 @@ Oct. 30 | [Graphs and Breadth-first Search](./lectures/Oct-30.md) | | Lab 6 due 
 Nov. 1 | [Depth-first Search](./lectures/Nov-1.md) | Ch. 9 sec. 3
 Nov. 3 | | | [Lab 7: Connected Components](./lab7) | [test](https://autograder.luddy.indiana.edu/web/project/705), [code](https://autograder.luddy.indiana.edu/web/project/702)
 Nov. 6 | [Shortest Paths](./lectures/Nov-6.md) | Ch. 9 sec. 6| <mark>Lab 7 due</mark> |
-Nov. 10 | | | Project 3: Routing Wires, Quiz
-Nov. 17 | | | Work on Routing Wires
-Nov. 20-24 | **Thanksgiving Break**
-Nov. 27 | | | Routing Wires due
-Dec. 1  | | | Lab 8: DNA Alignment, Quiz
-Dec. 4  | | | DNA Alignment due
-Dec. 11 | **Final Exam** 3-5pm
+Nov. 10 | <mark>Quiz 4</mark> | | Lab: work on <br> [Project 3 Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/704)
+Nov. 17 | | | Lab: finish <br> [Project 3 Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/704)
+Nov. 20- <br> Nov. 24 | **Thanksgiving Break**
+Nov. 27 | | | <mark>Project 3: Routing Wires due</mark>
+Dec. 1  | <mark>Quiz 5</mark> | | Lab 8: DNA Alignment
+Dec. 4  | | | <mark>Lab 8 due</mark>
+Dec. 11 | **Final Exam** [3-5pm](https://bulletin.indiana.edu/registration/examination-policies/fall-final-exams.html)
 
 **Resources**
 
