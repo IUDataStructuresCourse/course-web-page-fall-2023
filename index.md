@@ -77,7 +77,7 @@ Oct. 27 | [Quiz 3](https://iu.instructure.com/courses/2165834/quizzes/4058718) |
 Oct. 30 | [Graphs and Breadth-first Search](./lectures/Oct-30.md) | | Lab 6 due |
 Nov. 1 | [Depth-first Search](./lectures/Nov-1.md) | Ch. 9 sec. 3
 Nov. 3 | | | [Lab 7: Connected Components](./lab7) | [test](https://autograder.luddy.indiana.edu/web/project/705), [code](https://autograder.luddy.indiana.edu/web/project/702)
-Nov. 6 | [Shortest Paths](./lectures/Nov-6.md) | Ch. 9 sec. 6| <mark>Lab 7 due</mark> |
+Nov. 6 | [Shortest Paths](./lectures/Nov-6.md) | Ch. 9 sec. 6| Lab 7 due |
 Nov. 10 | [<mark>Quiz 4</mark>](https://iu.instructure.com/courses/2165834/quizzes/4065943) | | Lab: work on <br> [Project 3 Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/704)
 Nov. 17 | | | Lab: finish <br> [Project 3 Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/704)
 Nov. 20 <br> - <br> Nov. 24 | **Thanksgiving Break**
