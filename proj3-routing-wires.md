@@ -16,9 +16,8 @@ already allocated for other uses and may not be used for running
 wires. These already-in-use parts are called obstacles. Each obstacle
 is a rectangular region of the grid. You will be given a list of pairs
 of coordinates and your task is to connect each pair with a wire.  A
-coordinate is a pair of integers, with the first being the horizontal
-distance from the left edge of the grid, and the second being the
-vertical distance from the top edge of the grid.  A wire is a list of
+coordinate is a pair of integers, with the first being the row number,
+and the second being the column number. A wire is a list of
 grid points. Wires may not cross one another.  In addition to
 connecting all the pairs, your goal is to minimize the aggregate
 lengths of *all the wires* and to minimize the execution time of your
