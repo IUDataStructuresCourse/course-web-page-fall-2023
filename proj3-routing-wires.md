@@ -24,8 +24,8 @@ lengths of *all the wires* and to minimize the execution time of your
 program.
 
 The format of the input file is described as follows.  The first line
-is the height of the grid, given as an integer.  The second line is
-the width of the grid, also given as an integer.  The third line is
+is the height (number of rows) of the grid, given as an integer.  The second line is
+the width (number of columns) of the grid, also given as an integer.  The third line is
 the number of obstacles $o$.  The next $o$ lines are the obstacles.
 Each line has four integers, separated by spaces. The first two integers
 give the upper left coordinate of the obstacle and the second two
