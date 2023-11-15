@@ -38,7 +38,7 @@ For each square, we record the set of all available numbers that are
 still valid choices, a technique called *pencil marks*.
 
 We can `prune` a board if there is a square that no longer has any
-valid choices.
+valid choices. Let `m` and `n` be the number of rows and columns.
 
     static boolean prune(Set<Integer>[][] PM, int m, int n) {
         for (int i = 0; i != m; ++i)
@@ -90,9 +90,9 @@ unsolvable.
         return best;
     }
 
-With the identification of the most-constrained square, we recursively
-investigate all the choices for that square. For each choice, we must
-update the pencil marks accordingly.
+With the identification of the most-constrained square at some location `i,j`,
+we recursively investigate all the choices for that square. 
+For each choice `k`, we must update the pencil marks accordingly.
 
     static void
     update_marks(Set<Integer>[][] PM, int i, int j, int k, int m, int n)
@@ -112,8 +112,9 @@ update the pencil marks accordingly.
             }
     }
 
-We must make sure to use copies of the current board and pencil marks
-so that the different choices don't stomp on eachother.
+In the recursive calls to `solve`, we must make sure to use copies of
+the current board and pencil marks so that the different choices don't
+stomp on eachother.
 
 Putting this altogether, here's a backtracking algorithm for Sudoku.
 
@@ -139,7 +140,7 @@ Putting this altogether, here's a backtracking algorithm for Sudoku.
         }
     }
 
-The solution generated in under a second for world's hardest Sudoku
+The solution generated in under a second for the world's hardest Sudoku
 puzzle is:
 
     812 753 649
