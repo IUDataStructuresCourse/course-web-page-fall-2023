@@ -80,6 +80,8 @@ Nov. 3 | | | [Lab 7: Connected Components](./lab7) | [test](https://autograder.l
 Nov. 6 | [Shortest Paths](./lectures/Nov-6.md) | Ch. 9 sec. 6| Lab 7 due |
 Nov. 8 | [Union Find](./lectures/Nov-8.md)     | Ch. 8
 Nov. 10 | [Quiz 4](https://iu.instructure.com/courses/2165834/quizzes/4065943) | | Lab: work on <br> [Project 3 Routing Wires](./proj3-routing-wires) <br> [_Lab Notes_](./Nov-10-backup-notes) | [code](https://autograder.luddy.indiana.edu/web/project/704)
+Nov. 13 | [Minimum Spanning Tree](./lectures/Nov-13.md) | Ch. 9 sec. 5 | 
+Nov. 15 | [Backtracking](./lectures/Nov-15.md) | Ch. 10 sec. 5
 Nov. 17 | | | Lab: finish <br> [Project 3 Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/704)
 Nov. 20 <br> - <br> Nov. 24 | **Thanksgiving Break**
 Nov. 27 | | | <mark>Project 3: Routing Wires due</mark>
