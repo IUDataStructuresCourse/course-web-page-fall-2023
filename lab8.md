@@ -87,3 +87,7 @@ The `Driver` class will launch a GUI to help you visualize the
 algorithm. Be sure to read the comments to see how you can modify the
 nucleotides in the generated sequence to see how small changes to the
 DNA strands affects the solution.
+
+-----------------
+
+* This is the last lab of this semester. Good luck with the final exam!
