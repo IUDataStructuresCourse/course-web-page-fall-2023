@@ -2,7 +2,7 @@
 
 Overview
 * purpose: solve optimization problems, that is find the solution that
-  has the best metric among many feasible solutions, and
+  has the best metric among many feasible solutions
 * recursive solutions to problems with optimial substructure
 * memoization for problems with overlapping subproblems
 * bottom-up memoization, which is called dynamic programming
