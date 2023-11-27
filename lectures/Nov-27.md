@@ -14,9 +14,10 @@ An **optimization problem** is a problem in which the goal is to find
 an optimal solution among a set of feasible solutions.
 
 **Example** Suppose you are preparing to hike the Appalachian Trail.
-Select food from a grocery store that will fit in your backpack while
+Select items from a grocery store that will fit in your backpack while
 maximizing the number of calories.  You have room for 5 pounds of food
-in your backpack. (This is the 0-1 Knapsack Problem.)
+in your backpack and you are not allowed to split items. (This is the
+0-1 Knapsack Problem.)
 
 In general, an optimization problem defines a
 * predicate that says which solutions are **feasible** and a
