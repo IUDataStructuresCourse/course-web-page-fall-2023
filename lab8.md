@@ -30,7 +30,7 @@ first i characters of x and the first j characters of y.
 
 ![](./assets/images/lab8/gui.png)
 
-The image above shows the results of aligning ACACCC with GCCTCGA.
+The image above shows the results of aligning `ACACCC` with `GCCTCGA`.
 The best alignment has a score of -1, which corresponds to the entry
 in the lower right corner of the cache. This score is computed by
 summing the scores of each aligned pair of characters:
@@ -50,13 +50,12 @@ The alignment can be written textually like this:
 
 ## Support code and submission
 
-Submit your `StudentTest.java` file to the autograder, project
-`DNA_Alignment_Test`. As usual, it should contain a class `StudentTest` with a
-`test()` method.
-
-Submit your `Judge.java` and `SequenceAligner.java` files to the autograder,
-project `DNA_Alignment`.
-
++ Student support code is at [link](https://github.com/IUDataStructuresCourse/dna-alignment-student-support-code).
+  Please make sure to go through existing code, especially `Result.java`, before you start.
++ Submit your code file `Judge.java` and `SequenceAligner.java` to
+  [link](https://autograder.luddy.indiana.edu/web/project/695).
++ Submit your test file `StudentTest.java` to
+  [link](https://autograder.luddy.indiana.edu/web/project/711).
 
 ## Tasks
 
