@@ -51,7 +51,8 @@ The alignment can be written textually like this:
 ## Support code and submission
 
 + Student support code is at [link](https://github.com/IUDataStructuresCourse/dna-alignment-student-support-code).
-  Please make sure to go through existing code, especially `Result.java`, before you start.
+  Please make sure to go through existing code, especially `Result.java` and the example tests
+  in `StudentTest.java`, before you start.
 + Submit your code file `Judge.java` and `SequenceAligner.java` to
   [link](https://autograder.luddy.indiana.edu/web/project/695).
 + Submit your test file `StudentTest.java` to
