@@ -89,6 +89,7 @@ Nov. 29 | [DNA Alignment](./lectures/Nov-29.md)
 Dec. 1  | [Quiz 5](https://iu.instructure.com/courses/2165834/quizzes/4079601) | | [Lab 8: DNA Alignment](./lab8) | [test](https://autograder.luddy.indiana.edu/web/project/711), [code](https://autograder.luddy.indiana.edu/web/project/695)
 Dec. 4 | TBD | | <mark>Lab 8 due</mark>
 Dec. 6 | Review for Final Exam
+Dec. 8 | Extra Office Hours in Lab | | No Lab Assignment
 Dec. 11 | **<mark>Final Exam</mark>** [3-5pm](https://bulletin.indiana.edu/registration/examination-policies/fall-final-exams.html)
 
 **Resources**
