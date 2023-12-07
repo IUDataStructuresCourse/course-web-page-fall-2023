@@ -87,8 +87,8 @@ Nov. 20 <br> - <br> Nov. 24 | **Thanksgiving Break**
 Nov. 27 | [Dynamic Programming](./lectures/Nov-27.md) | Ch. 10, sec. 3 | <mark>Project 3: Routing Wires due</mark>
 Nov. 29 | [DNA Alignment](./lectures/Nov-29.md) 
 Dec. 1  | <mark>Quiz 5</mark> | | [Lab 8: DNA Alignment](./lab8) | [test](https://autograder.luddy.indiana.edu/web/project/711), [code](https://autograder.luddy.indiana.edu/web/project/695)
-Dec. 4 | TBD | | <mark>Lab 8 due</mark>
-Dec. 6 | Review for Final Exam
+Dec. 4 | Code Review | | <mark>Lab 8 due</mark>
+Dec. 6 | [Review for Final Exam](./lectures/Dec-6.md)
 Dec. 11 | **<mark>Final Exam</mark>** [3-5pm](https://bulletin.indiana.edu/registration/examination-policies/fall-final-exams.html)
 
 **Resources**
